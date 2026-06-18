@@ -1,0 +1,362 @@
+\documentclass[output=paper,colorlinks,citecolor=brown]{langscibook}
+\ChapterDOI{10.5281/zenodo.20541854}
+\author{Olaf Mikkelsen\orcid{}\affiliation{Université Paris 8, Vincennes - Saint Denis; Adam Mickiewicz University} and         Dylan Glynn\orcid{}\affiliation{Université Paris 8, Vincennes - Saint Denis; Adam Mickiewicz University}}
+\title[The future that may still be]{The future that may still be: The spread of \textit{blir å \textsc{inf}} in contemporary Norwegian}
+\abstract{This article investigates the semantics of the incipient future construction \textit{blir å \textsc{inf}} in contemporary Norwegian. Traditionally considered a feature of northern dialects, the construction is now used in writing by speakers throughout the country. We take data from a corpus consisting of blogs and manually annotate uses for various semantic features which we then investigate quantitatively. We show that the construction is largely non-distinct with respect to the other future constructions. However, there does appear to be evidence that the construction is used significantly more frequently as indicative of low-certainty predictions. Yet, in this respect, the construction overlaps with uses typical of the \textit{vil \textsc{inf}} construction. The study considers these results in terms of the diachronic spread and synchronic polysemy. First, we discuss whether \textit{blir å \textsc{inf}} is encroaching on the semantic territory of \textit{vil \textsc{inf}} specifically or is being used as an unmarked marker of futurity relative to the other constructions. Second, we consider the two main hypotheses concerning the diachrony of \textit{blir å \textsc{inf}}: a development of an intentional construction, or a loan from Sámi. Our findings seem to support the second hypothesis. However, the synchronic nature of the data and their geographic distribution constitute two caveats that impede strong conclusions.}
+
+%move the following commands to the "local..." files of the master project when integrating this chapter
+
+%\usepackage{subcaption}
+
+\IfFileExists{../localcommands.tex}{
+   \addbibresource{../localbibliography.bib}
+   \input{../localpackages}
+   \input{../localcommands}
+   \input{../localhyphenation}
+   \boolfalse{bookcompile}
+   \togglepaper[6]%%chapternumber
+}{}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}\label{sec:06:1}
+The verb \textit{bli/bliva} (‘become’) was borrowed by mainland Scandinavian from Middle Low German and/or Middle Dutch in the late Middle Ages \citep{Markey1969}. Despite the cross-linguistic observation that verbs signifying ‘be’ or ‘become’ often develop into future markers \citep{BybeePerkinsPagliuca1994}, this did not happen in any standard variety of Scandinavian (\citetv{chapters/05_skrzypek}). There is, however, evidence that one such instance is generalising to standard Norwegian. Example (\ref{ex:06:1}) is taken from Norwegian national media and shows the periphrastic \textit{blir å \textsc{inf}} (‘become to’), indicating futurity, has made its way into mainstream discourse.
+
+\ea\label{ex:06:1}
+\gll Hvis jeg ikke får jobb i Tromsø, BLIR jeg Å SØKE i Canada.\\
+     if I .\textsc{neg} get job in Tromso \textsc{fut} I to seek in Canada\\
+\glt ‘If I don’t get a job in Tromso I will apply in Canada.’\footnote{Source of example NRK Troms og Finnmark 13th October, 2023}
+\z
+\il{Norwegian} %add "Norwegian" to language index for this page
+
+Traditionally, the \textit{blir å \textsc{inf}} construction is considered a distinct feature of Northern Norwegian dialects and there have even been discussions regarding its appropriateness in writing in the language magazine of the official Norwegian Language Council \citep{jahr2009}. Over the past 10 years, however, the construction has received attention on social media (\textit{Språkspalta} on Facebook) and radio (\textit{Språkteigen} on NRK, 3. October 2014), and according to some informants in these channels, it has been adopted by speakers in other parts of the country.
+
+In this paper, we investigate the possible spread of this construction and its place alongside other verbal expressions of futurity. First, we need to establish the extent to which examples of \textit{blir å \textsc{inf}} can be found in written contemporary Norwegian. Given that it is considered a dialectal feature, we have chosen to work with a corpus consisting of blogs, in which speakers are less likely to be influenced by normative pressure on their language use than in the data typical of the national reference corpora. Second, having established that there likely is some spreading of this construction, we compare the semantics of \textit{blir å \textsc{inf}} with those of alternative future referring constructions, such as \textit{skal \textsc{inf}} (‘shall’), \textit{vil \textsc{inf}} (‘will’) and \textit{kommer til å \textsc{inf}} (‘come to’). In this, we seek to answer the question: is \textit{blir å \textsc{inf}} encroaching on the semantics traditionally associated with one of the other three constructions, or is it an entirely new aspectual encoding of the future in Norwegian? 
+
+To answer this question, we use a methodology that combines corpus data, qualitative analysis and multivariate statistics (Section \ref{sec:06:3}), and compare \textit{blir å \textsc{inf}} with the other future constructions in Norwegian along four dimensions of meaning:
+\begin{itemize}
+    \item Future function: whether the construction is used to express an intention, a plan or a prediction.
+    \item Conditionality: whether the conditions for carrying out the future event are given at the time of speech, dependent on a future contingency or unknown.
+    \item Temporal proximity: how near or far the future event is located on a temporal scale relative to the moment of speech.
+    \item Speaker certainty: how certain the speaker seems to be that the future event will actually be carried out.
+\end{itemize}
+The results of the analysis (Section \ref{sec:06:4}) show that \textit{blir å \textsc{inf}} is encroaching on a part of the semantic space of \textit{vil \textsc{inf}}, namely as an expression of low-certainty predictions. We suggest two possible (independent, but not mutually exclusive) motivations for this: the first has to do with the social meaning traditionally associated with \textit{vil \textsc{inf}}, the second is the absence of an “unmarked” or “neutral” future marker, i. e., one that is not associated with the specialised contexts of \textit{skal} (high certainty intentions and plans), \textit{vil} (low certainty predictions, contingent and temporally indefinite future events) and \textit{kommer til å \textsc{inf}} (high certainty predictions and atemporal future events).
+
+However, due to limitations in the availability of data (Section \ref{sec:06:3}), the results should be seen as preliminary. Furthermore, the data consists of utterances produced by what may turn out to be two different groups of speakers: the “natives”, for whom the construction has been part of their dialect for generations and the “adopters”, for whom the construction is likely to be an innovation. For this reason, we cannot exclude the possibility that the data represent two separate grammatical systems: one in which the construction has developed from childhood on a par with the other constructions; another in which it is a new addition to an already established system of future constructions. When we seek to explain a phenomenon such as the spread of \textit{blir å \textsc{inf}}, it is important to take such a divide into account and ask whether we are witnessing a gradual spread of a linguistic form from one variant to another, or a more sudden change where the new form is adopted, first by a reduced number of speakers (the “early adopters”), before it rapidly generalises across the broader community.
+
+Finally, we discuss our findings from the perspective of grammaticalisation. Some authors have argued that all futures go through a stage of intention \citep{BybeePerkinsPagliuca1994, Heine1995}, while others defend alternative paths of grammaticalisation, such as ingressive, inchoative, or resultative meanings \citep{Traugott1978, Dahl2000}. While intentional readings are part of the meaning of \textit{blir å \textsc{inf}}, our data suggest that it is not a defining feature of the construction today. This result must be interpreted in light of what was said in the preceding paragraph: if what we are seeing is representative of the “native” grammatical system, then the intentional readings could be remnants of a previous, intentional stage; if, on the other hand, we interpret our data as representative of the grammatical system of the “adopters”, then the results would suggest that the construction is establishing itself as a prediction-based future marker from the outset. The results will be interpreted in light of the two dominant hypotheses concerning the origin of \textit{blir å \textsc{inf}}: a development of the intentional-obligational \textit{det blir å \textsc{inf}} construction or an analogy on the Sámi verb for ‘become’ (Section \ref{sec:06:2}).
+
+The rest of the paper is organised as follows: Section \ref{sec:06:2} presents a short literature review of the \textit{blir å \textsc{inf}} construction in particular and Norwegian future constructions in general. Corpus data and methods are introduced in Section \ref{sec:06:3}, Section \ref{sec:06:4} presents the results, and Section \ref{sec:06:5} discusses the results both synchronically and diachronically.
+
+\section{Norwegian future markers and \textit{blir å \textsc{inf}}}\label{sec:06:2}
+
+The origin of \textit{blir å \textsc{inf}} as a future marker in Norwegian is unclear, but there are three main hypotheses. \citet{iversen1954} proposes, first, that \textit{blir å \textsc{inf}} is a development of the expletive \textit{det blir å \textsc{inf}} (‘it becomes to’) construction (\ref{ex:06:2}), which is found across most varieties of Norwegian (including the standard):
+
+\ea\label{ex:06:2}
+\gll Skal du studere, så BLIR DET Å LEVE på lån.\\
+     shall you study then \textsc{fut} \textsc{expl} to live on loan\\
+\glt ‘If you are going to study, you will have to live off loans.’ \citep{iversen1954}
+\z
+
+His second hypothesis is that \textit{blir å \textsc{inf}} is a loan construction from the Sámi verb \textit{šâd’dât} (‘become’) (\ref{ex:06:3}):
+
+\ea\label{ex:06:3}
+\gll Don ŠÂDDÂK oaid’net.\\
+     you \textsc{fut} see\\
+\glt ‘You will see.’ \citep{nielsen1926}
+\z
+
+This hypothesis is questioned by \citet{vannebo1979} because of the low social status of the Sámi languages relative to Norwegian, and he suggests, as a third hypothesis, that \textit{blir å \textsc{inf}} is formed by analogy to the Norse verb \textit{verða} ‘become’, which developed into a future marker in some Norwegian dialects (also in earlier Icelandic and Swedish cf. \citealt{chapters/05_skrzypek}).
+
+While it is not the goal of this paper to investigate the origin of \textit{bli å \textsc{inf}}, the original geographical extension of the construction certainly lends credibility to the Sámi hypothesis, as it corresponds precisely to those areas of Norway (blue dots, \figref{fig:mikk_glynn:map}) where there has been widespread contact between Norwegian and Sámi. Over time, the construction has spread from Finnmark and Troms to the entire Nordland region (red dots, \figref{fig:mikk_glynn:map}).
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{figures//mikk_glynn/fig_1_2.png}
+    \caption{The use of \textit{blir å \textsc{inf}} in the Nordic Dialect Corpus \citep{johannessen2009}. Image created with the R packages \textit{maps} \citep{R-maps} and \textit{giscoR} \citep{R-giscoR} using geodata from \href{https://ec.europa.eu/eurostat/web/gisco/geodata}{GISCO}.}
+    \label{fig:mikk_glynn:map}
+\end{figure}
+
+
+In our data, consisting of written online personal blogs (see Section \ref{sec:06:3}), we find that \textit{blir å \textsc{inf}} is used not only by speakers from the North, but by speakers from all the other major dialectal areas of Norway: the East, the Southwest and the Centre (Trøndelag). While still infrequent in writing, we assume that the construction is in the incipient stage of spreading well outside of its traditional area, and that a comparison with the other expressions of futurity in Norwegian (\textit{skal \textsc{inf}}, \textit{vil \textsc{inf}} and \textit{kommer til å \textsc{inf}}) is warranted.
+
+It should be noted that the literature on futurity in Norwegian is somewhat limited. Perhaps due to the fact that Norwegian does not have a single morpheme to express futurity (i.e., “future tense” in the traditional sense) and that the future constructions are used to express many other (mostly modal) meanings, the Norwegian linguistic community has preferred to focus on modality more broadly \citep{eide2020}. Nonetheless, there seems to be a distinction in the usage of the “intention-based” \textit{skal \textsc{inf}} on the one hand, and the “prediction-based” \textit{vil \textsc{inf}} and \textit{kommer til å \textsc{inf}} on the other \citep{Dahl2000}. That is, the former is mainly used to express what the speaker intends to carry out, while the latter two are preferred when talking about what the speaker thinks will happen. Earlier authors have focused on distance in time and degree of certainty: \textit{skal \textsc{inf}} is used to talk about events that are happening in the near future and which the speaker feels more confident about, relative to the more distal and uncertain \textit{vil \textsc{inf}} \citep{macdonald1982}. \citet{lie2005} points out that \textit{skal \textsc{inf}} is dispreferred with certain conditional clauses, and this observation is corroborated by \citet{mikkelsenhartmann2022} using data from the NoTa and BigBrother corpora. These authors also observe that \textit{skal \textsc{inf}} prefers syntactically more complex environments (i.e., context of negation, interrogation, and subordination) than the other two constructions. As for the difference between \textit{vil \textsc{inf}} and \textit{kommer til å \textsc{inf}}, \citet{macdonald1982} and \citet{vannebo1985} claim that it is mainly one of register (\textit{vil \textsc{inf}} being the more formal of the two), while \citet{hasselgård2015} finds that \textit{kommer til å \textsc{inf}} favours confident predictions on the basis of present knowledge and events that come about as a matter of course (i.e. predestination).
+
+To the authors' knowledge, no study to date has attempted to give a detailed description of the semantics of \textit{blir å \textsc{inf}} in relation to the other future constructions in Norwegian. However, the different hypotheses concerning its origin may give us some clues: should the construction be a development of the expletive \textit{det blir å \textsc{inf}} construction, we might expect it to retain more intentional readings; if the construction is formed by analogy on the Sámi \textit{šâd’dât}, which according to \citet{nielsen1926} translates to \textit{kommer til å \textsc{inf}} in Norwegian, then we might expect it to behave more like the predictive-based futures. In any case, the differences in meaning between the different constructions are subtle, and there are many contexts in which speakers judge the constructions as equally grammatical (\ref{ex:06:4}), and where the change in meaning between them is minimal, if at all noticeable:
+
+\ea\label{ex:06:4}
+\gll Jeg (SKAL/VIL/BLIR/KOMMERTILÅ) SØKE i Canada hvis jeg ikke
+får jobb i Tromsø.\\
+     I \textsc{fut} seek in Canada if I \textsc{neg} get job in Tromso\\
+\glt ‘I will apply in Canada if I don’t get a job in Tromso.’
+\z
+
+This does not imply, however, that these constructions are simply different means of saying the same thing. In certain specialised contexts (possibly remnants of different stages of grammaticalisation diachronically / different uses synchronically) (\ref{ex:06:5}--\ref{ex:06:9}), the constructions are non-interchangeable and may or may not have future time reference:
+
+\ea\label{ex:06:5}
+\gll Du SKAL ikke STJELE. (future time reference, deontic modality)\\
+     you \textsc{fut} \textsc{neg} steal\\
+\glt ‘Thou shalt not steal.’
+\z
+
+\ea\label{ex:06:6}
+\gll Han SKAL VÆRE dyktig. (present time reference, epistemic
+modality)\\
+     He \textsc{fut} be capable\\
+\glt ‘He’s supposed to be good.’
+\z
+
+\ea\label{ex:06:7}
+\gll Jeg venter på at han SKAL BLI ferdig. (future time ref., inceptive)\\
+     I wait on that he \textsc{fut} be finished\\
+\glt ‘I'm waiting for him to finish.’
+\z
+
+\ea\label{ex:06:8}
+\gll VIL du GIFTE deg med meg? (present time reference, deontic modality)\\
+     \textsc{fut} you marry you with me\\
+\glt ‘Will you marry me?’
+\z
+
+\ea\label{ex:06:9}
+\gll Jeg KOMMER TIL Å TENKE på noe. (present time ref., inceptive)\\
+     I \textsc{fut} think on something\\
+\glt ‘I just remembered something.’
+\z
+
+Examples such as these illustrate that the future-referring constructions have many other distinct functions, and this is before we take into account highly frequent chunks related to particular subject-construction-verb combinations, such as \textit{det vil si} (elucidation construction), \textit{jeg vil si} (hedging construction) or \textit{det skal sies} (concessive construction), to name but a few. All this complexity is part of speakers’ knowledge about these constructions and may contribute to biases in the choice of constructions, even in contexts where there is no apparent difference between them.
+
+\section{Data and methods}\label{sec:06:3}
+As noted, \textit{blir å \textsc{inf}} is considered a dialectal feature that is rare in formal writing. For this reason, we looked at informal written language drawn from the Norwegian Blog Corpus \citep{Mikkelsen2021}. This corpus was compiled using the Python script Trafilatura \citep{barbaresi2021} and consists of a total of 841 blogs (approximately 18 million words), with entries spanning the years 2010--2020. During the scraping process, partial speaker metadata (age, sex, and region) were retained where possible (extracted from the “about me” pages or similar). All instances of the verbs \textit{skal}, \textit{vil}, \textit{kommer} and \textit{blir} in the present tense were drawn using the CasualConc concordancer version 2.1.6 \citep{imao2021} with a context of 500 characters left and right of the verb. Using different sorting techniques, instances without an infinitival complement were discarded. This process resulted in a pool of roughly 100,000 items, from which subsamples of 200 occurrences per construction were drawn.
+
+The subsamples were manually checked and both non-interchangeable instances (\ref{ex:06:5}--\ref{ex:06:9}) and interchangeable instances with no future time reference (habituals and generics) were removed. Negated and interrogated instances with future time reference, which both correlate with \textit{skal \textsc{inf}} and are often seen as indices of processing factors \citep{mikkelsenhartmann2022}, were also excluded from study. The \textit{blir å \textsc{inf}} construction (\ref{ex:06:1}) was separated from the expletive \textit{det blir å} construction (\ref{ex:06:2}) and borderline cases with no overt subject (\ref{ex:06:10}). Since the expletive construction is considered a different construction altogether and instances like (\ref{ex:06:10}) are ambiguous with respect to the interpretation (the unexpressed subject could be interpreted both as an expletive \textit{det} ‘it’ or as a first person jeg ‘I’), these types of examples were removed from further analysis. Furthermore, the latter null-subject construction might be perceived as a bridging-context in the sense of \citet{Heine2002}, facilitating the acceptability (and thus spread) of \textit{blir å \textsc{inf}}.
+
+\ea\label{ex:06:10}
+\gll BLIR nok Å STRIKKE fremover, uansett. \\
+     \textsc{fut} enough knit forwards anyway\\
+\glt ‘I’ll keep knitting anyways.’ / ‘There’ll be plenty of knitting anyways.’ (strikkehege)
+\z
+
+The pseudonym of the blogger will be given in parentheses. Each subsample of \textit{skal \textsc{inf}}, \textit{vil \textsc{inf}} and \textit{kommer til å \textsc{inf}} was controlled for potential intralinguistic variation by extracting only one item per speaker per construction. In the case of \textit{blir å \textsc{inf}}, this was not possible, as the total number of instances after manual disambiguation was reduced to 76 items (34 speakers). This imbalance in the data in disfavour of \textit{blir å \textsc{inf}} is a disadvantage that is not easily resolved. While it would be possible to pool data from other sources, this will not be easy as the construction is still infrequent in writing, and it will also raise issues of comparability. The distribution of speakers by region following the division traditionally used in Norwegian dialectology (East, Southwest, Centre and North) are given in \tabref{tab:mikk_glynn:regions}.
+
+\begin{table}
+\caption{Constructions and speakers by region}
+\label{tab:mikk_glynn:regions}
+ \begin{tabularx}{.9\textwidth}{p{2.5cm} rrrrr}
+  \lsptoprule
+Construction & East & Southwest & Centre  & North & Unknown\\
+  \midrule
+  \textit{Blir}  & 10 & 18 & 15 & 31 & 2\\
+  \textit{Kommer}  & 98 & 52 & 13 & 12 & 25\\
+  \textit{Skal}  & 96 & 55 & 12 & 14 & 23\\
+  \textit{Vil}  & 91 & 44 & 14 & 17 & 34\\
+  \lspbottomrule
+ \end{tabularx}
+\end{table}
+
+The total dataset of 676 items was subject to feature analysis, the first step of behavioural profile approach \citep{dirven1982, geeraerts1994, gries2003, divjakgries2006}, which uses manual analysis of each sample to identify patterns of usage interpretable as functional criteria for a quantified description of grammar. The patterns are typically identified with the use of multivariate statistics, and in this study, we employ both multiple correspondence analysis (MCA) and loglinear analysis. MCA is a multivariate exploratory space reduction technique for categorical data analysis that reveals frequency-based associations in the form of biplots. These biplots seek to represent the degree of likelihood of combinatorial possibilities of the different features. As such, they produce maps of the different uses, understood as clusters of those combinatorial possibilities \citep{Glynn2014}. Loglinear analysis allows us to examine some of the more frequent combinatorial possibilites to see if the frequency or infrequency of their occurrence is statistically significant \citep{Glynn2014}.
+
+After sample extraction, the data were submitted to blind annotation, i.e., the actual construction was hidden from the annotator to minimise the effects of annotator bias. Annotation was performed by a single native speaker (the first author of this study). From the literature review in Section \ref{sec:06:2}, four semantic dimensions were distinguished. First, the basic distinction between intention-based and prediction-based was operationalised as Future Type: `intentions', `plans' and `predictions'. These were distinguished by virtue of an entity called the “director”, defined as the entity willing and able to carry out the future event. When the speaker is director, we are dealing with an intention (\ref{ex:06:11}):
+
+\ea\label{ex:06:11}
+\gll På Facebook BLIR jeg Å DELE coachteknikker. \\
+     On Facebook \textsc{fut} I to share coachingtechniques\\
+\glt ‘I will share coaching techniques on Facebook.’ (slottsfruen)
+\z
+
+Note that the director can be backgrounded, i.e., not overtly expressed, so that examples like (\ref{ex:06:12}), in which the speaker is clearly both willing and able to carry out the future event (talking about bullying) even though the syntactic subject ("today's topic") is not the director, were annotated as intentions:
+
+\ea\label{ex:06:12}
+\gll Dagens tema BLIR Å OMHANDLE mobbing. \\
+     Todays topic \textsc{fut} to concern bullying\\
+\glt ‘Today's topic will be bullying.’ (=In this blog entry I will talk about bullying.)’ (renatev)
+\z
+
+When the speaker is not a director, but merely a reporter of a future event that is to be carried out by the director (typically backgrounded or expressed syntactically as the subject of the construction), we are dealing with a plan (\ref{ex:06:13}):
+
+\ea\label{ex:06:13}
+\gll Boken BLIR Å INNEHOLDE (...) inspirerende ideer. \\
+     book\textsc{def} \textsc{fut} to contain (...) inspiring ideas\\
+\glt ‘The book will be filled with inspiring ideas.’ (livetdetgode)
+\z
+
+Predictions are statements in which there is no director, neither explicitly mentioned nor backgrounded (\ref{ex:06:14}), and where the speaker takes on the role of an evaluator, assessing the likelihood of the future event:
+
+\ea\label{ex:06:14}
+\gll Ikke hjelper det å fortelle at taxi hjem til meg BLIR Å KOSTE en formue. \\
+     Not helps it to tell that taxi home to me \textsc{fut} to cost a fortune\\
+\glt ‘There’s no use in telling [them] that taking a taxi home will cost a fortune.’ (majbee)
+\z
+
+Both Temporal Proximity and Speaker Certainty were annotated using a nine-point Likert scale, which were then collapsed to binary distinctions. In this study, for Temporal Proximity, 'proximal’ (\ref{ex:06:15}) future uses refer to events that will take place within the same day relative to the moment of speech, while events that are located further away (days, weeks, months, years…) are ‘distal’ (\ref{ex:06:16}). For Speaker Certainty, expressions that contain an overt statement of certainty (\ref{ex:06:17}) and also unmarked future statements (\ref{ex:06:14}) are annotated as ‘high certainty’. On the contrary, statements in which there is some degree of doubt or reservation (\ref{ex:06:18}) are annotated as ‘low certainty’.
+
+\ea\label{ex:06:15}
+\gll Snart kommer X hit, regner med at vi BLIR Å CHILLE masse. \\
+     Soon come X here, calculate with that we \textsc{fut} to chill a-lot\\
+\glt ‘Soon X will be here, I'm sure we will have a good time.’ (sophieelise)
+\z
+
+\ea\label{ex:06:16}
+\gll Får håpe at dei BLIR Å SKAPE mykje glede i åra som kjem! \\
+     get hope that they \textsc{fut} to create much happiness in years to come\\
+\glt ‘Let’s hope they will be the source of much happiness in the coming years!’ (ladyingunn)
+\z
+
+\ea\label{ex:06:17}
+\gll Har innstilt meg på at jeg BLIR Å STRYKE uansett. \\
+     Have adjusted me on that I \textsc{fut} to fail anyway\\
+\glt ‘I have come to terms with the fact that I will fail anyway.’ (sandraeliene)
+\z
+
+\ea\label{ex:06:18}
+\gll Langt fra overbevist om at dette er en metode jeg BLIR Å BRUKE flere ganger. (strikkepiken)\\
+     far from convinced about that this is a method I \textsc{fut} to use more times\\
+\glt ‘I'm far from convinced that I will use this method again.’
+\z
+
+Certain examples cannot, however, be located on a temporal or epistemic scale. Cases in which the speaker is not addressing a particular reader, but anyone who happens to read the blog, can only receive a temporal interpretation relative to the time it is read (which can happen at many different points in time). Such cases are referred to as temporally 'indefinite'. Expressions with universal quantifiers such as \textit{alltid} (‘always’) or \textit{aldri} (‘never’) are in this study marked 'atemporal' when they have future time reference (if not, they are generic or habituals). Finally, certain expressions, notably indirect questions and protasis (the clause introducing the condition of a conditional clause) do not express a degree of certainty. These are referred to as epistemically 'non-committing'.
+
+Finally, Conditionality is an operationalisation of the “inevitable” uses associated with \textit{kommer til å \textsc{inf}}, defined as future culmination of present cause, or 'given' conditionality (\ref{ex:06:19}); and the more hypothetical uses often associated with \textit{vil \textsc{inf}}, defined as dependent on a future condition (semantic if-clause) or 'contingent' (\ref{ex:06:20}). These two uses are seen as two extremes on a scale of conditionality, with uses that are neither given nor contingent in the middle. We will refer to the middle cases as 'stand-alone'.
+
+\ea\label{ex:06:19}
+\gll Tromsø ble klare til opprykk. Så til neste år blir de å spille i eliteserien. (vegardsverden)\\
+     Tromso was ready for promotion. So to next year \textsc{fut} they to play in topdivision\textsc{def}\\
+\glt ‘Tromso was promoted, so next year they’ll be playing in the Premier.’
+\z
+
+\ea\label{ex:06:20}
+\gll Snart senga, men må vente litt til ellers så blir jeg å våkne kl.3. (majbee)\\
+     Soon bed but must wait abit more other wise \textsc{fut} I to wake 3o'clock\\
+\glt ‘Bed soon, but have to wait a bit, otherwise I’ll wake up at 3 am.’
+\z
+
+\tabref{tab:mikk_glynn:features} provides an overview of the distribution of the semantic variables and their features by construction. It is important to note that all of the semantic features are possible for all the constructions. These data serve as input for both the MCA and the loglinear models.
+
+\begin{table}
+\caption{Distribution of semantic features wrt. future constructions}
+\label{tab:mikk_glynn:features}
+ \begin{tabularx}{.8\textwidth}{X rrrr}
+  \lsptoprule
+Feature   & \textit{Blir} & \textit{Kommer} & \textit{Skal} & \textit{Vil}\\
+  \midrule
+  Intention  & 29 & 70 & 142 & 36\\
+  Plan  & 3 & 5 & 23 & 17\\
+  Prediction  & 44 & 125 & 35 & 147\\
+  Proximal  & 8 & 14 & 58 & 9\\
+  Distal  & 52 & 150 & 136 & 145\\
+  Indefinite  & 7 & 8 & 4 & 29\\
+  Atemporal  & 9 & 28 & 2 & 17\\
+  High Certainty  & 44 & 149 & 159 & 102\\
+  Low Certainty  & 29 & 38 & 37 & 86\\
+  Non-Committing  & 3 & 13 & 4 & 12\\
+  Given  & 10 & 30 & 21 & 34\\
+  Stand-Alone  & 61 & 151 & 172 & 139\\
+  Contingent  & 5 & 19 & 7 & 43\\
+  \lspbottomrule
+ \end{tabularx}
+\end{table}
+
+\section{Results}\label{sec:06:4}
+Given that there was no clear hypothesis presented by the previous literature concerning the precise semantics of \textit{blir å \textsc{inf}} relative to the other constructions (Section \ref{sec:06:3}), we started out by exploring the distribution of all the constructions in relation to the semantic variables, described in the preceding section, using MCA. This method is a useful technique for visually identifying potential structure in complex data. \figref{fig:mikk_glynn:biplotfeatures} presents the results of a multiple correspondence analysis that includes all the features annotated for all four constructions.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=1\linewidth]{mikk_glynn/fig_3.png}
+  \caption{Correspondences in the distribution of future constructions and semantic variables}
+  \label{fig:mikk_glynn:biplotfeatures}
+\end{figure}
+
+In \figref{fig:mikk_glynn:biplotfeatures}, degree of association is represented by relative proximity between the usage-features and the constructions. The plot depicts a 2-dimensional representation of these associations across 17 dimensions. The inertias indicate the relative contribution of each dimension, where dimension one constitutes the \textit{x}-axis and dimension two the \textit{y}-axis. The visualisation was generated in R with the explor package \citep{barnier2023} and uses the Burt method to generate its representation. The scree-plot was produced in R with ca \citep{greenacre2007} using the so-called adjusted method, since it is argued to more realistically represent complexity in multiple correspondence analysis \citep{greenacre2010}. The size of the data-points represents contribution.
+
+Beginning on the left in the bottom quadrant, we see \textit{skal \textsc{inf}} dominating the visualised structure, being associated with proximal temporal reference and both intention and plan future types. However, the future type associations are not distinctive, even if their association with the construction is strong. The structure visualised in bottom-right quadrant is equally clear. The construction \textit{vil \textsc{inf}} is both highly and distinctly associated with indefinite temporal type, contingent conditionality and low speaker certainty. The top two quadrants are entirely structured by a combination of atemporal temporal proximity and given conditionality, two features distinctly associated with the \textit{kommer til å \textsc{inf}} construction. The rest of the features and the \textit{blir å \textsc{inf}} construction group around the centre, at the intersection of the two axes, indicating that their use is relatively non-distinctive.
+
+In summary, what we see largely echoes previous introspective accounts (Section \ref{sec:06:3}): \textit{skal \textsc{inf}} is the intention-based marker of near-future, while \textit{vil \textsc{inf}} is the future of uncertain and contingent events. Both \textit{vil} and \textit{kommer til å \textsc{inf}} are prediction-based, but the latter is associated with 'high certainty' (just like \textit{skal \textsc{inf}}) and 'given conditionality' (future culmination of present cause). In addition to this, we see that \textit{vil \textsc{inf}} is associated with 'indefinite temporality' (habitual-like statements directed at more than one reader), and \textit{kommer til å \textsc{inf}} with 'atemporal' readings (often strong assertions or promises). The division of labour seems quite clear between three of the constructions: \textit{skal \textsc{inf}} would mostly be used to express intentions or plans that take place in the near future (the same day) and with a high degree of speaker certainty; \textit{vil \textsc{inf}} could be characterised as the more hypothetical future, used to express predictions with some degree of uncertainty; \textit{kommer til å \textsc{inf}} seems to specialise in future culmination of present cause ('given conditionality') and high certainty predictions.
+
+Where does \textit{blir å \textsc{inf}} fit into the picture? Its defining characteristic seems to be that it is nondistinctive, that is, a future construction that is unmarked with regards to the four semantic variables in question when we analyse all of the different usage events (the data points) collectively. There are several possible (not mutually exclusive) explanations:
+\begin{itemize}
+\item The construction is highly polysemous, and thus the plot is a poor visualisation,
+\item The construction has different meanings for different speakers, which again would lead to a visualisation that does not reflect the complexity of the data.
+\item The construction is used as a neutral way of referring to the future (predictions about non-near and non-contingent future events), and the plot is a good representation of the linguistic reality.
+\end{itemize}
+It is practically impossible to distinguish the first two alternatives using these data (we would need substantially more data from different speakers), but we may get an idea about how probable the third alternative is by examining the actual data points that are distributed “behind” the labels presented in \figref{fig:mikk_glynn:biplotfeatures}. The plot in \figref{fig:mikk_glynn:biplotindividuals} presents such a plot of the data points. We see that while \textit{skal \textsc{inf}} (blue dots), \textit{vil \textsc{inf}} (green dots) and to a lesser degree \textit{kommer til å \textsc{inf}} (red dots) are neatly separated, \textit{blir å \textsc{inf}} (yellow dots) is overlapping with all of them. Can this be taken to support the first two alternatives mentioned above? Is the defining feature of \textit{blir å \textsc{inf}} that it can be used in most contexts, unlike the other, more specialised constructions?
+
+\begin{figure}
+  \centering
+  \includegraphics[width=1\linewidth]{mikk_glynn/fig_4.png}
+  \caption{Distribution of data points for the four constructions viz. semantic variables}
+  \label{fig:mikk_glynn:biplotindividuals}
+\end{figure}
+
+In order to try to tease apart some of the interactions visualised above, we first conducted a series of univariate analyses (chi-squared tests) with each of the constructions for each of the four variables. In contrast to the other constructions, the chi-squared tests revealed no significant interactions between \textit{blir å \textsc{inf}} and any of the variables. This lack of distinctiveness with respect to the semantic variables is in line with what we observed in the correspondence analysis. However, it is perfectly reasonable that an interaction of certain semantic variables is significantly associated or dissociated with the construction \textit{blir å \textsc{inf}} even if independently they are not. For these reasons, we submitted a simplified set of data to a loglinear analysis. This multivariate approach models the combinatorial possibilities of all the semantic variables, testing for significant association and disassociation.
+
+It was necessary to simplify the data because a complex multivariate analysis requires a larger sample than we have for this construction. In order to fit the model, `plans and intentions' were collapsed into a single category labelled `intention - plan', and `given' and `stand-alone' conditionality were both treated as `non-contingent'. The instances that were annotated as `non-committing' with regards to speaker certainty were excluded. Finally, the variable Temporal Proximity was not included. 
+
+ The mosaic plot in \figref{fig:mikk_glynn:mosaic} visualises a model combining the remaining simplified variables of future type, conditionality and speaker certainty, with respect to the constructions. In this plot, there are four columns representing each of the four constructions (\textit{blir å \textsc{inf}} on the far left, \textit{vil \textsc{inf}} on the far right and the other two in the middle. Each column is split into two, accounting for the variable conditionality (contingent and non-contingent). The variable future type represents the two main rows (prediction is bottom, and the combination of intentions and plans is top). These two rows are, in turn, subdivided according to the variable speaker certainty (high and low). The size of the boxes indicates frequency, and the colours indicate significance: blue boxes indicate a significant association, red boxes a significant dissociation, while grey boxes are an indication of no significance.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=1\linewidth]{mikk_glynn/fig_5.png}
+  \caption{Distribution of Constructions, Future Type, Conditionality, and Speaker Certainty}
+  \label{fig:mikk_glynn:mosaic}
+\end{figure}
+
+The plot shows that \textit{blir å \textsc{inf}} is not significantly associated or disassociated with respect to any uses except with respect to the combination of prediction, low-certainty, and non-contingent future events. However, in this, \textit{blir å \textsc{inf}} is like \textit{skal \textsc{inf}}. In contrast to \textit{blir å \textsc{inf}}, we see that other constructions do have clear and quite distinctive profiles of use. For example, \textit{skal \textsc{inf}} is significantly associated with high-certainty intentions and plans, and that \textit{vil} and \textit{kommer til å \textsc{inf}} divide up the “predictive” semantic space between them: the former is used to talk about predictions that are dependent on a future contingency or predictions that are low in certainty; the latter to talk about predictions with a higher degree of confidence.
+
+In summary, our results confirm previous introspective research concerning the semantics of \textit{skal} and \textit{vil \textsc{inf}}: the former is typically used to express plans and predictions with a high degree of certainty, the latter is used to express predictions that are seen as more uncertain. We can also provide a more accurate description of the difference between \textit{vil} and \textit{kommer til å \textsc{inf}} than what has been done in earlier research: these two constructions are semantically distinctive when we take into consideration speaker certainty and contingency, \textit{vil \textsc{inf}} being associated with low certainty predictions, or predictions that are contingent and \textit{kommer til å \textsc{inf}} with high certainty predictions. With regards to \textit{blir å \textsc{inf}}, the result of the loglinear analysis shows that the construction is largely non-distinct with respect to the other future constructions. While it is used to express low certainty predictions significantly more frequent than would be expected by chance, so is \textit{vil \textsc{inf}}.
+
+As mentioned above, the variable temporal proximity was not included in the final loglinear analysis. A more sophisticated statistical technique would be necessary to account for the added complexity of indefinite and atemporal future time reference, but also to determine whether the observed correlation between \textit{skal \textsc{inf}} and proximal future time is simply due to intentions occurring in near future. Furthermore, the variables speaker certainty and temporal proximity are here treated as nominal variables, even though they are inherently scalar. This was done to avoid having to exclude the items that do not fit on the scales (atemporal and indefinite temporal reference, non-committing speaker certainty). In future studies, speaker certainty and temporal proximity should be treated as ordinal variables rather than binary distinctions as in the present study.
+
+\section{Discussion}\label{sec:06:5}
+
+We have seen that \textit{blir å \textsc{inf}} is not semantically distinct from the other three constructions of futurity in Norwegian. While it is true that the construction is significantly associated with expressions of low certainty predictions, this feature does not constitute a distinct way of referring to the future since it is also associated with \textit{vil \textsc{inf}}. This could mean that \textit{blir å \textsc{inf}} is encroaching on the semantic territory of \textit{vil \textsc{inf}}. Provided that this is the case, what would be the motivation? As mentioned in Section \ref{sec:06:2}, \textit{vil \textsc{inf}} is seen as a more formal way of talking about the future, and having a more colloquial variant at one’s disposal to describe predictions that are less certain may be desirable for many speakers.
+
+Another possibility would be to say that \textit{blir å \textsc{inf}} is not replacing \textit{vil \textsc{inf}} specifically, but that it constitutes an unmarked way of referring to the future relative to the other constructions. In Section \ref{sec:06:2}, we saw that the choice of future construction in Norwegian is complex: there are contexts in which it is nearly impossible to make a distinction between the different forms, and at the same time each of the constructions has restrictions related to specific contexts or lexical items. Could it be that a new construction not only does not increase, but actually reduces complexity and makes speaker choice easier when it is less burdened with linguistic excess baggage in the form of contextual specificities and lexical biases? \citet{Fleischman1982} likens the development of future markers to turning wheels: as the older markers adopts more non-future (modal, irrealis) uses, new lexical material is recruited, first with aspectual meanings of imminence or prospection, before they consolidate as new future markers. In the case of Norwegian, the modals have both retained their original meaning of obligation (\textit{skal}) and volition (\textit{vil}) and developed new epistemic uses. Such a panorama would favour the apparition of a new future marker, following Fleischman’s analysis.
+
+Here an important caveat concerning the geographical distribution of the data must be added. In Section \ref{sec:06:3}, we saw that the examples were divided between speakers of Northern dialects (31 items) and other varieties (43 items) / unknown origin (2 items). As was mentioned in Section \ref{sec:06:1}, this could mean that the data reflect two subsystems: that of the “natives” who learned \textit{blir å \textsc{inf}} from childhood and that of the “adopters” who incorporated the construction into their adult grammars. In other words, it is possible that \textit{blir å \textsc{inf}} only is a “neutral” or “unmarked” future in appearance when we look at the population as a whole and that it takes on more specific meanings when we look at individual users. If we subdivide the sample of \textit{blir å \textsc{inf}} into two separate populations ("North" and "Other"), we find no significant difference between the two in terms of the semantic variables investigated. Because of the small data set, however, this should not be interpreted as solid evidence against the parallel grammar hypothesis. At present, we do not have enough data to investigate the matter further. Furthermore, it would be useful to ascertain the motivations for why speakers from other regions have started adopting the construction, whether it is due to prolonged contact with Northern varieties, perceived language ``fashion" or a mixture of the two factors.
+
+A secondary question is what our findings on the synchrony of \textit{blir å \textsc{inf}} can tell us about its diachrony. In Section \ref{sec:06:2}, we noted that there are two main hypotheses concerning the development of \textit{blir} as a future marker in Northern dialects: a development of the expletive \textit{det blir å} construction or an analogy of the Sámi verb \textit{šâd’dât}. A preliminary investigation of the expletive construction in our corpus (199 items) suggest that, despite not having an animate subject, most of the examples are used to express near-future intentions (\ref{ex:06:21}). 
+
+\ea\label{ex:06:21}
+\gll Ferdig på jobb 22:00, da blir det å dra rett på Kaliber etterpå.\\
+     Finished at job 10pm, then  \textsc{fut} \textsc{expl} to go straight at Kaliber after\\
+\glt ‘I finish work at 10 pm and will be heading straight to Kaliber afterwards.’ (idadir)
+\z
+
+If (pending more detailed analysis) this use is prototypical of the expletive \textit{det blir å} construction today, we might infer that the construction went through a stage of intention at some point during its history. Therefore, if \textit{blir å \textsc{inf}} has developed from the expletive construction, we would expect it to behave like an intention-based future. The Sámi \textit{šâd’dât}, on the other hand, is described as a prediction-based future in previous literature (Section \ref{sec:06:2}), and if \textit{blir å \textsc{inf}} has developed from  \textit{šâd’dât}, we would expect it to behave like a prediction-based future. Given our findings that \textit{blir å \textsc{inf}} is associated with low-certainty predictions, this would lend some support to the second (Sámi) hypothesis concerning the diachrony of the construction.
+
+We must be cautious not to make any strong claims, however, since \textit{blir å \textsc{inf}} is not significantly associated with predictions when this feature is examined independently of speaker certainty (it is only when these variables combine that we see a significant association). In other words, the construction is used to express both intentions and predictions. Another caveat is that we know too little about how \textit{blir å \textsc{inf}} was used when people first started adopting the expression in the North of Norway. \citet{vannebo1979}, looking at the spread through the Northern regions, distinguishes three phases: intention (\ref{ex:06:22}), plan (\ref{ex:06:23}) and prediction (\ref{ex:06:24}). According to his informants, the construction was only used to express intentions and plans in the southernmost areas. In the “core” area, meanwhile, intentions were more common than plans, which in turn were more common than predictions. This suggests that the construction was in fact originally intention-based.
+
+\ea\label{ex:06:22}
+\gll Jeg blir å reise i morgen.\\
+     I \textsc{fut} to travel to morrow\\
+\glt ‘I will travel tomorrow.’ \citep{vannebo1979}
+\z
+
+\ea\label{ex:06:23}
+\gll Båten blir å gå i morgen.\\
+     The boat \textsc{fut} to go to morrow\\
+\glt ‘The boat will depart tomorrow.’ \citep{vannebo1979}
+\z
+
+\ea\label{ex:06:24}
+\gll Jeg tror det blir å regne til natta.\\
+     I think it \textsc{fut} to rain to night\\
+\glt ‘I think it will rain tonight.’ \citep{vannebo1979}
+\z
+
+When we interpret our findings in light of these caveats, new and interesting questions emerge. The first of these questions is whether the “natives” are still using \textit{blir å \textsc{inf}} in its original, mostly intention-based uses, while the “adopters” are responsible for the new prediction-based uses. This could mean that the new construction fills a gap in the existing system of speakers from outside the Northern areas. It is here important to point out that such a gap may not only refer to a lack of specialised functions or contexts, but also to a lack of a more general or less specific function (in this case, a “neutral” future). A parallelism within the grammatical system of Norwegian would be that of the epistemic stance verbs. Over the past decades, a new use of \textit{tenke} ‘think’ has established itself in detriment of \textit{tro} ‘believe’, \textit{synes} ‘appear’ and \textit{mene} ‘mean’, and many speakers find this new use “too generic” (\textit{Språkrådet}, 16.02.2016).
+
+Another possibility could be that when \textit{blir å \textsc{inf}} enters a new variety of Norwegian, it is compared to the formally similar expletive \textit{det blir å} construction. In Section \ref{sec:06:3}, we noted that there are contexts (with a null subject) in which both the obligational-intentional and the future meanings are possible, depending on the interpretation. Could it be that the formal and semantic similarity between these two constructions functions as an underlying motivation for speakers to use \textit{blir å \textsc{inf}} to express predictions, in order to separate the two?
+
+It is, of course, possible that the situation is reversed entirely: the adopters prefer the original intentional meanings, while the natives innovate. This would follow the development outlined in \citet{vannebo1979} and would also be in accordance with the view that all futures go through a stage of intention \citep{BybeePerkinsPagliuca1994, Heine1995}. It should not, however, be interpreted as an absolute law, as other authors defend alternative paths of grammaticalisation, such as ingressive, inchoative, or resultative meanings \citep{Traugott1978, Dahl2000}. In the case of the Swedish future constructions, \citet{Hilpert2008} did not find evidence for an intentional phase in the collocation patterns of \textit{komma att \textsc{inf}}. If the Norwegian \textit{kommer til å \textsc{inf}} followed a similar path as its Swedish cognate, i.e., from ingressive aspect directly to prediction, without having passed through intention, then it is possible that \textit{blir å \textsc{inf}} is doing the same now.
+
+Future researchers wanting to disentangle these questions need to take several routes to reach their objective. First, more synchronic data is needed to test the possible difference between native users and adopters of \textit{blir å \textsc{inf}}. This includes uses of the expletive \textit{det blir å} construction as well as the null subject bridging contexts. Second, diachronic data is needed to establish the construction’s path of grammaticalisation: prediction via intention, or prediction directly through the inchoative. Finally, it will be necessary to look at both social variables such as prestige (in our data we find famous bloggers like Sophie Elise) and individual variation, as new constructions often are more polysemous and more prone to idiolectal effects not necessarily visible in frequency-based data.
+
+\section{Online repository}\label{sec:06:6}
+The annotated data, R-history and R plots can be found at the following address: \url{https://osf.io/mh4n6/}
+
+\sloppy
+\printbibliography[heading=subbibliography,notkeyword=this]
+\end{document}

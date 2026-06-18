@@ -1,0 +1,612 @@
+\documentclass[output=paper,colorlinks,citecolor=brown]{langscibook}
+\ChapterDOI{10.5281/zenodo.20541848}
+
+
+
+\author{Lena Schnee\orcid{}\affiliation{Heinrich-Heine-Universität Düsseldorf; Universität Hamburg} and
+        Stefan Hartmann\orcid{}\affiliation{Heinrich-Heine-Universität Düsseldorf}}
+\title[{\textit{werden} + Infinitive and \textit{werden} + Present Participle}]{Constructional template or competitor? Revisiting the relation between German \textit{werden} + Infinitive and \textit{werden} + Present Participle based on new datasets} 
+
+\abstract{The German future construction \textit{werden} + Infinitive has been subject to considerable research efforts and controversial debates. In particular, it is a matter of debate which other constructions can be considered potential predecessors (in the sense of constructional ``templates") and/or competitors. The recent release of reference corpora of Middle and Early New High German offers the possibility of assessing its development based on balanced, systematically compiled datasets. In this paper, we present the results of an in-depth corpus-based analysis that sheds new light on some long-standing debates on the development of \textit{werden} + Infinitive as well as its potential predecessors or competitors. More specifically, we investigate the distribution of slot fillers in \textit{werden} + Infinitive and \textit{werden} + Present Participle constructions using collostructional analysis as well as dispersion measures. The results provide further evidence for the hypothesis that rather than \textit{werden } + Participle being a predecessor of \textit{werden} + Infinitive, the two constructions show parallel developments for a while before they specialize into different niches, with \textit{werden }+ Infinitive becoming a future marker and \textit{werden} + Participle an inchoative marker that only survives in some dialects. }
+
+%move the following commands to the "local..." files of the master project when integrating this chapter
+
+
+
+
+\IfFileExists{../localcommands.tex}{
+   \addbibresource{../localbibliography.bib}
+   \input{../localpackages}
+   \input{../localcommands}
+   \input{../localhyphenation}
+   \boolfalse{bookcompile}
+   \togglepaper[3]%%chapternumber
+}{}
+
+\begin{document}
+\maketitle
+
+
+\section{Introduction} \label{sec:hs:intro}
+
+In present-day German, there are essentially two main ways of marking future reference: On the one hand, the periphrastic form \textit{werden} `become' + Infinitive can be used, as in \xref{ex:hs:futurwerden}. On the other hand, one can make use of the futurate present, i.e. a present-tense form that refers to a future event, as in \xref{ex:hs:futuratepresent}.
+
+\ea
+    \label{ex:hs:futur}
+    \ea \label{ex:hs:futurwerden}
+    \gll Morgen werde ich das Kapitel zu Ende schreiben. \\
+    Tomorrow \textsc{fut} I the chapter to end write. \\
+    \glt `Tomorrow I will finish writing the chapter.'
+
+    \ex \label{ex:hs:futuratepresent}
+    \gll Morgen schreibe ich das Kapitel zu Ende. \\
+    Tomorrow write I the chapter to end. \\
+    \glt `Tomorrow I will finish writing the chapter.'
+    \z
+    \z
+
+The historical genesis of \textit{werden} + Infinitive as well as its status in present-day German have been subject to considerable debate. To discuss the latter aspect first, i.e. its grammatical status in present-day German, it is a matter of debate whether the construction can actually be seen as a future construction \citep[e.g.][]{saltveitBesitztDeutscheSprache1960, vater1975}. For example, \citet{vater1975} argues that \textit{werden} in combination with the infinitive does not express temporal relations different from those that can be expressed with the futurate present, and thus cannot be considered a future tense form. Indeed, it can be considered an open question whether or not the \textit{werden} + Infinitive construction should be regarded as a future \textit{tense} form. However, even if we decide not to treat it as a tense in its own right, i.e. not on a par with tenses like the simple present or the simple past, it can still be considered a future \textit{construction} in the sense that it is used in a systematic way to refer to future events. Thus, we agree with \citet[154]{Hilpert2008} that ``the modalist-temporalist debate should therefore be abandoned in favor of a discussion of how the temporal and modal meanings of \textit{werden} relate to each other."
+
+Regarding the historical development of \textit{werden} + Infinitive, key questions revolve around the question of which constructions can be considered potential predecessors and/or competitors of the pattern. According to the textbook scenario, the construction \textit{werden} + Present Participle, as in \xref{ex:hs:tatian}, played a major role in the development of \textit{werden} + Infinitive, which prevailed over a number of other candidates that were occasionally used with future reference in earlier stages of German, especially modal verbs such as Old High German \textit{skulan} `shall' or, less frequently, \textit{wellen} `want' or \textit{mugan} `can' \citep[see][144--148]{szczepaniakGrammatikalisierungImDeutschen2011}. 
+
+\ea \label{ex:hs:tatian}
+\gll inti nu uuirdist thu suigenti \\
+And now become.\textsc{2sg} you be-silent.\textsc{prs.ptcp.} \\
+\glt `And now you become silent' (Tatian 2,9, quoted from \citeauthor{szczepaniakGrammatikalisierungImDeutschen2011} \citeyear{szczepaniakGrammatikalisierungImDeutschen2011}: 144)
+\z
+
+Several scenarios have been proposed to explain the rise of \textit{werden} + Infinitive (see Section \ref{sec:hs:emergence} below). However, many studies had to work with comparatively limited datasets \citep[e.g.][]{Schmid2000}. Over the last decade, reference corpora covering the historical stages of (Low and High) German have become available that allow us to revisit such long-standing research questions on the basis of a fairly large amount of data. 
+
+In this paper, we revisit the competition between \textit{werden} + Infinitive and what is arguably its most relevant competitor, \textit{werden} + Present Participle (henceforth just \textit{werden} + Participle), in Middle High German (c. 1050--1350) and Early New High German (c. 1350--1650)\footnote{In the present paper, we will focus on the development of \textit{werden} + Infinitive and \textit{werden} + Participle in High German; see Ihden \& Schnee (this volume) for an in-depth discussion of Low German.} based on data from the reference corpora of these two stages of German. We will first give a brief overview of previous research (Section \ref{sec:hs:emergence}), before we introduce our data as well as our annotation guidelines (Section \ref{sec:hs:dataandmethods}). We focus on three aspects: firstly, we take a closer look at the frequency and productivity of both constructions in the light of the evidence that the newly available reference corpora of historical stages of German offer. Secondly, we investigate the (distribution of) the slot fillers in the two constructions that are usually seen as the most relevant competitors, \textit{werden} + Infinitive on the one hand and \textit{werden} + Present Participle on the other.  And thirdly, we zero in on the question of whether or not the constructions actually clearly encode future reference in the contexts in which they appear. After presenting our results in Section \ref{sec:hs:results}, we discuss to what extent the results can shed new light on the question of how \textit{werden} + Infinitive developed (Section \ref{sec:hs:discussion}). 
+
+
+
+\section{The emergence of \textit{werden} + Infinitive} \label{sec:hs:emergence}
+% - relevant theories/scenarios, reference Westvik's overview
+
+\subsection{State of the art} \label{sec:hs:whatdoweknow}
+
+\textit{werden} + Infinitive is probably among the most well-investigated constructions in German. Hence, this section cannot offer an even remotely comprehensive overview of previous studies. Instead, we will focus on two aspects that are particularly relevant for our research: we first discuss grammaticalization scenarios that have been proposed for \textit{werden} + Infinitive (Section \ref{sec:hs:scenarios}), before we turn to an overview of relevant studies that have taken a quantitative corpus-based approach to the \textit{werden} + Infinitive construction and its competitors, including very early studies that can be regarded as examples of quantitative corpus linguistics \textit{avant la lettre} (Section \ref{sec:hs:quant}).
+
+\subsubsection{Scenarios of the diachronic development of \textit{werden} + Infinitive} \label{sec:hs:scenarios}
+
+ As already mentioned in the Introduction (Section \ref{sec:hs:intro}), there are a number of scenarios that have been proposed for the emergence of \textit{werden} + Infinitive. In his comprehensive review paper on this topic, \citet[]{Westvik2000}{} singles out six major hypotheses, or theories, as he calls them. We briefly summarize these hypotheses below, adding a more recent one proposed by \citet[]{Jäger2024}; Table \ref{tab:hs:westviktheories} gives an overview of the different scenarios.
+ 
+% Define new column type for left-aligned columns within tabularx
+% \newcolumntype{L}{>{\raggedright\arraybackslash}p{0.3\textwidth}}  % Left column
+
+\begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{QK}
+    \lsptoprule
+         {Theory} & {Explanation: \textit{werden} + Infinitive  ...} \\ 
+         \midrule
+         Erosion theory (\textit{Abschleifungstheorie}) & ...emerged from \textit{werden} + Present Participle via phonological erosion\\  
+         \midrule
+         Confusion theory  (\textit{Konfusionstheorie}) & ...emerged from \textit{werden} + Present Participle through a ``confusion" between present participles and inflected infinitives\\ 
+         \midrule
+         Autonomy theory (\textit{Autonomietheorie}) & ...existed as an autonomous construction before it ``merged" with \textit{werden} + Participle\\ 
+         \midrule
+         Analogy theory (\textit{Analogietheorie}) & ...emerged in analogy to other constructions, especially constructions with \textit{werden}, but also e.g. inchoative constructions\\
+         \midrule
+         Contamination theory (\textit{Kontaminationstheorie}) & ... emerged in analogy to constructions with modal verbs and infinitives\\ 
+         \midrule
+         Interference theory (\textit{Interferenztheorie}) & ... as a loan construction modeled on Czech \textit{budu} + Infinitive\\
+         \midrule
+         Reanalysis theory & \textit{werden} + Infinitive as a reanalysis of \textit{werden} + Past Participle constructions\\
+         \lspbottomrule
+    \end{tabularx}
+    \caption{The six scenarios for the emergence of \textit{werden} + Infinitive proposed by \citep[][]{Westvik2000}, plus \citegen{Jäger2024} reanalysis hypothesis. The German names in brackets are Saltveit's original terms for the hypotheses.}
+    \label{tab:hs:westviktheories}
+\end{table}
+
+
+\noindent The oldest among the hypotheses reviewed by \citet[]{Westvik2000} is what he calls the ``erosion theory" (\textit{Abschleifungstheorie}), according to which \textit{werden} + Infinitive emerged from \textit{werden} + Present Participle. On this view, the participle, as in MHG \textit{ir werdint lachinde}, lit. `you become laughing', underwent phonological erosion, which caused the present participle to become homophonous with the infinitive (\textit{lachend} `laugh-\textsc{PRT}' > \textit{lachen} `laugh-\textsc{INF}'). However, \citet{Kleiner1925} already showed that this hypothesis is only plausible in very few dialects of German. More specifically, this hypothesis is not supported by evidence regarding the spatial development of the two phenomena: \textit{werden} + infinitive first expanding in the South of the German-speaking area and -\textit{d}-deletion starting prominently in Low German, i.e. in the North. Instead, \citet[]{Kleiner1925}{} argued for what \citet[236]{Westvik2000}{} calls the ``confusion theory" (\textit{Konfusionstheorie}). This hypothesis also assumes that the present participle forms lost their endings at some point, but offers a more complex explanation instead of the previous, purely phonological account. According to this hypothesis, in MHG, a ``contamination" took place between the present participle on the one hand, and the inflected infinitive on the other: In Middle High German, the regular genitive and dative forms of the infinitive in its nominalized use -- the so-called gerund -- were \textit{-ens} and \textit{-ene} (e.g. \textit{arbeitene} `work-\textsc{dat}.'; see \citeauthor{Hartmann2021} \citeyear{Hartmann2021}: 367). According to \citet[58]{Kleiner1925}{}, the ending \textit{-de(s)} occasionally starts to occur in the oblique cases of the inflected infinitive. Thus, they become identical to the present participle. Kleiner now assumes that the present participle forms lost their \textit{-de} endings in analogy to the regular forms of the gerund. However, both \citet[7]{Schmid2000}{} and \citet[325]{pfefferkornPeriphrastischenFuturformenIm2005}{} point out that this hypothesis would only be convincing if such a contamination could be observed for present participles in general, not only for those that co-occur with \textit{werden}. This, however, is not the case. 
+
+While both of the aforementioned early theories posit one specific construction, i.e. \textit{werden} + Present Participle, as predecessor of \textit{werden} + Infinitive, more recent ones instead assume a polygenetic origin of the construction. According to \citegen{Saltveit1962} approach, dubbed ``autonomy theory" (\textit{Autonomietheorie)} by \citeauthor{Westvik2000} (\citeyear{Westvik2000}: 236), \textit{werden} + Infinitive and \textit{werden} + Present Participle used to be two semantically and syntactically different structures, with \textit{werden} + Infinitive originally having modal meaning. Hence, \textit{werden} + Infinitive is not seen as a secondary development: instead, Saltveit assumes that \textit{werden} + Infinitive already existed as an autonomous construction before it ``merged" with \textit{werden} + Present Participle \citep[see][236]{Westvik2000}{}{}.  
+
+A number of approaches assume a central role of analogy, which is why \citet[237]{Westvik2000}{} summarizes them under the label of ``analogy theory". \citet[]{Wilmanns1899}{} assumed that \textit{werden} + Infinitive was formed in analogy to verbs like \textit{biginnan} `begin', while also assuming a major role of the phonological erosion of the participial ending leading to a loss of the distinction between participle and infinitive. \citet[9]{kurrelmeyer1904}{} sees \textit{werden} + Infinitive as ``arising from a number of influences", including the German passive form (\textit{werden} + past participle), the use of \textit{werden} with a predicative noun or adjective, and the construction \textit{werden} + present participle. In a similar vein, \citet[]{Kraemer2005}{} assumes that \textit{werden} + Infinitive emerged in analogy to \textit{werden} + present participle and other inchoative constructions such as \textit{beginnen} + infinitive. However, \citet[140]{fleischerHistorischeSyntaxDeutschen2011}{} point out that Krämer does not substantiate her hypothesis based on authentic data.
+
+In a similar vein, \citegen{Schmid2000} ``contamination theory" assumes that constructions with modal verbs and infinitive has acted as analogical templates for \textit{werden} + Infinitive. \citet[][]{DiewaldHabermann2005}{}{} also argue that analogical influence was key in the genesis of \textit{werden} + Infinitive, but they assume that not modal verb constructions but rather verbs that are similar to werden in \textit{meaning}, such as \textit{beginnen} `begin', have played the most crucial role in this process. In addition, they hypothesize that language contact with Latin contributed significantly to the prevalence of \textit{werden} + Infinitive as future marker \citep[241]{DiewaldHabermann2005}{}. 
+
+Work on \textit{werden} + Infinitive (and its competitors) has often singled out the fact that the grammaticalization of `become' as a future marker is typologically quite unusual \citep[e.g.][125]{Heine1995} -- even within the West Germanic languages, German, along with its close relatives Yiddish and Luxembourgish, stands out in its use of \textit{werden} `become' as a future marker \citep[][364]{abrahamFuturTypologieGermanischenSprachen1989}. \citet[][86]{Kuteva2019} only mention Russian \textit{budu} `I will be' + Infinitive and Estonian \textit{saama} + \textit{ma}-infinitive as further examples, with the latter being a contact-induced variant imposed on Standard Estonian by German language reformers. However, \textit{budu} + Infinitive also exists in Czech. While \citet[]{roslerBeobachtungenUndGedanken1952} assumes that the Czech construction is a structural loan from German, \citet[]{leissZurEntstehungNeuhochdeutschen1985} hypothesizes that it might actually have been the other way around, and that \textit{werden} + Infinitive emerged as a loan from Czech. This is called ``interference theory" (\textit{Interferenztheorie}) by \citet[236]{Westvik2000}, but as \citet[]{Westvik2000}
+ also mentions, this idea has met with significant skepticism; see e.g. \citet[156--157]{Kotin2003} for a critical discussion of Leiss' line of reasoning.
+
+ An entirely new explanation for the emergence and expansion of \textit{werden} + Infinitive has recently been proposed by \citet[]{Jäger2024}{}.  She hypothesizes that the construction emerged through a reanalysis of forms in the copula construction \textit{werden} + past participle that show a syncretism between infinitive and past participle, as in \xref{ex:hs:jaeger} (for a brief discussion of this scenario, also see Wiemer, this volume). In the original structure, \textit{werden} serves as a copula and the past participle functions as an adjective-like predicate noun.  
+
+\ea \label{ex:hs:jaeger}
+    \gll huan-ēr uurði imu thiu tīd kuman, that …\\
+    when would him the time come that...\\
+    \glt `when for him the time would come that...' (Heliand, quoted from \cite[191]{Jäger2024})  \\
+    \z
+
+She argues that this scenario offers an explanation for several of the questions that are still open, all of which arguably none of the aforementioned theories can account for: (i) Why did \textit{werden} as a copula verb, normally combining with NPs and AdjPs, combine with infinitival forms? (ii) Why did its expansion happen in the 15\textsuperscript{th} and 16\textsuperscript{th} centuries? (iii) Why did the construction only emerge in High German? 
+
+Starting out with the first of these questions, she shows that there are ambiguous instances where the complement of \textit{werden} can be interpreted either as a past participle or as an infinitive. These only occur with a fairly limited subset of verbs that fulfills certain formal (syncretism of infinitive and past participle) and semantic (the past participle in predicative or attributive usage must refer to the subject) requirements (see \citeauthor{Jäger2024} \citeyear{Jäger2024} for a detailed elaboration of both requirements).  Based on these contexts, \citep[][195]{Jäger2024} proposes a grammaticalization scenario parallel to that of the perfect with \textit{sein} `be', developing from full verb to copula to auxiliary (with the additional step of a reanalysis Part. II > infinitive in the case of the \textit{werden} future). As for the second question, \citet{Jäger2024} argues that the possibility of aspect marking with the prefix \textit{ge-} decreased in the 15\textsuperscript{th} and 16\textsuperscript{th} centuries. \textit{ge-} is usually said to mark perfectivity/telicity (but see \cite{fleissnerPrafixGiIm2023} for an alternative analysis). From Old High German onwards, \textit{gi-/ge-} mostly occurred in past participles, but in Old and Middle High German, the prefix was usually omitted in the case of past participles of verbs that were already perfective, e.g. \textit{funden} `found' (past participle), \textit{komen} `come' (past participle). She argues that the reanalysis Past Participle > Infinitive should predominantly occur in the case of those verbs because there is no \textit{gi-/ga-/ge-} prefix that would set the infinitive apart from the infinitive (although they are only fully homonymous in some cases, e.g. \textit{komen}, but not in others, e.g. \textit{funden} vs. \textit{finden}). The results of her corpus study of Old High German and Old Saxon  offer some support for her hypothesis. First of all, she argues that the extremely infrequent occurrence of \textit{werden} + present participle indicates that it is unlikely for this structure to be the origin of, or have served as a model for, the future construction \textit{werden} + Infinitive. \citep[14]{Jäger2024}. The passive construction, \textit{werden} + past participle of transitive verbs, is by far the most frequent construction with \textit{werden}. While the construction is found to be `well established' with verbs that meet the semantic criterion, and `quite remarkable' with such that meet the formal criteria, the combination of both features is found quite rarely: looking only at instances with present tense forms of \textit{werden} (excluding past and infinitive forms), Jäger only finds nine instances. While this does not necessarily weaken her hypothesis, the validity of these findings may have to be taken with caution, as eight of the instances she finds come from the Old Saxon \textit{Heliand}. Apart from the fact that the evidence is predominantly Old Saxon (only one is from Notker), this is a text that is difficult to classify in many respects \citep[see e.g.][]{glauchNotkerIIISt2013}.
+%TO-DO: sum up more specifically, which scenarios are more likely, which are debated/refuted. (What are some predictions for corpus studies still to look at). 
+To conclude this section, some of the suggested scenarios appear to be more plausible then others. Both the erosion theory (I) and the confusion theory (II) could not be confirmed by empirical data, as is the case with the interference theory (VI). Generally, the prevailing opinion is that the most plausible scenarios are those  that assume a more complex interaction of multiple factors, i. e.  the analogy theory (IV) and the contamination theory (V).
+
+In sum, then, the question of how \textit{werden} + Infinitive developed is still very much open, and while it might be impossible to give a definitive answer, we can at least check the plausibility of the scenarios by taking a closer (quantitative and qualitative) look at the existing data. As the present paper focuses on the competition between \textit{werden} + Infinitive and \textit{werden} + Participle, we cannot do justice to all hypotheses outlined above to the same degree, but we can critically examine some of the most influential hypotheses, which tend to assume that \textit{werden} + Participle has played some role in the development of \textit{werden} + Infinitive, either as its main template or as one constructional template among others.
+ 
+% \citep{heineGermanWerdenFuture1995} has offered a detailed grammaticalization scenario for German \textit{werden} + Infinitive that is compatible with the widely attested grammaticalization pathway \textit{inchoative > intention > future}.  This also yields an interesting prediction that can be tested empirically: if \textit{werden} + Infinitive was used to express intention, then we might expect to see more first-person subject referents, as ``first-person subjects are more likely to show volition than other grammatical persons" \citep[][92]{tagliamonteGrammaticalizationEarlyStage2014}. We will return to this question in the quantitative analysis below.
+
+\subsubsection{Quantitative corpus-based studies} \label{sec:hs:quant}
+
+Recent work has shifted the focus to a more thoroughly empirical investigation of the development of \textit{werden} + Infinitive. A main tenet of this line of research has been to test existing theories by assessing the verbs that the construction combines with. However, it should be stressed that even long before the advent of linguistic corpora in the modern sense, a number of researchers have conducted large-scale analyses on the basis of impressive amounts of data. For example, \citegen{Kleiner1925} aforementioned work or \citegen{rick1905} study on \textit{werden} + Present Participle present comprehensive qualitative and even quantitative analyses of fairly large datasets. The same goes for \citet[]{kurrelmeyer1904}, who looked at the distribution of future constructions in more than 200 texts from the 12\textsuperscript{th} to the 15\textsuperscript{th} century. For the High German dialects, he analyzed 20,236 instances of future reference, counting instances of present tense, \textit{sollen} + infinitive, \textit{wollen} + infinitive, \textit{werden} + infinitive and \textit{werden} + present participle, as well as \textit{werden} + adjective or noun and \textit{werden} + perfect participle. He further differentiated his data by grammatical person. In his data, present tense and modal verbs make up the majority of the futurate items. He observes an increase in \textit{werden} + Infinitive and \textit{werden} + Participle from the 14\textsuperscript{th} century onwards, which is in line with the observations reported above. While Kurrelmeyer's study makes use of a remarkably comprehensive dataset, it has some major limitations, which is why \citet[16]{Luther2013}  points out that this study does not fully meet today's scientific standards (in particular, his database is not fully transparent). 
+
+More recent quantitative studies have typically used smaller datasets and/or focused on only one of the constructions taken into account in the present paper.  \citet[147--153]{Hilpert2008}{} uses diachronic distinctive collexeme analysis to assess the semantic development of the \textit{werden} + Infinitive construction over time. Distinctive collexeme analysis is a method that is usually employed to compare two (or more) constructions with an open slot in terms of their slot fillers \citep[][]{griesExtendingCollostructionalAnalysis2004}{}{}. Hilpert's adaptation of the method instead compares the same construction at different points in time \citep[][]{hilpertDistinctiveCollexemeAnalysis2006}{}{}. Drawing on the Bonn Early New High German Corpus (FnhdC) and texts from Project Gutenberg, and slicing the data into four periods, he shows that the verbs attracted to the first period are invariably dynamic, while the later periods contain stative verbs like \textit{fehlen} `be missing'. In later periods, terms like \textit{verstehen} `understand' and \textit{vergessen} `forget' become more relevant, which he interprets as evidence  ``that speaker-oriented modal meanings are on the rise in this period of German." \citep[][152]{Hilpert2008}{}{}. 
+
+\citet[]{Hartmann2021}{} and \citet[]{hartmannFuturkonstruktionenImWandel2023}{} investigate the diachronic development of \textit{werden} + Infinitive and \textit{werden} + Participle in terms of \textit{Aktionsart}. As a lexical-semantic category, \textit{Aktionsart} refers, roughly speaking, to the way the action described by a verb unfolds \citep[][]{katnyAktionsart2018}{}{}. The importance of \textit{Aktionsart} is twofold: On the one hand, it has been argued that present tense forms can be inherently future-oriented depending on the verb's \textit{Aktionsart} \citep[][9]{Saltveit1962}{}{}, with telic verbs like \textit{retten} `to save' or continuative ones like \textit{bleiben} `to stay/remain' typically evoking a future-oriented reading and atelic ones like \textit{haben} `to have' or \textit{sein} `to be' a present-oriented one. This entails that over the course of grammaticalization, we would expect a future construction to seize the latter type of verbs first before spreading to verbs that tend to evoke a future reading when used in the present form. On the other hand, \textit{Aktionsart} can also help characterize a construction's selectional preferences, which, from a usage-based Construction Grammar perspective, can give valuable clues to its constructional semantics \citep[][265]{hartmannFuturkonstruktionenImWandel2023}{}{}. Drawing on the well-known typology proposed by \citet[]{Vendler1957}{}, and on data covering the time from the 14\textsuperscript{th} up to and including the 17\textsuperscript{th} century, it can be shown that both \textit{werden} + Infinitive and \textit{werden} + Participle show an increase in the proportion of telic verbs they combine with. 
+
+Another recent corpus study was conducted by \citet{concu_werden_2022} on the basis of the Reference Corpus of Middle High German (\textit{Referenzkorpus Mittelhochdeutsch}, REM) and the Bonn Early New High German Corpus (\textit{Bonner Frühneuhochdeutschkorpus}, FnhdC), both of which are also used in the present study. Like many other studies on \textit{werden} + Infinitive \citep[e.g.][]{Kotin2003}, \citet[][29]{concu_werden_2022} explicitly focuses on the development of the verb \textit{werden}.  The goal of her study was to refute the popular scenario of \textit{werden} + Infinitive emerging from \textit{werden} + Present Participle. Her analysis is based on subsets from both corpora that are roughly balanced regarding language region over time, and include different text types. Her data contain 110 instances of the two constructions (from 30 different texts) from the REM and 410 instances (from 10 different texts) from the FnhdC. She only finds the constructions in the later texts (from the 13th and the 14th century) of her REM subset, \textit{werden} + Present Participle prevailing by far over \textit{werden} + Infinitive. The FnhdC subset contains \textit{werden} + Infintive in all centuries, while \textit{werden} + Present Participle is only attested marginally after the 14th century, which is in line with the frequencies found in the entire FnhdC (see \cite{Hartmann2021}; \citeauthor{hartmannFuturkonstruktionenImWandel2023} \citeyear{hartmannFuturkonstruktionenImWandel2023}, also see Section \ref{sec:hs:results} below).  Like \citet[][]{Hartmann2021}, she observes a coexistence of the two constructions in Middle High German with a clear overlap in the types of verbs they combine with. She sees this as evidence that the relationship between the constructions is one of siblings -- referencing \citegen{Kotin2003} notion of a `twin construction' -- rather than parent and child, which entails that \textit{werden} + Infinitive did not originate from \textit{werden} + Present Participle.  
+
+The FnhdC data leads her to another conclusion concerning the time when \textit{werden} + Infinitive grammaticalized. While in the REM Data both constructions also occur with \textit{werden} in the preterite tense, this usage is becoming more restricted in the course of the 14\textsuperscript{th} century, by the end of which she does not find any more preterite occurrences of indicative \textit{werden} + Infinitive. According to her, this can be described as a loss in autonomy of the verb \textit{werden}, and as an indicator that the overall construction is being strengthened as a unit. In the 16\textsuperscript{th} century she finds the first instance of the main verb \textit{werden} being used in the \textit{werden} + Infinitive construction (e.g. \textit{Er wirt ein priester Gottes \textbf{werden}} `He will become a priest of God', Samson, 16.2, REF), indicating the full grammaticalization of the construction around this time \citep[see also][17]{Schmid2000}.
+
+Concu's results show interesting differences to \citet[]{Hartmann2021}{} and \citet[]{hartmannFuturkonstruktionenImWandel2023}{}. Most importantly, she only finds durative verbs in the \textit{werden} + Present Participle construction. Also, she reports inchoative readings only for \textit{werden} + Present Participle. This, however, can probably be attributed to different operationalizations of the \textit{Aktionsart} categories, which shows that when analyzing such notoriously difficult data, it is essential to make the annotation criteria as transparent as possible, and to ideally share the annotated data publicly. The diverging results also show that the jury is still out regarding the development of \textit{werden} + Infinitive and its relation to \textit{werden} + Participle, which leads us to a brief discussion of some questions that are currently still open.
+
+\subsection{Some open questions} \label{sec:hs:openquestions}
+
+Despite extensive research, a number of questions regarding German \textit{werden} + Infinitive remain unresolved. There may not be any definitive answers for some of those open questions; however, to the extent that we can empirically address them, the newly available reference corpora of Middle High German and Early New High German offer promising ways of looking at those long-standing questions. In particular, the overarching question remains which of the various scenarios proposed in the literature is most compatible with the available data. 
+
+Of course, even the most exhaustive set of historical data will hardly be able to resolve the open issues once and for all. The different scenarios entail fairly similar predictions, which is why a detailed look at specific aspects of the diachronic development of the different patterns is necessary. For example, as argued in \citet[][]{Hartmann2021}{}{} and \citet[]{hartmannFuturkonstruktionenImWandel2023}{}, the aspectual semantics of the slot fillers can give valuable clues to the development of the different patterns. On a more general level, it can be informative to take an explorative look at the collocational preferences of the constructions in question: if, for example, different patterns show similar developments regarding their ``collo-profiles" (in the sense of \citeauthor{herbstValencyArgumentStructure2019} \citeyear{herbstValencyArgumentStructure2019}, i.e. the behavior that a pattern shows with regard to its collocational behavior), we can reasonably expect that they influence each other; if, by contrast, their ``collo-profiles" seem to drift apart over time, we can assume that they are undergoing a process of differentiation in the sense of \citet[]{DeSmet2018}{}. This is the main focus of the present paper. 
+
+Another question that has not been fully and satisfactorily answered yet pertains to the semantics of the two constructions, especially to the division of labor between inchoative and futurate readings and how this division of labor changes over time. For \textit{werden} + Participle, it is a matter of debate to what extent it can encode futurity in the first place. \citet[385]{Welke2005} argues that all instances of \textit{werden} + Participle can be interpreted as progressive forms. \citet[325--326]{pfefferkornPeriphrastischenFuturformenIm2005} takes a less radical stance, arguing that \textit{werden} + Participle can have futurate meaning but that it can only express a change of state in the immediate future, and is thus very similar to \textit{werden} + Adjective, keeping the ingressive/inchoative semantics of the verb \textit{werden}. But even for \textit{werden} + Infinitive, as already hinted at in Section \ref{sec:hs:intro}, it is a matter of debate whether its semantics can be described in terms of `pure' future marking, free from any modal meaning, as claimed by \citet[132]{dalKurzeDeutscheSyntax1962}, or, to the contrary, whether \textit{werden} + Infinitive has to be regarded as a modal rather than a temporal construction (\cite{vater1975}; also see \cite{Heine1995}: 134). There is a broad consensus now that the construction combines modal and temporal meaning elements \citep[see][154]{Hilpert2008}.  Note that both \textit{werden} + Infinitive and \textit{werden} + Participle are attested with the auxiliary \textit{werden} in the past tense in the Middle High German and Early New High German periods, which indicates that the constructions must still have been closely connected to functions other than future marking at that time. A closer analysis of the contexts in which instances of the constructions occur, as well as of their slot fillers, can potentially help determine the degree to which the constructions actually encode future meaning at different points in time.
+
+While much previous research, with some notable exceptions like \citep[][]{Hilpert2008}, has mostly focused on the role of the auxiliary \textit{werden} in the grammaticalization process in question, we argue that taking the dependent verbs into account is at least as important, and therefore focus on their distribution in our corpora as well as their semantic properties and on the question of how those aspects change over time. 
+ 
+
+
+\section{Data and methods} \label{sec:hs:dataandmethods}
+
+\subsection{Corpora: REM, REF, and FnhdC} \label{sec:hs:corpora}
+%Distribution
+The data we draw on come from the reference corpora of Middle High German (Referenzkorpus Mittelhochdeutsch, REM) and Early New High German (Referenzkorpus Frühneuhochdeutsch, REF). Both corpora have been compiled with the aim to give a representative sample of the text production of the respective periods, balancing the data for different text types and regional variants \citep[see e.g.][]{dipperHistorischeLinguistik202018}. 
+
+The Reference Corpus of Middle High German (1050--1350) \citep{kleinReferenzkorpusMittelhochdeutsch105013502016} contains nearly 2.5 million tokens from a total of 395\footnote{See our documentation in the \hyperref[sec:hs:dataavailability]{supplementary material} for an explanation of the difference in the number of texts compared to the official website of the REM.} different texts. The texts have been assembled with the aim of obtaining a balanced set regarding time, region and text type/topic; according to one assessment, this goal was met at least regarding the parameters of time and region \citep[see][p.6]{kopfKorpusKorpusHerausforderungen2019}. As for text types and topics, there is a skew towards religious texts, which clearly predominate in the corpus (62 \%), followed with a considerable gap by literary (17 \%) and law texts (12 \%). Other text types are marginally represented, namely science-related texts 
+(8.7 \%) and textual witnesses of everyday life (0.04 \%).\footnote{The text type grouping used here can be found in the metadata entries for ``topic" in REM and ``genre" in REF.}
+
+The Reference Corpus of Early New High German (1350--1650) \citep{wegeraReferenzkorpusFruhneuhochdeutsch135016502021} contains nearly 3.5 million tokens from a total of 190 different texts. The corpus is comparably balanced regarding the three structuring parameters. Overall, religious texts predominate, if only slightly, amounting to 32 \% of the tokens. They are more closely followed by science related (21 \%) and literary texts (20 \%). Textual witnesses from everyday life make up 17 \% in the REF, the least represented category is law texts (10 \%).
+There is a slight imbalance regarding the distribution over time, as the texts from between 1450 and 1550 make up nearly half of the tokens in the entire corpus. All other time slots are represented with at least 10 \%, however, except for the late 17th Century. The different language areas are well covered in the corpus, Westmitteldeutsch being featured a little more (37 \% of tokens) than the other areas.
+
+For reasons of comparability and clarity, we have adapted the metadata of the corpora in such a way that we can use the same set of metadata for both corpora.\footnote{See the \hyperref[sec:hs:dataavailability]{supplementary material} for a more detailed description.}  In particular, we used unified tagsets for time, language area, and topic; for the latter, we adapted the REF tagset to the one used in the REM corpus, following the assignment proposed by \citet[7]{kopfKorpusKorpusHerausforderungen2019}.
+
+For some analyses that required complex semantic annotation, we used the much smaller Bonn Early New High German Corpus (FnhdC) instead of REF. Both corpora partly overlap: REF contains 24 of the 40 texts contained in the older FnhdC. Among the FnhdC texts not included in REF are those dating after 1650 as well as the  \textit{Oxforder Benediktinerregel} which is already part of the REM. 
+
+\subsection{Data retrieval and annotation} \label{sec:hs:retrieval} 
+For the present study, we used version 1.0 of both REM and REF\footnote{An updated version of REM, version 2.1, has recently become available, but could not be taken into account here.}. The corpora were queried using the Corpus Workbench\footnote{See \href{https://cwb.sourceforge.io/}{https://cwb.sourceforge.io/}; the scripts for converting the original corpus files to CWB's VRT format are available on GitHub: \href{https://github.com/hartmast/rem2cwb}{https://github.com/hartmast/rem2cwb} and \href{https://github.com/hartmast/ref2cwb}{https://github.com/hartmast/ref2cwb} (all links last checked 22/12/2024).}.
+
+In the REM we simply searched for words lemmatized as \textit{werden}, preceeded or followed by an infinitive or a present participle with a distance of up to 5 tokens. We then manually excluded those cases where the infinitive or participle are not a complement to the \textit{werden}-instance. 
+
+Unfortunately, the same procedure proved unfit for the REF, as much of the the (mostly automatic) lemmatization turned out to be incorrect. In order to obtain our data we therefore searched for a total of 127 word forms of \textit{werden}\footnote{We included the forms given by the \textit{Mittelhochdeutsches Handwörterbuch} (\url{https://www.woerterbuchnetz.de/Lexer}, last checked 16/10/2023) as well as the variants found in the FnhdC. We did not limit the search with regard to tense and mode of the \textit{werden} instance. The full list of variants can be found in the \hyperref[sec:hs:dataavailability]{supplementary material}.}, resulting in 36,467 matches that were all checked manually. A total of 14,479 true positives were identified, among which 2,863 have an infinitive and 72 a present participle complement.\footnote{No less than 12.5 \% of these instances would not have been found if we had relied on the automatic lemmatisation.}  We manually added lemmatization for the complement relying on the \citetitle[]{FNHDWB} and, supplementary, the \citetitle[]{DWb}.   
+
+Crucially, when identifying the true positives, we relied on formal criteria, and we did not take into account the semantic criterion of whether or not a specific use of \textit{werden} + Infinitive or \textit{werden} + Participle can be interpreted as referring to a future event: as we are interested in the polyfunctionality of both constructions, we also wanted to take instances into account that are almost certainly not futurate but rather inchoative, like e.g. \xref{ex:hs:gluehende}.
+
+\ea \label{ex:hs:gluehende}
+\gll Die kraft des fuͥres duͥ gat ín den ſteín . dc er reht gluͤíende wírt \\
+The power of-the fire \textsc{refl} goes into the stone . that it right glowing becomes \\
+\glt `The power of the fire goes into the stone so that it becomes properly glowing' (NikP, 14.2, REM)\footnote{When quoting examples from our dataset in this paper, we give a) a short version of the text's title, using the short sigle in the case of REM, b) the half-century from which the text stems, here: second half of the 14\textsuperscript{th} century, and c) the corpus -- REF, REM, or FnhdC.} 
+\z
+
+Another reason for using formal rather than semantic criteria was that futurate and other, e.g. modal, readings often blur into one another, as discussed in Section \ref{sec:hs:emergence}, and are therefore almost impossible to tell apart. Similarly, in the case of \textit{werden} + Participle, we are confronted with the problem that present participles are arguably categorically ambiguous between verbs and adjectives; they are usually used like adjectives \citep[209]{eisenbergGrundrissDeutschenGrammatik2020}, and at last in present-day German, some are clearly lexicalized and detached from their verbal origins (e.g. \textit{blendend} `marvelous, brillant' from \textit{blenden} `glare'). In our sample, there are also some cases where the participles might be considered lexicalized, or at least strongly adjectival in nature, as in the use of \textit{sehend} meaning `seeing' as opposed to `blind', as in \xref{ex:hs:sehendt}. 
+
+\ea \label{ex:hs:sehendt}
+\gll  {vff das} die do nit sehen sehendt werden vnd die do sehent blind werden \\
+so-that those there not see seeing become and those there seeing blind become \\
+\glt `so that those who do not see become seeing and those who see become blind' (Martin Butzers Predig [sic], 16.1, REF)
+\z
+
+Although, from a present-day perspective, the use in \xref{ex:hs:sehendt} may seem quite different from e.g. the one in \xref{ex:hs:liebesehend}, it is hard to tell to what degree the present participle \textit{sehend} is already lexicalized in our data, which is why the true positives were selected on the basis of purely formal criteria. 
+
+\ea \label{ex:hs:liebesehend}
+\gll dz er siech wirt in rechter liebe vntz er dich sehende wirt \\
+that he sick becomes in true love until he you seeing becomes \\
+\glt `that he will become sick in true love until he will see you' (Passionstraktet [sic], 14.2, REF)
+\z
+
+As mentioned in Section \ref{sec:hs:corpora}, we additionally used the Bonn Early New High German Corpus (FnhdC). As this is a manually annotated corpus, we could rely on its lemmatization as well as its morphological annotation for retrieving instances of \textit{werden} followed or preceded by an infinitive or participle in a distance of up to five words. 
+
+The lemmatization as well as the morphological annotation of all true positives was manually corrected. In addition, the data from REM and FnhdC was annotated for markers of future reference in the immediate context, i.e. whether an overt future marker such as a temporal adverbial appears in the context. This can help clarify to what extent the constructions convey futurity on their own.
+
+
+\begin{table}
+\caption{Overview of the true positives across the three corpora, including hits with \textit{werden} in the past tense (excluded from the further analysis, hence greyed out).}
+\label{tab:hs:overview}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllllll}
+\lsptoprule
+                    & \multicolumn{2}{c}{REM} & \multicolumn{2}{c}{REF} & \multicolumn{2}{c}{FnhdC} \\
+                    % \midrule
+                    & present  & \textcolor{gray}{past}  & present  & \textcolor{gray}{past}  & present   & \textcolor{gray}{past}   \\
+                    \midrule
+\textit{werden} + Infinitive & 56       & \textcolor{gray}{30}           & 2863     & \textcolor{gray}{260}          & 515       & \textcolor{gray}{206}           \\
+\textit{werden} + Participle & 145      & \textcolor{gray}{75}           & 72       & \textcolor{gray}{11}           & 11        & \textcolor{gray}{19}           \\
+\lspbottomrule
+\end{tabular}%
+}
+\end{table}
+
+
+
+\subsection{Method: Collostructional analysis} \label{sec:hs:collanal}
+
+Apart from simple frequency counts, we use collostructional analysis \citep[][]{stefanowitschCollostructionalAnalysis2013} to explore the semantic profiles of the verbs that combine with \textit{werden} + Infinitive and \textit{werden} + Participle. Collostructional analysis is a family of approaches that are used to assess the interaction between words and constructions using association measures. Specifically, we use two variants of collostructional analysis:  simple collexeme analysis \citep[][]{stefanowitschCollostructionsInvestigatingInteraction2003} on the one hand, and distinctive collexeme analysis \citep[][]{stefanowitschDistinctiveCollexemeAnalysis2006} on the other. The logic of collostructional analysis is very simple: In the case of simple collexeme analysis, an association measure is computed over a 2x2 table containing a) the frequency of a given word in a given construction, b) the frequency of any other word in the given construction, c) the frequency of the given word in all other constructions, and d) the frequency of all other words in all other constructions (approximated in the present study using the total number of tokens in the corpus). For example, in REF, a) the verb \textit{tun} `do' occurs 59 times in \textit{werden} + Infinitive; b) there are 2,312 instances of \textit{werden} + Infinitive with other verbs than \textit{tun}; c) there are 255 further instances of \textit{tun} in REF outside of \textit{werden} + Infinitive (total frequency in the corpus: 314); d) there are 3,418,972 tokens in the REF corpus, from which the values in a)-c) are subtracted, leaving 3,416,346 as a proxy for ``all other words in all other constructions". This yields a log-likelihood ratio of G\textsuperscript{2} = 556.71. The log-likelihood ratios of the different slot fillers can be used to rank them in terms of their degree of ``attraction" to or ``repulsion" from the construction in question.
+
+Distinctive collexeme analysis follows the same logic, but instead of comparing the frequencies of words within and outside of a specific construction, it compares the frequencies of slot fillers in two (usually near-synonymous or functionally equivalent) constructions. Importantly, this method only takes the frequencies from the constructions themselves into account, not their frequencies in the entire corpus. Again, the method takes four frequencies as input: a) the frequency of a given word Construction A, b) the frequency of the same word in Construction B, c) the frequency of all other words in construction A, d) the frequency of all other words in construction B. 
+
+In the present paper, we use the log-likelihood ratio G\textsuperscript{2} as association measure. There are some debates about which association measure to use in what context \citep[see e.g.][]{wiechmannComputationCollostructionStrength2008}, and many researchers argue that ideally, different measures should be triangulated \citep[e.g.][]{griesFrequencyDispersionAssociation2024}. We will not delve into this discussion here, but instead settle for one widespread measure that we report in the present paper; the \hyperref[sec:hs:dataavailability]{supplementary material} additionally contains the unidirectional word-to-construction and construction-to-word delta p measures (a unidirectional measure of association) and can be used to compute further measures. 
+
+
+\section{Results} \label{sec:hs:results}
+
+In this section, we summarize the main results of our corpus study, starting with general observations on the frequency development of the constructions and their distribution across text types (Section \ref{sec:hs:frequencies}), and then moving on to a more in-depth analysis of the verbs they combine with, using collostructional analysis \ref{sec:hs:collanalysis}. 
+
+In each of the following subsections, we  report the results both for Middle High German and for Early New High German, drawing on REM and REF for all our analyses except for the data annotated for future time reference: Given that this kind of semantic annotation is very complex, we used the Bonn Early New High German corpus (FnhdC) instead of the REF as a much smaller, yet balanced dataset.
+
+\subsection{Frequencies and distribution} \label{sec:hs:frequencies}
+
+We will first take a closer look at the frequencies of the two constructions and at their distribution across time, text types, and language areas. A crucial advantage of the reference corpora is that they allow for assessing these distributional facts in a very simple way based on their metadata. 
+
+One important observation when taking a closer look at the distribution of the constructions in the REM is that both constructions -- especially, however, \textit{werden} + Infinitive -- are quite rare. \textit{werden} + Participle occurs in 49 out of 368 REM texts, \textit{werden} + Infinitive even in just 32. Also, those texts come from a fairly limited set of text types. 90 \%  of all instances are from the domain of religious texts. The few we find in the other domains all date from 1250--1300 or later, except for four instances from the domain of scientific writing, \textit{Wiener Physiologus (Jüngerer Physiologus)} and  \textit{Kaiserchronik A}. Only in ten texts in the REM do we find five or more instances of \textit{werden} with either an infinitive or a present participle. Also, we  we find more than one occurrence of \textit{werden} + infinitive in only two texts, both of which are East Middle German gospel texts from the 14th century: The \textit{Berliner Evangelistar} (mid-14th century) has 13 occurrences (as well as two occurrences of \textit{werden} + Present Participle), the \textit{Evangelienbuch des Matthias von Beheim} (early 14th century) has 6 occurrences and no \textit{werden }+ Present Participle.
+
+We find a more balanced distribution in the REF data, where religious texts account for only about half of the items. Approximately 25\%  come from literary texts and 16\% from scientific texts. Much fewer instances are found in law and everyday life texts. Also, the distribution across texts differs considerably from that in the REM data: More than 90\% of the texts in REF contain instances of one of the two constructions,  and we find more than ten items in more than half of the texts. Among the three texts that have more than a hundred instances are two bible texts, \textit{Das Newe Testament} by Martin Luther and one bible translation by Johannes Eck, as well as one literary piece (drawing on biblical material) \textit{Samson} by Mattheus Rotbletz. While the REM data contain more instances of \textit{werden} + Participle than \textit{werden} + Infinitive, the REF data show a clear skew towards the latter construction. 170 out of the 190 REF texts contain instances of \textit{werden} + Infinitive, while \textit{werden} + Participle is attested in only 31 texts.
+
+To assess the distribution of \textit{werden} + Infinitive and \textit{werden} + Participle across texts quantitatively in more detail, we calculated the normalized Kullback-Leibler divergence as proposed by \citep[][]{griesMoreCarefulCorpus2022} for each of the time slices covered by the corpora (for an extensive discussion of Kullback-Leibler divergence and its applications, see \cite{griesFrequencyDispersionAssociation2024}: 80--169).\footnote{For the calculation of the association measure, we used code from \citet[]{sonningEvaluationTextlevelMeasures2022}.} As pointed out by \citet[]{sonningAdvancingOurUnderstandingforthcoming}, the term \textit{dispersion} can either refer to the pervasiveness of an item (in our case: a construction) in a corpus, or it can denote the evenness of a distribution, with modern dispersion measures such as the Kullback-Leibler divergence being mostly concerned with the latter aspect. The Kullback-Leibler divergence is a directional measure of how much a probability distribution, usually the observed one, diverges from another one, usually the expected one under the null hypothesis of equidispersion \citep[][5]{griesMoreCarefulCorpus2022}.  D\textsubscript{KL\textit{norm}} is a normalized version of the Kullback-Leibler divergence; its values fall between 0 and 1, with 1 representing a perfectly even distribution and 0 an uneven one. For calculating D\textsubscript{KL\textit{norm}} based on our data, we used, on the one hand, the frequency of \textit{werden} + Infinitive or \textit{werden} + Participle in each text and, on the other hand, the overall number of tokens per text, which allowed us to assess the dispersion of the two constructions across texts. As expected, the normalized D\textsubscript{KL} values of of \textit{werden} + Infinitive see a steady increase, indicating that we see a more even distribution across different corpus texts over time, while \textit{werden} + Participle, after an increase in the REM data, becomes limited to only a few texts in the REF data, which is reflected in the declining D\textsubscript{KL} values (Figure \ref{fig:hs:dklnorm}).
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{figures/hartmann_schnee/dklnorm.png}
+    \caption{Dispersion of the instances of \textit{werden} + Infinitive and \textit{werden} + Participle as measured by the Kullback-Leibler divergence D\textsubscript{KL\textit{norm}}.}
+    \label{fig:hs:dklnorm}
+\end{figure}
+
+Figure \ref{fig:hs:rem_ref_freq} shows the general frequency development of both constructions. \newline While \textit{werden} + Participle is quite frequent in the Middle High German period and even increases its frequency considerably over the time covered by the REM, it is far outnumbered by \textit{werden} + Infinitive over the course of the Early New High German period. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{figures/hartmann_schnee/werden_rem_ref_freq.png}
+    \caption{Frequency development of \textit{werden} + Infinitive and \textit{werden} + Present Participle in the Reference Corpus of Middle High German (REM, left) and the Reference Corpus of Early New High German (REF, right). Note the different scales of the y axis.}
+    \label{fig:hs:rem_ref_freq}
+\end{figure}
+
+
+However, the mere frequency of a construction does not tell us much about its productivity, i.e. the extent to which it extends to new cases. The type-token ratio of a construction can be informative in this regard, although it has to be taken with caution as it strongly depends on the sample size \citep[see e.g.][]{baayenCorpusLinguisticsMorphology2009}. Figure \ref{fig:hs:rem_ref_ttr} shows the type-token ratio of the two constructions in both corpora. As the sample size is very small for most periods, the datapoints are accompanied by information on the absolute frequencies of both constructions in each time slice. \textit{werden} + Infinitive shows a fairly high type-token ratio from early on, indicating that it appears with a fair number of different verbs.  \textit{werden} + Participle has a comparatively low TTR in the 13\textsuperscript{th} century, which indicates that there may be a few verbs that it preferentially occurs with, but this may be due to the composition of the corpus for these periods. The TTRs for the 14\textsuperscript{th} century suggest that this construction, too, is quite promiscuous, while the data obtained for \textit{werden} + Participle in REF from the 15\textsuperscript{th} are not really revealing due to the extremely small number of attestations.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{figures/hartmann_schnee/ttr_rem_ref.png}
+    \caption{Type-token ratio in REM and REF}
+    \label{fig:hs:rem_ref_ttr}
+\end{figure}
+
+
+
+
+In the following section, we will take a closer look at the slot fillers of both constructions as well as their semantics.
+
+
+\subsection{Collostructional analysis} \label{sec:hs:collanalysis}
+
+In this section, we summarize the results of the different collostructional analyses that we ran using the REM and REF data. For calculating the collostruction strengths, we used \citegen{flachCollostructionsImplementationFamily2017} package \textit{collostructions} for R \citep[][]{RCoreTeam2021}. 
+
+Let us first take a look at the results of distinctive collexeme analysis. As discussed in Section \ref{sec:hs:collanal}, distinctive collexeme analysis is used to compare the frequencies of slot fillers across two constructions. In this case, the constructions to be compared are \textit{werden} + Infinitive and \textit{werden} + Present Participle. Table \ref{tab:hs:dist_collex_rem} shows the verbs that are significantly attracted to \textit{werden} + Infinitive or \textit{werden} + Participle in the REM data. The first column shows the verbs along with a rough translation, the second and third columns show the frequency of each verb in each of the two constructions. The fourth column indicates the direction of association, i.e. whether the verb is significantly attracted to \textit{werden} + Infinitive or to \textit{werden} + Present Participle. The fifth column shows the log-likelihood ratio G\textsuperscript{2}, and the last column shows the significance (see the table caption for the p-value significance thresholds). 
+
+For all collostructional analyses, we used the lemma annotation available in REM, while in the case of REF, the data were lemmatized by ourselves. The lemmatization corresponds to the dictionary entries in the Middle and Early New High German dictionaries, respectively. Especially when it comes to variants that are ambiguous between a prefixed and a non-prefixed lemma, this annotation is necessarily speculative to some extent -- for example, in the case of a participle form like \textit{gehabt}, it is not necessarily clear whether the corresponding lemma is \textit{haben} or \textit{gehaben} (both mean `have', with slight meaning nuances; as shown by e.g, \cite{fleissnerPrafixGiIm2023}, the exact function of the \textit{ge-} prefix is subject to debate in the literature). Because of this, and even more so due to the small sample sizes especially in the case of the REM data, the results have to be taken with some caution.
+
+Turning to the results in Table \ref{tab:hs:dist_collex_rem}, only one verb emerges as a distinctive collexeme significantly attracted to \textit{werden} + Participle, namely \textit{ge-sëhen} `see'. As \linebreak shown in \xref{ex:hs:gesehent}, its use in \textit{werden} + Participle usually refers to blind people regaining their eyesight (\textit{sehend} `seeing'). Five verbs are significantly attracted to \textit{werden} + Infinitive; given the overall low frequency of the \textit{werden} + Infinitive construction in Middle High German, all of them are very infrequent, and they mainly have in common that they do not occur in the \textit{werden} + Participle construction (except for \textit{entvâhen}, which occurs once in \textit{werden} + Participle). The distinctive collexeme analysis on the basis of the REF data, the results of which are shown in Table \ref{tab:hs:dist_collex_ref}, proves more informative thanks to the much larger sample size, despite the fact that the attestations \textit{werden} + Participle are massively outnumbered by those of \textit{werden} + Infinitive. Four items are identified as being significantly attracted to \textit{werden} + Infinitive: \textit{geben} `give', \textit{haben} `have', \textit{sein} `be', and \textit{werden} `become'. This fits in well with the results of the simple collexeme analysis discussed below, the results of which are reported in Table \ref{simple_collex_werden_inf_ref} and which shows that \textit{werden} + Infinitive in Early New High German tends to combine with what, borrowing a term from first language acquisition, can be called general-purpose verbs (\cite{clarkFirstLanguageAcquisition2009}: 170; also see \cite{goldbergConstructionsConstructionGrammar1995}: 40), i.e. highly frequent and semantically ``light" verbs. All remaining items in Table \ref{tab:hs:dist_collex_ref} are significantly attracted to \textit{werden} + Participle -- most of them, however, simply because they occur once in the construction and never or just once in \textit{werden} + Infinitive. Among all the collexemes identified as significantly attracted to \textit{werden} + Participle according to the distinctive collexeme analysis, only the verbum dicendum \textit{sprechen} `speak', which also emerges as a strongly attracted collexeme of \textit{werden} + Participle in the simple collexeme analysis both for the REM and the REF data (Tables \ref{simple_collex_werden_part_rem} and \ref{simple_collex_werden_part_ref}), occurs more than five times.
+ 
+\ea
+\label{ex:hs:gesehent}
+\textit{sô wirdet ouch der denne dâ gesehente -- der êr blint was} `so this there becomes seeing then -- he who was blind' (PrRoth R, 13.1, REM)
+\z
+
+
+
+\begin{table}[ht] 
+\caption{Results of a distinctive collexeme analysis for \textit{werden} + Participle and \textit{werden} + Infinitive in the Reference Corpus of Middle High German. Only significantly attracted or repelled collexemes shown. ***** p < .00001, ****: p < .0001, *** p < .001, ** p < .01, * p < .05.}
+\label{tab:hs:dist_collex_rem}
+\centering
+\footnotesize
+\begin{tabular}{rlrrlrl}
+  \lsptoprule
+ & Collexeme & Freq in  & Freq in & Direction &  G\textsuperscript{2} & Significance \\
+ &  &  werden+Inf & werden+Part &  &  &  \\
+  \midrule
+  1 & be-halten `keep'&   4 &   0 & Infinitive & 10.44 & ** \\ 
+  2 & ver-gëben `forgive'&   3 &   0 & Infinitive & 7.79 & ** \\ 
+  3 & ver-stôzen `outcast'&   3 &   0 & Infinitive & 7.79 & ** \\ 
+  4 & mëzzen `measure'&   2 &   0 & Infinitive & 5.16 & * \\ 
+  5 & ent-vâhen `receive'&   3 &   1 & Infinitive & 3.91 & * \\ 
+  6 & ge-sëhen `see'&   0 &  10 & Participle & 6.73 & ** \\ 
+   \lspbottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{table}[ht]
+\caption{Results of a distinctive collexeme analysis for \textit{werden} + Participle and \textit{werden} + Infinitive in the Reference Corpus of Early New High German. Only significantly attracted or repelled collexemes shown. ***** p < .00001, ****: p < .0001, *** p < .001, ** p < .01, * p < .05.}
+\label{tab:hs:dist_collex_ref}
+\centering
+\footnotesize
+\begin{tabular}{rlrrlrl}
+\lsptoprule
+ & Collexeme & Freq in  & Freq in  & Direction & G\textsuperscript{2} & Sign. \\ 
+ &  & \textit{werden} &  \textit{werden} &  &  &  \\ 
+ &  & \textit+Inf &  \textit+Part1 &  &  &  \\ 
+  \midrule
+1 & geben `give'& 111 &   0 & werden + Inf & 5.62 & * \\ 
+  2 & haben `have'& 101 &   0 & werden + Inf & 5.11 & * \\ 
+  3 & sein `be'& 274 &   2 & werden + Inf & 5.10 & * \\ 
+  4 & werden `become'& 100 &   0 & werden + Inf & 5.06 & * \\ 
+  5 & erquicken `revive'&   1 &   1 & werden + Part1 & 4.71 & * \\ 
+  6 & gesehen `see'&   1 &   1 & werden + Part1 & 4.71 & * \\ 
+  7 & irren `err'&   1 &   1 & werden + Part1 & 4.71 & * \\ 
+  8 & liegen `lie'&   1 &   1 & werden + Part1 & 4.71 & * \\ 
+  9 & scheinen `shine'&   1 &   1 & werden + Part1 & 4.71 & * \\ 
+  10 & schwitzen `sweat'&   1 &   1 & werden + Part1 & 4.71 & * \\ 
+  11 & schwören `swear'&   1 &   1 & werden + Part1 & 4.71 & * \\ 
+  12 & spotten `mock'&   1 &   1 & werden + Part1 & 4.71 & * \\ 
+  13 & wandeln `stroll'&   1 &   1 & werden + Part1 & 4.71 & * \\ 
+  14 & zittern `tremble'&   1 &   1 & werden + Part1 & 4.71 & * \\ 
+  15 & verdammen `condemn'&   5 &   2 & werden + Part1 & 6.75 & ** \\ 
+  16 & diessen `sound, chime' &   0 &   1 & werden + Part1 & 7.43 & ** \\ 
+  17 & einleuchten `be(come) clear' &   0 &   1 & werden + Part1 & 7.43 & ** \\ 
+  18 & fingerzeigen `point-fingers' &   0 &   1 & werden + Part1 & 7.43 & ** \\ 
+  19 & gagen `rock back and forth' &   0 &   1 & werden + Part1 & 7.43 & ** \\ 
+  20 & karen `wheeze' &   0 &   1 & werden + Part1 & 7.43 & ** \\ 
+  21 & kräftigen `strengthen'&   0 &   1 & werden + Part1 & 7.43 & ** \\ 
+  22 & nachgehen `follow'&   0 &   1 & werden + Part1 & 7.43 & ** \\ 
+  23 & rasen `rage' &   0 &   1 & werden + Part1 & 7.43 & ** \\ 
+  24 & tönen `sound'&   0 &   1 & werden + Part1 & 7.43 & ** \\ 
+  25 & verneuen `rejuvenate'&   0 &   1 & werden + Part1 & 7.43 & ** \\ 
+  26 & wallen, sieden `simmer'&   0 &   1 & werden + Part1 & 7.43 & ** \\ 
+  27 & zemen `tame' &   0 &   1 & werden + Part1 & 7.43 & ** \\ 
+  28 & sitzen `sit' &   4 &   2 & werden + Part1 & 7.44 & ** \\ 
+  29 & scheiden `part' &   2 &   3 & werden + Part1 & 15.74 & **** \\ 
+  30 & sprechen `speak'&  10 &   7 & werden + Part1 & 30.01 & ***** \\ 
+   \lspbottomrule
+\end{tabular}
+\end{table}
+
+Tables \ref{simple_collex_werden_inf_rem} and \ref{simple_collex_werden_part_rem}  show the results of simple collexeme analyses for \textit{werden} + Infinitive and \textit{werden} + Participle, respectively, in REM. Note that the frequency of both constructions, and especially of \textit{werden} + Infinitive, is very low in the Middle High German period, which is why the results have to be taken with caution and are arguably not particularly meaningful. What is striking, however, is the fairly equal distribution of the slot fillers: Most instances of \textit{werden} + Participle and \textit{werden} + Infinitive in our data are hapax legomena, i.e. attested only once. In \textit{werden} + Participle, \textit{sëhen} and \textit{gesëhen} (both `see') are attested more than 10 times each, stemming from six different texts in the case of \textit{sëhen} and from seven different texts in the case of \textit{ge-sëhen}, but in most cases referring to regaining eyesight; notable exceptions include the attestation in \xref{ex:hs:sehende}. 
+
+\ea \label{ex:hs:sehende}
+\gll wā da wˢdēt ſi mich ſehende \\
+because there become they me seeing \\
+\glt `because they will see me there' (PrSch, 13.2, REM)
+\z
+
+
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{rlrrrl}
+  \lsptoprule
+ & Collexeme & Cxn freq. & Corpus freq. & G\textsuperscript{2} & Signif. \\ 
+  \midrule
+1 & ver-stôzen `outcast'&   3 & 102 & 37.25 & ***** \\ 
+  2 & be-halten `keep'&   4 & 1022 & 33.55 & ***** \\ 
+  3 & ver-gëben `forgive'&   3 & 330 & 30.16 & ***** \\ 
+  4 & mëzzen `measure'&   2 &  75 & 24.40 & ***** \\ 
+  5 & ge-dènkenwider(e) `recall' + &   1 &   1 & 21.40 & ***** \\ 
+  6 & ent-vâhen `receive'&   3 & 1774 & 20.11 & ***** \\ 
+  7 & ver-hol(e)n `acquire'&   1 &  11 & 14.70 & *** \\ 
+  8 & be-schatwen `shadow' &   1 &  20 & 13.46 & *** \\ 
+  9 & en-blanten &   1 &  23 & 13.18 & *** \\ 
+  10 & setzen `put/sit' &   2 & 1286 & 13.04 & *** \\ 
+  11 & tragen `carry' &   2 & 1619 & 12.13 & *** \\ 
+  12 & er-manen `urge' &   1 &  55 & 11.41 & *** \\ 
+  13 & hunger(e)n `hunger'&   1 &  61 & 11.20 & *** \\ 
+  14 & sunter(e)n `detach'&   1 & 107 & 10.07 & ** \\ 
+  15 & ge-lîchen `equal'&   1 & 144 & 9.48 & ** \\ 
+  16 & lachen `laugh' &   1 & 152 & 9.37 & ** \\ 
+  17 & er-tèilen `judge'&   1 & 156 & 9.32 & ** \\ 
+  18 & ver-râten `betray'&   1 & 167 & 9.18 & ** \\ 
+  19 & rüèren `move'&   1 & 186 & 8.97 & ** \\ 
+  20 & hazzen `hate'&   1 & 205 & 8.77 & ** \\ 
+   \lspbottomrule
+\end{tabular}
+\caption{Results of a simple collexeme analysis of the REM data for \textit{werden} + Infinitive} 
+\label{simple_collex_werden_inf_rem}
+\end{table}
+
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{rlrrrl}
+  \lsptoprule
+ & Collexeme & Construction & Corpus & G\textsuperscript{2} & Signif. \\ 
+ &  & freq. & freq. & & \\ 
+  \midrule
+1 & sëhen `see'&  14 & 4058 & 87.89 & ***** \\ 
+  2 & ge-sëhen `see' &  10 & 1077 & 82.15 & ***** \\ 
+  3 & nièzen `use'&   4 & 179 & 39.74 & ***** \\ 
+  4 & troumen `dream'&   3 &  35 & 38.04 & ***** \\ 
+  5 & wîssagen `predict'&   3 &  70 & 33.75 & ***** \\ 
+  6 & bëtel(e)n `beg'&   2 &   9 & 29.46 & ***** \\ 
+  7 & wider-gëben `return'&   2 &  16 & 26.94 & ***** \\ 
+  8 & hêrschen `reign'&   2 &  24 & 25.23 & ***** \\ 
+  9 & vëhten `fight' &   3 & 375 & 23.61 & ***** \\ 
+  10 & wèinen `cry'&   3 & 604 & 20.76 & ***** \\ 
+  11 & rîches(en)en `reign'&   2 &  76 & 20.50 & ***** \\ 
+  12 & sëhen-ane `look at' &   2 &  85 & 20.05 & ***** \\ 
+  13 & stân-ûf `stand up/rise' &   1 &   1 & 19.49 & **** \\ 
+  14 & vâhen `catch'&   3 & 853 & 18.72 & **** \\ 
+  15 & lëben `live'&   4 & 2939 & 17.59 & **** \\ 
+  16 & vliègen `fly'&   2 & 175 & 17.15 & **** \\ 
+  17 & toèten `kill'&   2 & 195 & 16.72 & **** \\ 
+  18 & sprëchen `speak'&   6 & 11305 & 15.93 & **** \\ 
+  19 & brinnen `burn'&   2 & 239 & 15.90 & **** \\ 
+  20 & be-schrènken `compass'&   1 &   3 & 15.67 & **** \\ 
+   \lspbottomrule
+\end{tabular}
+\caption{Results of a simple collexeme analysis of the REM data for \textit{werden} + Participle} 
+\label{simple_collex_werden_part_rem}
+\end{table}
+
+% ge-sehen: strukturelle Ambiguität wie von Jäger vorhergesagt? - no. Wie sieht es mit den anderen assoziierten Kollexemen aus?
+
+% TODO Stefan: Frequenz in der jeweils anderen Konstruktion hinzufügen
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{rlrrrl}
+  \lsptoprule
+ & Collexeme & Cxn freq. & Corpus freq. & G\textsuperscript{2} & Signif. \\ 
+  \midrule
+1 & tun `do'&  59 & 314 & 556.71 & ***** \\ 
+  2 & geben `give'& 111 & 7504 & 474.06 & ***** \\ 
+  3 & sehen `see'&  82 & 4476 & 383.21 & ***** \\ 
+  4 & sein `be'& 274 & 117659 & 295.99 & ***** \\ 
+  5 & hören `hear'&  51 & 1995 & 270.99 & ***** \\ 
+  6 & kommen `come'&  79 & 8662 & 264.00 & ***** \\ 
+  7 & finden `find'&  46 & 2918 & 200.92 & ***** \\ 
+  8 & werden `become'& 100 & 23890 & 195.97 & ***** \\ 
+  9 & sagen `say'&  57 & 6545 & 185.14 & ***** \\ 
+  10 & gehen `go'&  53 & 5452 & 182.91 & ***** \\ 
+  11 & bleiben `stay'&  36 & 1971 & 167.37 & ***** \\ 
+  12 & auferstehen `resurrect'&  14 &  31 & 161.09 & ***** \\ 
+  13 & vernemen `hear'&  11 &  11 & 160.07 & ***** \\ 
+  14 & haben `have'& 101 & 38272 & 123.58 & ***** \\ 
+  15 & vergelten ` retaliate'&  10 &  36 & 103.01 & ***** \\ 
+  16 & überantworten `sign over'&   8 &  12 & 101.14 & ***** \\ 
+  17 & erlangen `obtain'&  14 & 257 & 95.38 & ***** \\ 
+  18 & ergehen `fare'  &  13 & 211 & 91.82 & ***** \\ 
+  19 & zergehen `dissolve'&   6 &   6 & 87.30 & ***** \\ 
+  20 & machen `make'&  33 & 5774 & 81.72 & ***** \\ 
+   \lspbottomrule
+\end{tabular}
+\caption{Results of a simple collexeme analysis of the REF data for \textit{werden} + Infinitive} 
+\label{simple_collex_werden_inf_ref}
+\end{table}
+
+The results of the simple collexeme analysis for \textit{werden} + Infinitive in REF (Table \ref{simple_collex_werden_inf_ref}) show that the construction tends to combine with general-purpose verbs such as \textit{tun} `do' or \textit{sein} `be'. \textit{geben} `give', which occupies the second rank, can be used in an existential sense in German (\textit{es wird Kuchen geben} `there will be cake'), but in the REF data, it is almost exclusively used in the literal sense, usually in religious contexts, e.g. \textit{der heer wiert geben die seniftguettichait} `the Lord will give the gentleness' (Rationale divinorum officiorum, 14.2, REF). 
+
+The fact that \textit{geben} `give' is among the top collexemes of \textit{werden} + Infinitive coincides with \citegen[142]{Hilpert2008} results. However, in Hilpert's data, most instances turn out to be cases of existential \textit{geben} as in \textit{Es wird keine Beatles-Tour mehr geben} `There will be no further tour of the Beatles'. In our data, by contrast, most attestations of \textit{geben} are literal uses with a transfer meaning, as in \xref{ex:hs:pfennig}. This is not surprising as the existential \textit{es gibt} construction only emerged in the 16\textsuperscript{th} century \citep[][]{newmanOriginGermanEs1997, lenzZurGrammatikalisierungGeben2007}. The fact that \textit{geben} remains an attracted collexeme, albeit with a different predominant meaning, might be an indication that \textit{werden} + Infinitive has developed a preference for specific lexical items (as argued by Smirnova, this volume), regardless of their specific reading variants. Future work using data from the initial stages of the New High German period (1650 onwards) that is not covered in the present paper could address this hypothesis in more detail by investigating the distribution of different readings of \textit{geben} within and outside of the \textit{werden} + Infinitive construction.
+
+\ea \label{ex:hs:pfennig}
+Dye werden dir noch dreyssig phening geben `They will give you 30 more \textit{pfennig} [currency]' (Passion Sterzing, 15.2, REF)
+\z
+
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{rlrrrl}
+  \lsptoprule
+ & Collexeme & Cxn freq. & Corpus freq. & G\textsuperscript{2} & Signif. \\ 
+  \midrule
+1 & sprechen `speak'&   7 & 8741 & 39.91 & ***** \\ 
+  2 & scheiden `part'&   3 & 542 & 28.41 & ***** \\ 
+  3 & verdammen `condemn'&   2 & 149 & 22.46 & ***** \\ 
+  4 & rasen `rage'&   1 &   1 & 21.82 & ***** \\ 
+  5 & einleuchten `be(come) clear'  &   1 &   2 & 19.05 & **** \\ 
+  6 & finden `find' &   3 & 2918 & 18.38 & **** \\ 
+  7 & fingerzeigen `hint'&   1 &   3 & 18.00 & **** \\ 
+  8 & kräftigen `strengthen'&   1 &   8 & 15.79 & **** \\ 
+  9 & sitzen `sit'&   2 & 1211 & 14.09 & *** \\ 
+  10 & verneuen `rejuvenate'&   1 &  24 & 13.51 & *** \\ 
+  11 & zittern `tremble'&   1 &  30 & 13.05 & *** \\ 
+  12 & erquicken `revive'&   1 &  38 & 12.57 & *** \\ 
+  13 & nachgehen `follow'&   1 &  40 & 12.47 & *** \\ 
+  14 & stinken `stink'&   1 &  41 & 12.42 & *** \\ 
+  15 & schwitzen `sweat'&   1 &  49 & 12.06 & *** \\ 
+  16 & spotten `mock'&   1 &  67 & 11.43 & *** \\ 
+  17 & irren `err'&   1 & 150 & 9.81 & ** \\ 
+  18 & reichen `hand'&   1 & 165 & 9.62 & ** \\ 
+  19 & wandeln `stroll'&   1 & 178 & 9.47 & ** \\ 
+  20 & aufheben `repeal/pick up'  &   1 & 214 & 9.10 & ** \\
+   \lspbottomrule
+\end{tabular}
+\caption{Results of a simple collexeme analysis of the REF data for \textit{werden} + Participle} 
+\label{simple_collex_werden_part_ref}
+\end{table}
+
+It can also be instructive to take a closer look at the degree to which the slot filler types of both constructions overlap. A low degree of overlap could be a sign that the constructions are also functionally quite different, while a high degree of overlap might indicate functional similarity (although this is not necessarily the case, as even functionally very different constructions might combine with the same slot fillers). As Figure \ref{fig:hs:vennremref} shows, both constructions overlap to some extent in the REM data, but there are also many slot filler types that seem to be unique to each of the two constructions. In REF, there are many verbs that only occur in the much more frequent \textit{werden} + Infinitive construction, but only about 20\% of all items attested in \textit{werden} + Participle are unique to the latter construction. Table \ref{tab:hs:overlap_REM} shows the lemmas that are attested in both constructions in the REM along with their overall corpus frequencies.  
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/hartmann_schnee/venn_REM_REF.png}
+    \caption{Overlap between \textit{werden} + Infinitive and \textit{werden} + Participle slot filler types in REM and REF.}
+    \label{fig:hs:vennremref}
+\end{figure}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{rlrrr}
+  \lsptoprule
+ & Lemma & Corpus freq. & werden + Inf. & werden + Part1 \\ 
+  \midrule
+1 & sprëchen `speak/talk' & 11305 &   1 &   6 \\ 
+  2 & gëben `give' & 6432 &   2 &   3 \\ 
+  3 & sëhen `see' & 4058 &   2 &  14 \\ 
+  4 & gân `go' & 3808 &   1 &   1 \\ 
+  5 & var(e)n `go/drive' & 2121 &   1 &   1 \\ 
+  6 & hoèren `hear/listen' & 1850 &   1 &   1 \\ 
+  7 & ent-vâhen `receive/take' & 1774 &   3 &   1 \\ 
+  8 & tragen `carry' & 1619 &   2 &   1 \\ 
+  9 & sètzen `put/sit' & 1286 &   2 &   1 \\ 
+  10 & suochen `search/seek' & 895 &   1 &   1 \\ 
+  11 & be-kènnen `confess' & 558 &   1 &   2 \\ 
+  12 & trinken `drink' & 472 &   1 &   1 \\ 
+  13 & schînen `shine' & 433 &   1 &   1 \\ 
+  14 & hazzen `hate' & 205 &   1 &   1 \\ 
+  15 & lachen `laugh' & 152 &   1 &   1 \\ 
+   \lspbottomrule
+\end{tabular}
+\caption{Lemmas attested in both constructions in REM} 
+\label{tab:hs:overlap_REM}
+\end{table}
+
+\subsection{Future reference} \label{sec:hs:futurereference}
+
+As mentioned in Section \ref{sec:hs:dataandmethods}, we annotated the data from REM and REF for the occurrence of overt markers of future reference in the immediate context of the instances of the \textit{werden} + Infinitive and \textit{werden} + Participle constructions in our data. As Figure \ref{fig:hs:futref} shows, the vast majority of all instances of the two constructions come without an overt marker of future reference. Interestingly, however, we see a comparatively high proportion of overt markers of future reference with \textit{werden} + Participle in the later Middle High German data, which might indicate that the construction, which is typically inchoative, is used in a futurate sense to an increasing extent, before \textit{werden} + Infinitive takes over; in the entire FnhdC data, we find only one single attestation of \textit{werden} + Participle with an overt marker of future reference. Of course, this does not mean that instances without an overt temporal marker cannot have a futurate reading as well, but most of the few attestations of \textit{werden} + Participle in the FnhdC corpus are clearly inchoative, as \xref{ex:hs:fnhdc_wpart2} and \xref{ex:hs:fnhdc_wpart3} show; only very early attestations like \xref{ex:hs:fnhdc_wpart1} and \xref{ex:hs:antichrist} can be considered more futurate, although they also have a fairly clear inchoative meaning component.
+
+%\ea \label{ex:hs:antichrist}  vntz der antichriſt chvͦmt . Mit dem wˢde wir ſtreitend . [...] dˢ wírt vns dāne toͤttend `... until the Antichrist comes. With him we will fight [...]. He will kill us then' (KlostEvang, 14.1, REM)
+%\z
+
+\ea \label{ex:hs:fnhdc_wpart} 
+    \ea \label{ex:hs:fnhdc_wpart1} we euch die ir nu lachet wanne ir wert her nach weinent `Woe to you who are laughing now because you will be crying afterwards'  (Altdeutsche Predigten I, 14\textsuperscript{th} century, FnhdC)
+    \ex \label{ex:hs:antichrist}  vntz der antichriſt chvͦmt . Mit dem wˢde wir ſtreitend . [...] dˢ wírt vns dāne toͤttend `... until the Antichrist comes. With him we will fight [...]. He will kill us then' (KlostEvang, 14.1, REM)
+    \ex \label{ex:hs:fnhdc_wpart2}  Ein stockblindes Kind wird vollkommenlich sehend `A completely blind child becomes fully sighted' (Augsburgischer Arzt, Augsburg 1678) 
+    \ex \label{ex:hs:fnhdc_wpart3}  Ein junge Tochter so von Kindsweesen Stumm war wird redend `A young daughter who was mute from childhood becomes talking' (Augsburgischer Arzt, 1678, FnhdC) 
+    \z
+\z 
+
+Overall, this is consistent with the idea that \textit{werden} + Participle came to be used in futurate contexts more often and may have been on its way to becoming a future marker, although its function was never limited to marking future time reference. It also fits in well with the idea proposed in \citet[274]{hartmannFuturkonstruktionenImWandel2023} that there may be a ``co-evolution" of \textit{werden} + Participle and \textit{werden} + Infinitive in the sense of \citet[296]{zehentnerCompetitionLanguageChange2019}, who argues that competing constructions can develop a ``symbiotic" relationship, noting that in biology, the label \textit{symbiosis} refers to any kind of interaction between organisms or species that can be antagonistic, parasitic, predatory or mutualistic. Our results provide tentative evidence that the two constructions undergo attraction and differentiation processes in the sense of \citet[]{DeSmet2018}, with the two patterns first becoming more similar and then coming to occupy different functional niches.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/hartmann_schnee/futurereference_rem_fnhdc.png}
+    \caption{Overt markers of future reference in the immediate context of \textit{werden} + Infinitive and \textit{werden} + Participle, respectively.}
+    \label{fig:hs:futref}
+\end{figure}
+
+
+
+\section{Discussion and conclusion} \label{sec:hs:discussion}
+
+A main goal of the present paper was to demonstrate that analyzing data from the newly available reference corpora of Middle High German and Early New High German can shed new light on the development of the German future construction \textit{werden} + Infinitive in relation to its competitors. For the present study, we have focused on one particular competitor, namely \textit{werden} + Present Participle. Following up on previous corpus-based studies that had focused on the role of aspectual patterns in the use of those two constructions, the present paper has taken a broader approach, targeting three aspects: firstly, the temporal and areal frequency distribution of the two constructions in the pertinent reference corpora of Middle and Early New High German; secondly, the collostructional preferences of the two constructions; and thirdly, the correlation of the two constructions with other markers of future time reference. As for the first aspect, the data from the reference corpora confirm the general tendencies observed in previous studies: \textit{werden} + Infinitives experiences a slow but fairly steady growth (and spread) from the Middle High German to the Early New High German period. As for the second aspect, the results are quite mixed, especially due to the sparsity of the REM data for \textit{werden} + Infinitive and the sparsity of the REF data for \textit{werden} + Participle. Despite these limitations, the data are, overall, in line with the results of previous research, and additionally, they indicate that the two constructions share a fairly large number of collocates in the REM data, while this shared inventory becomes much smaller in the case of the REF data. To some extent, this is of course due to the fact that by that time, \textit{werden} + Participle is vastly outnumbered by \textit{werden} + Infinitive, but it is also in line with the hypothesis advanced in previous work \citep[e.g.][]{Hartmann2021} that \textit{werden} + Infinitive and \textit{werden} + Participle first become more similar (``attraction" in the sense of \cite{DeSmet2018}) before starting to occupy different niches (what \citealt[]{DeSmet2018} call ``differentiation"). This is also in line with our finding that \textit{werden} + Participle is increasingly found in futurate contexts in the REM corpus.
+
+Note that Smirnova (this volume), who investigates the development of \textit{werden} + Infinitive in the time periods directly following the time span covered in the present paper, adds important observations that are directly relevant to those three aspects, namely that on its way to present-day German, \textit{werden} + Infinitive seems to have undergone a clear specialization:  \textit{werden} + Infinitive has become less frequent in most future-related contexts compared to the futurate present, and the verb it combines most with, according to Smirnova's data, is the copula \textit{sein} `to be'. 
+
+% future onomasiological study should also take futurate present instances into account
+
+As shown in Section \ref{sec:hs:whatdoweknow}, there are numerous hypotheses regarding the development of \textit{werden} + Infinitive, and arguably the most convincing ones assume that a complex interaction of different factors gave rise to this construction. As such, our analysis of \textit{werden} + Infinitive and one competing pattern, \textit{werden} + Participle, can only address hypotheses related to a small part of the bigger picture of this development. Indeed, our results provide further evidence against a scenario in which \textit{werden} + Participle is the main or even the only source for \textit{werden} + Infinitive, regardless of whether one assumes a scenario of phonological erosion or an account that explains a purported extension from \textit{werden} + Participle to \textit{werden} + Infinitive via analogy. However, our results do not allow us to make a decision between the polygenetic accounts mentioned in Section \ref{sec:hs:scenarios} and listed in Table \ref{tab:hs:westviktheories}, as they are compatible with multiple conceivable scenarios. They do, however, provide tentative evidence that the two constructions may have undergone processes of attraction and differentiation. If this is the case, then the scenario would be compatible with different elements of different theories: The idea of an analogy between the two constructions is at the heart of both confusion and autonomy theory. However, while the former assumes that \textit{werden} + Infinitive emerged from \textit{werden} + Participle, the idea of the two constructions becoming more similar in the first stage of the process aligns more with autonomy theory, which assumes that the two constructions existed independently before they underwent partial assimilation. 
+
+Future research should take other competing constructions, e.g. modal constructions, but also the futurate present, into account more thoroughly. More specifically, future studies should also take an onomasiological perspective to explore the different possibilities that are taken in different contexts to encode future reference. Still, we hope to have shown with the present paper that data from the new reference corpora can help us better understand the competition between different ways of future encoding in historical German.
+
+At the same time, our study also points to some limitations of working with data from those reference corpora. Among other things, despite the corpus compilers' efforts to make the corpora as balanced as possible, the reference corpora of Middle High German and Early New High German are not really balanced for factors like language areas or text types and, presumably most relevant for this kind of study, topics. As such, it is not always straightforward to compare the results between the two corpora, or even between different time slices within one corpus. Highly homogeneous corpora like \citegen{Schmid2000} ``Seven Signs corpus" exclusively comprised of a relatively small set of apocalyptic texts have a major advantage here. This does not mean, however, that the reference corpora are not well-suited for analyzing different ways of future reference in the history of German; however, the aforementioned limitations should be kept in mind, and as virtually always, evidence from different sources, including smaller and more balanced corpora, should be triangulated to arrive at a more nuanced picture of the development of \textit{werden} + Infinitive and its competitors.
+
+
+
+\section*{Data availability} \label{sec:hs:dataavailability}
+
+The data and scripts used for the analysis reported on in the present paper can be found on the Open Science Framework, \href{https://doi.org/10.17605/OSF.IO/4R9M7}{https://doi.org/10.17605/OSF.IO/4R9M7}.
+
+
+\section*{Acknowledgements}
+We are grateful to Lynn Froben, Julian Miedl, Celina Paas, and Jiabin Yao for their support in the annotation of the data. Also, we would like to thank Martin Hilpert for helpful comments on a previous version of this paper. The research reported on in the present paper was funded by the German Research Foundation (DFG), project number 461542742.
+
+
+\sloppy
+\printbibliography[heading=subbibliography,notkeyword=this]
+\end{document}

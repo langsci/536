@@ -1,0 +1,794 @@
+\documentclass[output=paper,colorlinks,citecolor=brown]{langscibook}
+\ChapterDOI{10.5281/zenodo.20541856}
+\author{Svetlana Petrova\orcid{}\affiliation{University of Wuppertal} and
+        Yen-Chun Chen\orcid{}\affiliation{University of Wuppertal} 
+        }
+\title{The expression of future in the past in Old and Middle High German}
+\shorttitlerunninghead{Future in the past in OHG/MHG}
+\abstract{We adopt an onomasiological approach to the description of future in the past in Old and Middle High German. In these stages of German, the present-day main correlate of future in the past, the \textit{würde} + infinitive construction, is not established yet. We search the reference corpora ReA and ReM and compile a database consisting of sentential complements of past-tense matrix predicates embedding a posterior event. We describe the forms and constructions occurring as correlates of future in the past in these clauses and investigate their formal and semantic properties. The past subjunctive is the most relevant correlate of future in the past in these periods, but it alternates with various types of periphrastic constructions which are known to express posteriority in the respective periods of German. Modal verb periphrases are the most frequent ones among these. We compare their frequency and distribution in contexts pertaining to future in the present and future in the past. We consider factors such as the choice of the modal verb, its relation to person, and the actional properties of the embedded verb. We find that modal verb periphrases act similarly in both contexts.}
+
+%move the following commands to the "local..." files of the master project when integrating this chapter
+
+% \usepackage{multirow}
+% \usepackage{verbatim}
+% \usepackage{enumitem}
+%\noautomath
+
+\IfFileExists{../localcommands.tex}{
+   \addbibresource{../localbibliography.bib}
+   \input{../localpackages}
+   \input{../localcommands}
+   \input{../localhyphenation}
+   \boolfalse{bookcompile}
+   \togglepaper[7]%%chapternumber
+}{}
+
+\begin{document}
+\maketitle
+
+
+\section{Introduction} \label{section 1}
+
+\sloppy
+The category of the future and the development of forms and constructions expressing reference to future events are well-established topics in the diachronic description of German. There is a long tradition of research investigating the origins and the grammaticalization of the construction \textit{werden} + infinitive (\textit{werden}-\textsc{inf}) (see the overview and the references in \cite[19–45]{Luther2013}), which is considered a periphrastic future tense in present-day German (PDG) and which emerges relatively late, towards the end of the Middle High German period (MHG, \textit{c}. 1050--1350) (\cite[261]{Behaghel1924}, \cite[296]{Paul2007}, \cite[11]{Luther2012}). There is also corpus-based work describing the forms and constructions used to express future time reference prior to the establishment of the \textit{werden}-\textsc{inf} or during the grammaticalization of this construction (\cite{Schmid2000}, \cite{Luther2012} and \citeyear{Luther2013}, \cite{Hartmann2021}), which takes place during the Early New High German period (ENHG, \textit{c}. 1350–1650).
+
+A property unifying these approaches is that they address the future as a deictic category, i.e. as a category expressing posteriority relative to the actual utterance time. Yet there is another type of future time reference which has attracted less attention from a comparable corpus-based perspective, namely the one describing events or actions subsequent to some relevant point in the past. This kind of future time reference, also known as \textit{future in the past} (FiP) (\cite[see][75 and 128]{Comrie1985}, \cite[797]{Dahl2000}), is illustrated in \xref{ex:petrova_chen:english} taken from \citet[595]{KampReyle1993}: 
+
+\ea \label{ex:petrova_chen:english} English \\ Mary got to the station at 9:00. Her train \textbf{would arrive} at 10:00.\\
+\z
+\il{English}
+
+In the small discourse in \xref{ex:petrova_chen:english}, the event in the second conjunct, namely the arrival of the train, is subsequent to the event in the first conjunct, Mary’s arrival at the train station, which, for its part, precedes the time of utterance.
+
+In PDG, the expression of FiP is associated with the \textit{würde}-infinitive construction (\textit{würde}-\textsc{inf}) as its most salient formal correlate (see \cite{Herdin1903} and \citeyear{Herdin1905}, \cite[35–36]{Petkov1991}, \cite[140–159]{Thieroff1992}, \cite[60–67]{Szatzker2002}, among others), next to some additional forms, most of all the past indicative and subjunctive, which are also attested in such contexts (see \cite[94]{FabriciusHansen2000}, \cite[177–184]{Szatzker2002} or \cite[307]{Welke2005}). In the German translation of the small discourse in \xref{ex:petrova_chen:english}, the relations pertaining to FiP are most naturally expressed by means of \textit{würde}-\textsc{inf}, see \xref{ex:petrova_chen:pdg}:
+
+% \largerpage[1.5]
+
+\ea \label{ex:petrova_chen:pdg} PDG \\ Maria erreichte den Bahnhof um 9 Uhr. Ihr Zug \textbf{würde} um 10 Uhr \textbf{kommen}.
+\z
+\il{Present-day German}
+
+The nature of \textit{würde}-\textsc{inf} in PDG has raised considerable debate, due to the exceptional status and the functional ambiguity of this construction (see \sectref{section 2.1}). Its development has also received some attention (see \sectref{section 2.2}). \citet{Szatzker2002} provides a detailed account of the functions of  \textit{würde}-\textsc{inf} and the expression of FiP in corpus data from the 15\textsuperscript{th} century to 2000. She finds that \textit{würde}-\textsc{inf} is robustly attested as a correlate of FiP in her material, but that it alternates with other expressions, such as the modal verb periphrases and the past indicative. However, there is no comparable, corpus-based investigation of the expression of FiP in earlier periods, in which this construction is still missing. The present paper aims at filling this gap. It adopts an onomasiological approach, proceeding from meaning to form. It identifies specific contexts in which temporal relations pertaining to FiP occur, and searches the digital reference corpora of the respective periods to determine the inventory of forms and constructions appearing in these contexts. 
+
+The paper is structured as follows. \sectref{section 2} describes the notion of FiP from a synchronic perspective (\sectref{section 2.1}) and summarizes the state of the art regarding the diachronic research on FiP in German (\sectref{section 2.2}). \sectref{section 3} describes the corpora and the query methods, including the caveats related to the identification of the relevant data. \sectref{section 4} describes the inventory and distribution of the correlates of FiP found in the database. \sectref{section 5} summarizes the results of the analysis.
+
+\section{Previous research} \label{section 2}
+
+\subsection{The notion of FiP} \label{section 2.1}
+
+% \largerpage[1.5]
+
+The complex interplay of temporal and modal features, which is constitutive of the category of the future as a whole, finds its proper manifestation in the expression of FiP as its representative as well. The problematic status of this type of future results from the observation that in a series of languages, the formal correlates of FiP display temporal and modal functions alike \citep[75]{Comrie1985}. This also applies to the construction \textit{würde}-\textsc{inf}, which is considered the most salient correlate of FiP in PDG (see \sectref{section 1}). As a member of the paradigm of the future construction \textit{werden}-\textsc{inf},  \textit{würde}-\textsc{inf} is exceptional both with respect to form and meaning (\cite{Thieroff1992}, \citeauthor{FabriciusHansen1998} \citeyear{FabriciusHansen1998} and \citeyear{FabriciusHansen2000}, \cite{Smirnova2006}). In terms of form, it involves the past subjunctive (\textit{Konjunktiv II}) of the future auxiliary \textit{werden} ‘become’, and lacks a morphologically indicative counterpart of the type *\textit{wurde}-\textsc{inf} (but see  \sectref{section 2.2} below). In terms of meaning, it is polyfunctional in that, next to its use as a correlate of FiP, it also occurs in prototypical subjunctive contexts, such as conditional and counterfactual utterances or instances of indirect speech, where it is partially interchangeable with the synthetic past subjunctive. For these reasons, the classification of \textit{würde}-\textsc{inf} as part of the system of moods and tenses in PDG has been particularly difficult (see the overview in \cite[11–40]{Smirnova2006}). \citet[141–159]{Thieroff1992} argues that \textit{würde}-\textsc{inf} is syncretic, being part of the subjunctive paradigm when used in counterfactual and reportive contexts, and of the indicative tense system when used to express FiP.
+
+The following observations are taken to suggest that despite its subjunctive morphology, \textit{würde}-\textsc{inf} as a correlate of FiP is part of the indicative tense system (see \cite[136]{Petkov1991}, \cite[145–147]{Thieroff1992}). First, it can be observed that \textit{würde}-\textsc{inf} alternates with the indicative of the future construction \textit{werden}-\textsc{inf} when the temporal orientation of the context is changed from past to present, as shown in \xref{ex:petrova_chen:petrova_chen:pdg3a} and \xref{ex:petrova_chen:petrova_chen:pdg3b}. Note that the respective variant of the subjunctive derived from the present stem of the future auxiliary \textit{werden}, the so-called \textit{Konjunktiv I Futur} given in \xref{ex:petrova_chen:petrova_chen:pdg3c}, is ungrammatical in this case. Second, it is observed that in the domain of FiP, \textit{würde}-\textsc{inf} alternates with the indicative of the simple past, i.e. with the so-called \textit{Präteritum Indikativ} \citep[see also][306–307]{Welke2005}, see \xref{ex:petrova_chen:petrova_chen:pdg3d}:\footnote{\citet[94]{FabriciusHansen2000} provides examples in which the past subjunctive (\textit{Konjunktiv Präteritum}) also expresses relations pertaining to FiP, see (\ref{i}). According to her, the past subjunctive is interchangeable with \textit{würde}-\textsc{inf} in this context, as shown in (\ref{ii}). This alternation, in turn, is parallel to the one between the present indicative and the future construction \textit{werden}-\textsc{inf}, see (\ref{iii})-(\ref{iv}):
+
+\begin{exe}
+    \ex \label{i} \textit{Ich ging schon beinahe in die fünfte Klasse des Gymnasiums} […] \textit{Nicht mehr lange, und ich bekäme einen Schülerausweis mit dem begehrten roten Stempel „über 16“.} `I almost went to the fifth class of high school already (...) It wouldn't take much longer, and I would get a student ID card with the coveted red stamp `over 16'.' […]
+    \ex \label{ii} \textit{Nicht mehr lange, und ich würde einen Schülerausweis} […] \textit{bekommen.} `It wouldn't take much longer, and I would get a student ID.'
+    \ex \label{iii} \textit{Nicht mehr lange, und ich bekomme einen Schülerausweis} […] `It wouldn't take much longer, and I [would] get a student ID.'
+    \ex \label{iv} \textit{Nicht mehr lange, und ich werde einen Schülerausweis} […] \textit{bekommen} `It wouldn't take much longer, and I will get a student ID.'
+\end{exe}
+}
+
+% \largerpage[2]
+
+\ea \label{ex:petrova_chen:petrova_chen:pdg3} PDG \\
+
+    \ea \label{ex:petrova_chen:petrova_chen:pdg3a} 
+    \gll Er wusste, was geschehen würde.\\
+    he know.\textsc{3sg.ind.pst} what happen will.\textsc{sbjv.pst}\\
+    \glt ‘He knew what would happen.’
+
+    \ex \label{ex:petrova_chen:petrova_chen:pdg3b} 
+    \gll Er weiß, was geschehen wird.\\
+    he know.\textsc{3sg.ind.prs} what happen will.\textsc{ind.futi}\\
+    \glt ‘He knows what will happen.’
+
+    \ex \label{ex:petrova_chen:petrova_chen:pdg3c} 
+    \gll Er weiß, was geschehen *werde.\\
+    he know.\textsc{3sg.ind.prs} what happen will.\textsc{ind.futi}\\
+    
+    \ex \label{ex:petrova_chen:petrova_chen:pdg3d} 
+    \gll Er wusste, was gleich geschah.\\
+    he know.\textsc{3sg.ind.prs} what next happen.\textsc{ind.pst}\\
+    \glt ‘He knew what happened thereafter.’
+    \z 
+\z
+
+\citet{Thieroff1992} explains this variation along the lines of his assumption that the indicative of the simple past represents a kind of a secondary (or shifted) present within a system of tenses directed towards a point preceding the time of utterance. As such, the simple past may have a futurate meaning and alternate with the respective future construction, namely \textit{würde}-\textsc{inf}, in the same way in which the canonical present tense is able to express future events, alternating with the \textit{werden}-\textsc{inf} in the system of tenses oriented towards the actual utterance time.
+
+
+
+\subsection{State of the art of the diachronic description} \label{section 2.2}
+
+The development of \textit{werden}-\textsc{inf} has given rise to much debate in the literature. Despite the controversial treatment of the origins and grammaticalization of this construction (see \cite{Jäger2024} on a novel account), there is agreement that \textit{werden}-\textsc{inf} emerges towards the end of the MHG period (\cite[261]{Behaghel1924}, \cite[296]{Paul2007})\footnote{Note that \citet[52]{Luther2013} characterizes the earliest attestations of the \textit{werden}-\textsc{inf} in MHG as ingressive and inchoative, expressing the beginning of a new state or action. This is identical with the position held by \citet[261, fn. 1]{Behaghel1924}. Putative instances of the \textit{werden}-\textsc{inf} in earlier periods have been rejected as inconclusive (\citeauthor{Saltveit1962} \citeyear{Saltveit1962}: 185--194 and \citeauthor{Jäger2024} \citeyear{Jäger2024}: 216--226).} and advances as a periphrastic future construction only during the subsequent ENHG period \citep[5]{Luther2012}.
+
+The rise of \textit{würde}-\textsc{inf} has also attracted much attention, see Szatzker (\citeyear{Szatzker2002}, \citeyear{Szatzker2003}), \citet{Kotin2003}, \citet{Smirnova2006}, \citet{DurrellWhitt2016}, among others. Research has commonly assumed that this expression is the subjunctive variant of the inchoative construction \textit{ward}-\textsc{inf} which was temporarily present in the history of German \citep[307]{Paul2007}. The loss of \textit{ward}-\textsc{inf} in the 16\textsuperscript{th} century is taken to indicate the crucial point in the grammaticalization of \textit{werden}-\textsc{inf} as a future construction, and in the consolidation of \textit{würde}-\textsc{inf} as a special representative of this paradigm (see \cite[87]{Oubouzar1974}, \cite[221]{GuchmannSemenjuk1981}, \cite[392]{EbertEtAl1993}, \cite[58–61]{Szatzker2002}, \cite[175–189]{Kotin2003}, \cite[469]{Welke2005}, \cite[41–54 and 283–295]{Smirnova2006}, \cite[307]{Paul2007} and \cite[335]{DurrellWhitt2016}). At the same time, it has been observed that \textit{würde}-\textsc{inf} is used to express FiP already at the beginning of the attestation of \textit{werden}-\textsc{inf}. The earliest conclusive example is the one given in (\ref{ex:petrova_chen:petrova_chen:ottokar}), dating to the first half of the 14\textsuperscript{th} century (\textit{c}. 1320):
+
+\ea\label{ex:petrova_chen:petrova_chen:ottokar} Ottokar v. Steiermark, \textit{Österr}. \textit{Reimchron}. vv. 4707--4713 (cit. in DWB vol. 14, 1/2, col. 255; online vol. 29, col. 273.), \newline context: und swer ir îlen het gesehen, / der müeste des fürwâr jehen, / daz nie von kuniges kinde / wart gesehen alsô swinde / über velt gegangen \newline = ‘and whoever has seen her haste would have to admit that no king’s child has been seen going so fast over fields’\\ 
+    \gll dâ si wurd enphangen / von Arrogûn diu kunigin\\
+    where her.\textsc{acc} will.\textsc{sbjv.pst} receive.\textsc{inf} / of Aragon the queen\\
+    \glt ‘[to the place] where the Queen of Aragon would receive her’
+\z
+
+The example in (\ref{ex:petrova_chen:petrova_chen:ottokar}) is cited in the entry of the verb \textit{werden} ‘become’ in Grimm’s \textit{German Dictionary} (\textit{Deutsches Wörterbuch}, DWB) and is interpreted as expressing ``zukunft von einem standpunkt der vergangenheit aus``, i.e., future from the perspective of the past (DWB vol. 14, 1/2, col. 255; online vol. 29, col. 273.). This opinion is shared by the subsequent literature, see \citet[206]{Wolf1981}, \citet[180]{Kotin2003}, \citet[51]{Smirnova2006}, and \citet[335]{DurrellWhitt2016}. 
+
+The role of \textit{würde}-\textsc{inf} as a correlate of FiP is consolidated in the subsequent periods. Szatzker (\citeyear{Szatzker2002} and \citeyear{Szatzker2003}) examines the forms and constructions used to express FiP in a corpus of texts from the 15\textsuperscript{th} century to 2000. She finds that \textit{würde}-\textsc{inf} is the most prominent correlate of FiP in her material (\cite{Szatzker2002}: 180–181 and \citeyear{Szatzker2003}: 199–203), and that it co-varies with other forms and constructions whose frequency changes during the investigated period. She shows that at the beginning, the most prominent competitors of \textit{würde}-\textsc{inf} are the past subjunctive and modal verb periphrases involving \textit{wollen} ‘will/want to’ and \textit{sollen} ‘shall’, but their frequency continuously declines, while especially after 1850, the past indicative becomes the most frequent alternate of \textit{würde}-\textsc{inf} \citep[181]{Szatzker2002}.
+
+The results obtained by \citet{Szatzker2002} are consistent with the observation that \textit{würde}-\textsc{inf} alternates with the past indicative in the domain of FiP in PDG, but also with insights regarding the expression of FiP in the earlier periods. The reference grammar of MHG \citep{Paul2007} describes a special function of the past subjunctive expressing “präteritales Futur” \citep[291]{Paul2007}, i.e. past futurity, for example in subordinate clauses expressing posteriority relative to a matrix clause in the past \citep[291, 401–402, 434 and 444–445]{Paul2007}. Consider the examples in (\ref{ex:petrova_chen:petrova_chen:iwein}) and (\ref{ex:petrova_chen:petrova_chen:nibelungenlied}):
+
+\newpage
+
+% \begin{minipage}{\textwidth}
+\ea\label{ex:petrova_chen:petrova_chen:iwein} Iwein 1532, cit. in \citet[291]{Paul2007}\\ 
+    \gll er weste wol daz Keii in niemer gelieze vrî von spotte\\
+    he know.\textsc{ind.pst} well that Keie him.\textsc{acc} never let.\textsc{sbjv.pst} free from mockery\\
+    \glt ‘He knew very well that Keie would never spare him from mockery.’
+\z
+%\end{minipage}
+
+\ea\label{ex:petrova_chen:petrova_chen:nibelungenlied} Nibelungenlied 1131, 1–2, cit. in \citet[445]{Paul2007}\\ 
+    \gll ih swuor […], daz ih ir getaete nimmer mêre leit\\
+    I swear.\textsc{ind.pst} […] that I her.\textsc{dat} do.\textsc{sbjv.pst} never more harm\\
+    \glt ‘I swore […] that I would never (again) do her any harm.’
+\z
+
+The same use of the past subjunctive is also observable in data from Old High German (OHG, c. 750–1050). \citet{Petrova2008} provides the example in (\ref{ex:petrova_chen:petrova_chen:oi10}), in which the past subjunctive occurs in the same context as in the MHG instances in (\ref{ex:petrova_chen:petrova_chen:iwein}) and (\ref{ex:petrova_chen:petrova_chen:nibelungenlied}), namely in a complement clause conveying an event that is subsequent to a past-tense matrix clause. At the same time, she observes that the modal verb construction involving OHG \textit{sculan} ‘shall’ is also found in such contexts. Consider the example in (\ref{ex:petrova_chen:petrova_chen:oi3}), in which the modal verb construction and the past subjunctive alternate in two subsequent clauses expressing posteriority relative to the matrix clause, which itself is situated in the past:
+
+% \largerpage[1.5]
+
+\ea\label{ex:petrova_chen:petrova_chen:oi10} O I 10, 13–14, cit. in \citet[13]{Petrova2008}, her ex. (10)\\ 
+    \gll gihiaz […] / thaz ér uns sin gisiuni in lichamen gábi\\
+    promise.\textsc{ind.pst} […] / that he us.\textsc{dat} his likeness in human\_body give.\textsc{sbjv.pst}\\
+    \glt ‘[God] had promised […] to give us his likeness in the shape of a human body’
+\z
+
+
+\ea\label{ex:petrova_chen:petrova_chen:oi3} O I 3, 37–38, cit. in \citet[175]{Petrova2008}, her ex. (245)\\ 
+    \gll Iro dágo ward giwágo fon alten wízagon, tház si uns béran scolti thér unsih gihéilti\\
+    her.\textsc{gen.pl} day.\textsc{gen.pl} become.\textsc{ind.pst} known from old prophets \textsc{comp} she us.\textsc{dat} bear shall.\textsc{sbjv} \textsc{rel} us.\textsc{acc} save.\textsc{sbjv.pst}\\
+    \glt ‘Of her days [of the Holy Virgin Mary], it was prophesied by the ancient prophets that for our sake, she would give birth to the one who would save us’
+\z
+
+\citet{Petrova2008} provides the examples above to exemplify the temporal underspecification of the past subjunctive, which conveys all kinds of temporal relations between main and embedded clauses, including those of posteriority, sharing the inherently prospective semantics of the deontic modal verb OHG \textit{sculan} ‘shall’. \citet{Schönherr2011} confirms these observations but claims that in the contexts at issue, the past subjunctive and the modal verb construction leave their original modal domain and obtain a purely temporal interpretation, sharing the polyfunctionality observed for \textit{würde}-\textsc{inf} as a member of the paradigm of the past subjunctive in PDG.\footnote{In addition, \citet{Schönherr2011} elaborates on differences in the interpretation of the past subjunctive and the indicative of \textit{sollen}-\textsc{inf} that are related to effects of perspective taking. These effects are well-known from the semantic literature on FiP. For instance, Eckardt (\citeyear{Eckardt2015}, \citeyear{Eckardt2017}) explains that the English counterpart of \textit{würde}-\textsc{inf}, namely \textit{would}-\textsc{inf}, conveys two different perspectives on events subsequent to a reference point in the past, namely the protagonist’s perspective on events held possible in the future of a past point of reference, as in \textit{free indirect discourse}, and the narrator’s preview into events to come, also called \textit{objective interpretation} or \textit{future of fate}. \citet[145–152]{Thieroff1992} also discusses similar effects related to the interpretations of \textit{würde}-\textsc{inf} in PDG, see also Zeman (\citeyear{Zeman2018} and \citeyear{Zeman2020}) on parallel suggestions on \textit{sollte} + infinitive in PDG. With respect to the expression of FiP in OHG, \citet{Schönherr2011} suggests that the construction involving OHG \textit{sculan} correlates with the objective interpretation of FiP, i.e., with the expression of future of fate.}
+
+\largerpage[1]
+
+Two important conclusions may be drawn from these observations. First, they provide diachronic evidence suggesting that members of the paradigm of the past subjunctive display the polyfunctionality described for \textit{würde}-\textsc{inf} as a correlate of FiP in PDG (see \sectref{section 2.1}) as their historically constant property. Second, they show that during the periods in which \textit{werden/würde}-\textsc{inf} are still missing, modal verb constructions act as periphrastic expressions of the future not only in its canonical domain, namely the one oriented towards the utterance time (\cite{Behaghel1924}: 258–259, \cite{Luther2012}: 4–10, \cite{Luther2013}: 90–100), but also in the domain of FiP. \citet[190]{Szatzker2003} also expresses this assumption, suggesting that the modal verb constructions act as forerunners of \textit{werden}-\textsc{inf} and \textit{würde}-\textsc{inf} alike. However, it is still unexplained if the properties governing the distribution of modal verb constructions within the domain of the canonical future and described in the literature (\cite{Behaghel1924}: 258–259, \cite{Luther2012} and \citeyear{Luther2013}) also apply to their function in the domain of FiP in the same periods.\footnote{\citet[104]{Luther2013} observes that past tense forms, including those of the modal verbs MHG \textit{mugan} ‘may’, \textit{sol(e)n} ‘shall’ and \textit{wellen} ‘want to/will’, also occur in her database (a total of 37 cases). She remarks that the verbal mood is indistinguishable in the past paradigm of \textit{wellen} and \textit{sol(e)n}, but in the remaining cases, i.e. in the active or passive paradigms of main verbs as well as of \textit{mugan}, in which the subjunctive can be distinguished from the indicative, the former is found in 16 out of 25 instances. Luther does not elaborate on the question of whether the respective instances express FiP. She rather interprets the subjunctive forms as hypothetical and therefore basically modal in nature.} These questions regarding the formal properties and the distribution of correlates of FiP in the history of German will be addressed on the basis of corpus evidence in the following sections.
+
+
+\section{Methods of data collection and properties of the database} \label{section 3}
+
+The present investigation pursues an onomasiological approach, seeking to identify the inventory of linguistic means used to express FiP in OHG and MHG. The database is retrieved from the reference corpora of the respective periods, namely \textit{Referenzkorpus Altdeutsch} (ReA, Version 1.2, \cite{zeigeDeutschDiachronDigital2022}) and \textit{Referenzkorpus Mittelhochdeutsch} (ReM, Version 1.0, \cite{kleinReferenzkorpusMittelhochdeutsch105013502016}). The corpora are lemmatized and annotated for morpho-syntax, searchable via ANNIS, an open-source web browser-based search tool facilitating queries in complex, multilayer linguistic corpora \citep{KrauseZeldes2016}.
+
+\largerpage[1]
+
+Onomasiological approaches essentially depend on the identification of well-defined contexts in which the phenomenon at issue is present. The underlying semantic property of FiP is that it conveys events or actions which take place after some relevant point in the past. But at the same time, there are no formal diagnostics occurring in contexts related to FiP, such as temporal adverbs or related lexical expressions. Also, the syntactic environments in which FiP can occur are quite heterogeneous, ranging from declarative and non-declarative main clauses to various types of dependent clauses, including relative and complement ones. This is demonstrated by \citet[149–152]{Thieroff1992} for PDG, on the basis of data from original prose. The same kind of heterogeneity is present in the historical data. Consider the examples in (\ref{ex:petrova_chen:petrova_chen:ddd}) and (\ref{ex:petrova_chen:petrova_chen:bair}), retrieved by way of manual search. Relations pertaining to FiP are conveyed in a relative-like main declarative clause given in (\ref{ex:petrova_chen:petrova_chen:ddd}) and in two different types of subordinate clauses in (\ref{ex:petrova_chen:petrova_chen:bair}), namely in a complement clause of MHG \textit{gehèizen} ‘promise’ used in the past, and a relative clause modifying the head noun MHG \textit{kint} ‘child’ in the preceding complement clause:
+
+\ea \label{ex:petrova_chen:petrova_chen:ddd} DDD-AD-Tatian\_1.2 > T\_Tat82, 12\\
+\gll Quad uuarlicho Iudam Simonem Scariothen, dér uuas selanti inan\\
+mean.\textsc{ind.pst} in-fact Judas son\_of\_Simon Iscariot \textsc{dem} be.\textsc{ind.pst} betray.\textsc{ptcp.prs} him.\textsc{acc}\\
+\glt ‘he meant Judas Iscariot, the son of Simon, for he would betray him’ / Lat. \textit{Dicebat autem Iudam Simonis Scariothis; hic enim erat traditurus eum }(Jo 6,71)
+\z
+
+\ea \label{ex:petrova_chen:petrova_chen:bair} 12\_2-bair-V\_2-X > M087-N1 (tok\_dipl 3875–3890)\\
+\gll got gehiz abrahame. daz ein kint dannen chome. daz di werlt alle. fuorte uon der helle\\
+God promise.\textsc{ind.pst} Abraham \textsc{comp} a child thereof come.\textsc{sbjv.pst} \textsc{rel} the world all lead.\textsc{sbjv.pst} from the hell\\
+\glt ‘God promised Abraham that a child would thereof [from Abraham’s people] come which would lead all world from hell’
+\z
+
+The lack of specific diagnostics associated with the presence of relations of FiP, and the heterogeneity of the syntactic contexts in which FiP may occur, make it difficult to formulate queries for an automatic corpus search.
+
+In a questionnaire prepared for linguistic fieldwork and designed to determine the linguistic devices used to express tense and aspect cross-linguistically, \citet[797]{Dahl2000} provides the following five contexts in which FiP is present, each accompanied by questionnaire items selected to retrieve the respective linguistic correlates:\footnote{In the original questionnaire, the individual items are supplemented by notes specifying the context in which the sentences are uttered, and the respective verbs are provided in their non-inflected lemma form, put in small caps. For illustration, we use the full forms of the sentence items in English and provide inflected verb forms.}
+
+\begin{enumerate}[label=\alph*.]
+    \item sentential complements of past-tense verbs of saying and believing, e.g. \textit{My brother said yesterday that he would come here }\{\textit{today/next week}\} or\textit{ My brother said yesterday that it would }\{\textit{be cold/rain}\}\textit{ today }(see questionnaire items 70, 72–74 in \cite{Dahl2000}: 792)
+
+\item sentential complements of past-tense verbs of wishing and hoping, e.g. \textit{My brother hoped yesterday that} \{\textit{you would come here/it would be cold}\}\textit{ today }(see questionnaire items 71 and 75 in \cite{Dahl2000}: 792)
+
+\item purpose clauses specifying a past-tense matrix clause, e.g. \textit{I wrote a letter to my brother in order that he knew that I would come to see him} (see questionnaire item 96 in \cite{Dahl2000}: 793)\footnote{In fact, this test item involves not only one, but two different cases related to FiP, namely the purpose clause itself and another context, namely the complement of the verb \textit{to know} describing a situation subsequent to the past-tense matrix clause.}
+
+\item \textit{before}-clauses, e.g. \textit{Yesterday evening, I went to bed before by brother came home }(see questionnaire item 22 in \cite{Dahl2000}: 790)
+
+\item main clauses of the type \textit{He would return at seven o’clock} (uttered at eight o’clock, while the person has left at six) (see questionnaire item 109 in \cite{Dahl2000}: 794).
+
+\end{enumerate}
+
+However, applying the questionnaire by \citet{Dahl2000} to OHG and MHG faces some serious methodological problems. First, it is well-known that in OHG and MHG, similarly to PDG, complements of verbs like \textit{say} and \textit{believe}, but also independent clauses uttering indirect speech or thought, tend to display the subjunctive as a marker of reported speech. Note also that in OHG and MHG, the past subjunctive may reveal all kinds of temporal relations between a matrix clause and its sentential complement, namely those of simultaneity, anteriority, and posteriority alike (see \cite{Petrova2008} for discussions and examples).\footnote{As in PDG, the system of OHG and MHG provides two paradigms of the subjunctive, the present subjunctive (\textit{Konjunktiv I}) and the past subjunctive (\textit{Konjunktiv II}), the latter being derived from the plural past stem of the verb. Despite of the implied terminology, these two subjunctive paradigms do not differ in terms of temporality in PDG. E.g., in indirect speech, both the present and the past subjunctive may refer to an event or situation which is simultaneous to the time at which the report is uttered. This holds for historical German in the same way, while the distribution of the different subjunctive paradigms may be governed by the rules of \textit{consecutio temporum}. But in addition to that, and in contrast to PDG, the past subjunctive in OHG is able to express posteriority and anteriority as well, see \citet[13 and 162–190]{Petrova2008} for examples.}
+
+Second, it has been observed that adverbial clauses like purpose clauses and \textit{before}-clauses, but also clausal complements of verbs like \textit{wish} systematically display the subjunctive in OHG (see \cite{ConiglioEtAl2018}). In the typology proposed by Giannakidou (\citeyear{Giannakidou1998} and later), purpose clauses, \textit{before}-clauses and complements of predicates of wish and desire display conditions pertaining to non-veridicality. The respective clauses share some formal cross-linguistic properties, most importantly the use of the subjunctive in Romance and of the class of so-called subjunctive complementizers in Greek and the Balkan languages (see \cite{Farkas1985} and \citeyear{Farkas1992}, \cite{Giannakidou1998} and later, \cite{Roussou2009}, inter alia). In OHG and MHG, but also in other early Germanic languages, the verbal mood in these clauses is prototypically the subjunctive (see \cite{ConiglioEtAl2018}).
+
+Taken together, the above-mentioned observations suggest that in the contexts described in \citet{Dahl2000}, we expect to find a high proportion of subjunctive forms in OHG and MHG. But despite the fact that the respective types of clauses are intrinsically prospective in nature, and despite the observation that in some of its functions, the subjunctive bears future implications in general (\cite{Ultan1978}: 94–95), its presence in the respective clauses may be the consequence of the principles of mood selection, rather than a strategy of expressing FiP in the respective periods of German.\footnote{Following similar considerations, \citet[63]{Luther2013} rejects the status of the present subjunctive as a potential marker of futurity in MHG, because its use very probably results from the selectional properties of the matrix predicate or the semantic type of the adverbial clause.}
+
+As the contexts provided by \citet[797]{Dahl2000} cannot be used to retrieve conclusive examples, we decided to apply alternative criteria to discerning the relevant contexts. We restricted the database to sentential complements of matrix predicates which select the indicative in OHG and MHG, unless they appear in the scope of a negative or non-assertive modal operator (see \cite{Schrodt1983}, \citeyear{Schrodt2004}: 185). These are the OHG and MHG equivalents of the verbs of mental, perceptional, and emotional states like \textit{know, realize, feel, see, be clear}, \textit{fear}, \textit{be afraid, be anxious} etc. as well as other verbs implying the posteriority of their complement, such as \textit{indicate}, \textit{predict}, \textit{foresee}, \textit{promise, pledge} etc. In the queries, we used the lemma information provided in the annotation, and specified that the matrix predicate should be used in the past tense. We extracted those cases in which the respective verbs select complements which are finite and posterior, relative to the event in the matrix clause.
+
+Table \ref{tab:1} provides a list of the matrix verbs which yielded conclusive examples, including the respective lemmata in OHG and MHG.
+
+% define new column type for left-aligned columns within tabularx
+% \newcolumntype{L}{>{\raggedright\arraybackslash}X}
+% \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+
+%table
+\begin{table}%[ht]
+\centering
+\begin{tabularx}{\textwidth}{QQQ}
+\lsptoprule
+{Matrix verb} & {OHG} & {MHG} \\
+\midrule
+\textit{know}, \textit{see}, \textit{recognize} & \textit{inkennen}, \textit{sehan}, \textit{wizzan} & \textit{wizzen}, \textit{erkènnen} \\
+\tablevspace
+% \midrule
+\textit{foreknow}, \textit{predict}, \textit{indicate} & \textit{forasehan}, \textit{wizagon},  \textit{bouhhanen}, \textit{bizeinen}/\textit{bizeinon}/ \textit{gizeihanon} & \textit{wîsen}, \textit{zèigen} \\
+\tablevspace
+% \midrule
+\textit{hope} & \textit{wanen}, \textit{warten} & \textit{gedingen}, \textit{hoffen}, \textit{wænen}, \textit{verwænen}, \textit{sich versëhen} \\
+\tablevspace
+% \midrule
+\textit{be afraid} & \textit{forhten} & \textit{vürhten } \\
+\tablevspace
+% \midrule
+\textit{promise}, \textit{pledge} & \textit{giheizan}, \textit{sih} \textit{biheizan}, \textit{gilobon} & \textit{geh}\textit{è}\textit{izen}, \textit{geloben} \\
+\lspbottomrule
+\end{tabularx}
+\caption{Matrix verbs yielding conclusive examples of FiP in OHG and MHG}
+\label{tab:1}
+\end{table}
+
+On the basis of the queries described above, we compiled a database consisting of a total of 130 instances, 26 OHG ones found in ReA, and 104 MHG ones found in ReM. The inventory and distribution of the variants attested as correlates of FiP in the database is discussed in \sectref{section 4}.
+
+
+\section{Results of the corpus study} \label{section 4}
+\subsection{Inventory} \label{section 4.1}
+
+\largerpage[1.5]
+
+Four types of constructions functioning as correlates of FiP can be identified in the OHG part of the sample. 
+First, as expected from the descriptions found in previous research, the past subjunctive of the lexical verb is found in contexts expressing FiP in OHG. Representative examples are provided in (\ref{ex:petrova_chen:petrova_chen:notker}) and (\ref{ex:petrova_chen:petrova_chen:otfrid}): 
+
+% \newpage
+
+\ea \label{ex:petrova_chen:petrova_chen:11}
+
+    \ea\label{ex:petrova_chen:petrova_chen:notker} DDD-AD-Z-Notker-Psalmen\_1.2 > N\_Ps\_030, 91, 4–5\\
+    \gll So hábest dû getân also dû gehiêzze. daz du mit mînemo bluôte mînen liût irlôstist\\
+so have you done as you promised.\textsc{ind.pst} \textsc{comp} you with my blood my people saved.\textsc{sbjv.pst}\\
+    \glt ‘So you have done as you promised, that you would save my people with my blood’
+
+    \ex \label{ex:petrova_chen:petrova_chen:otfrid} DDD-AD-Otfrid\_1.2 > O\_Otfr.Ev.4.19, 45\\
+    \gll Bizéinta thaz sin wírdi zi niwíhti scioro wúrdi\\
+demonstrate.\textsc{ind.pst} \textsc{comp} his priesthood in tatters soon became.\textsc{sbjv.pst}\\
+    \glt ‘[This] indicated that his priesthood would soon be ruined’
+    \z
+\z
+
+Second, as also mentioned in the literature, we find modal verb constructions occurring as correlates of FiP in OHG. The modal verbs attested are OHG \textit{sculan} ‘shall’ and \textit{wellen} ‘want’. Their distribution will be subject of analysis below (\sectref{section 4.2}). Note that these modal verbs are attested both in the indicative and the subjunctive, as shown in (\ref{ex:petrova_chen:petrova_chen:notker2}) and (\ref{ex:petrova_chen:petrova_chen:otfrid2}):
+
+\ea \label{ex:petrova_chen:petrova_chen:12}
+    \ea \label{ex:petrova_chen:petrova_chen:notker2} DDD-AD-Z-Notker-Psalmen\_1.2 > N\_Ps\_015, 23–24\\
+    \gll Aber in carne uuésendo. fóre sah ih. daz ih ze góte fólletânero uérte iruuínden sólta\\
+but in flesh being fore- see.\textsc{ind.pst} I \textsc{comp} I to God accomplish.\textsc{dat} earth\_life.\textsc{dat} return shall.\textsc{ind.pst}\\
+    \glt ‘But as human I foresaw that I would return to God after my earthy existence is fulfilled’
+
+    \ex \label{ex:petrova_chen:petrova_chen:otfrid2} DDD-AD-Otfrid\_1.2 > O\_Otfr.Ev.5.9, 31–32\\
+\gll Wir wântun thes giwísso […] er únsih scolti irláren thes mánagfalten wéwen\\
+we hope.\textsc{ind.pst} \textsc{def.gen.sg} truly […] he us.\textsc{acc} shall.\textsc{sbjv.pst} exempt \textsc{def.gen.sg} manifold.\textsc{gen.sg} pain.\textsc{gen.sg}\\
+\glt ‘we truly hoped […] that he would exempt us from this manifold pain’
+\z
+\z
+
+The third correlate of FiP found in the OHG part of the database is the construction involving the OHG equivalents of the copula verb \textit{be}, namely \textit{sîn} and \textit{wesan}, in combination with the present participle of the lexical verb. As shown for the modal verb constructions above, this construction may also involve both the past indicative and subjunctive of the finite verb, as demonstrated in (\ref{ex:petrova_chen:petrova_chen:13a}) and (\ref{ex:petrova_chen:petrova_chen:13b}):
+
+\ea\label{ex:petrova_chen:petrova_chen:13}
+\ea \label{ex:petrova_chen:petrova_chen:13a} DDD-AD-Tatian\_1.2 > T\_Tat135, 30\\
+\gll uuizagota thaz ther heilant sterbenti uuas furi thiota\\
+predict.\textsc{ind.pst} \textsc{comp} the Savior die.\textsc{ptcp.prs} be.\textsc{ind.pst} because-of people\\
+\glt ‘predicted that the Saviour would die for the sake of this people’ / Lat. \textit{prophetavit quia Ihesus moriturus erat pro gente}
+
+\ex \label{ex:petrova_chen:petrova_chen:13b} DDD-AD-Tatian\_1.2 > T\_Tat225, 3\\
+\gll Uuir uuantumes thaz her uuari arlosenti Israhel\\
+we expect.\textsc{ind.pst} \textsc{comp} he be.\textsc{sbjv.pst} save.\textsc{ptcp.prs} Israel\\
+\glt ‘We expected that he would save Israel’ / Lat. \textit{Nos autem sperabamus quia ipse esset redempturus Israhel}
+\z
+\z
+
+Finally, we find a lexical periphrasis involving the predicative adjective \textit{zuowart} ‘future, to come’ as a complement of the copula verbs OHG \textit{sîn}/\textit{wesan} ‘be’ or OHG \textit{werdan} ‘become’. Representative examples are provided in (\ref{ex:petrova_chen:petrova_chen:14a}) and (\ref{ex:petrova_chen:petrova_chen:14b}) This construction is only attested in the past indicative in the database:
+
+\ea 
+\ea\label{ex:petrova_chen:petrova_chen:14a} DDD-AD-Tatian\_1.2 > T\_Tat80, 8\\
+\gll soso her thaz inkanta thaz sie zuouuerte uuarun\\
+as\_soon\_as he \textsc{dem.acc.sg} realize.\textsc{ind.pst} \textsc{comp} they to\_come be.\textsc{ind.pst}\\
+\glt ‘as soon as he realized that they would return’ / Lat. \textit{cum cognovisset quia venturi essent}
+
+\ex \label{ex:petrova_chen:petrova_chen:14b} DDD-AD-Isidor\_1.2 > I\_DeFide\_6, 1\\
+\gll Uuexsal dhes nemin huuazs bauhnida? Nibu dhazs after moysise dodemu […] uns zuouuert leididh uuardh unser druhtin iesus christus\\
+change \textsc{def.gen.sg} name.\textsc{gen.sg} what signified.\textsc{ind.pst} if-not \textsc{comp} after Moses’ death […] us.\textsc{dat} to\_come leader become.\textsc{ind.pst} our lord Jesus Christ\\
+\glt ‘What signified the changing of Christ’s name? It meant that after Moses’ death, […] our lord Jesus Christ would become our leader’ / Lat. \textit{Mutatio nominis quid significabat, nisi quia defuncto Moyse }[…]\textit{ dux nobis Dominus Jesus Christus erat futurus}
+\z
+\z
+
+The total of examples found in OHG is very small (n=26), but nevertheless, we want to analyze the quantitative distribution of the four types of correlates of FiP included in the OHG part of the database. The absolute numbers and the proportions of the OHG correlates of FiP are provided in \tabref{tab:2}. With 11 out of 26 cases (42.3\%), the past subjunctive of the lexical verb provides the most frequent correlate of FiP in OHG. The modal verb periphrases and the construction OHG \textit{sîn/wesan} + present participle share the same proportions in the database, occurring in 6 out of 26 instances (23.1\%) each. The most infrequent variant is the lexical construction \textit{zuowart sîn/wesan/werdan} which is attested only three times (11.5\%) in the database.
+
+\begin{table}
+    \centering
+    \begin{tabularx}{\textwidth}{Qr}
+        \lsptoprule
+        {Formal correlate of FiP in OHG} & {n (\%)} \\
+        \midrule
+        past subjunctive & 11 (42.3\%) \\
+        % \midrule
+        modal verb construction & 6 (23.1\%) \\
+        % \midrule
+        \textit{sîn/wesan} ‘be’ + present participle & 6 (23.1\%) \\
+        % \midrule
+        \textit{zuowart sîn/wesan/werdan} ‘be to come’ & 3 (11.5\%) \\
+        \midrule
+        {Total} & 26 (100\%) \\
+        \lspbottomrule
+    \end{tabularx}
+    \caption{Types, absolute numbers, and percentages of OHG formal correlates of FiP in the database}
+    \label{tab:2}
+\end{table}
+
+Let us look into the distribution of the indicative and the subjunctive in the domain of FiP in OHG. The relevant figures are provided in \tabref{tab:3}. With simple forms of the lexical verb, the past subjunctive occurs in all of the instances involved in the database. In contrast, the lexical periphrasis \textit{zuowart sîn/wesan/werdan} is only attested in the past indicative. In the remaining domains, there is alternation of the indicative and the subjunctive. The former is present in 66.7\% of the modal verb constructions and in 50.0\% of the construction OHG \textit{sîn/wesan} + present participle. In total, the subjunctive is present in 69.2\% of the contexts involving relations pertaining to FiP in the OHG part of the database.
+
+\begin{table}%[ht]
+    \centering
+    \begin{tabularx}{\textwidth}{Qrrr}
+        % {>{\raggedright\arraybackslash}p{4cm} Y@{\hspace{40pt}} Q Y}
+        \lsptoprule
+        {Formal correlate of FiP in OHG} & {\textsc{ind}} & {\textsc{sbjv} (\%)} & {Total} \\
+        \midrule
+        past subjunctive & 0 & 11 (100\%) & 11 \\
+        % \midrule
+        modal verb construction & 2 & 4 (66.7\%) & 6 \\
+        % \midrule
+        \textit{sîn/wesan} ‘be’ + present participle & 3 & 3 (50.0\%) & 6 \\
+        % \midrule
+        \textit{zuowart sîn/wesan/ werdan} ‘be to come’ & 3 & 0 (0.0\%) & 3 \\
+        \midrule
+        {Total} & 8 & 18 (69.2\%) & 26 \\
+        \lspbottomrule
+    \end{tabularx}
+    \caption{Verbal mood of formal correlates of FiP in the OHG part of the database. \textsc{ind} = Indicative, \textsc{sbjv} = Subjunctive.}
+    \label{tab:3}
+\end{table}
+
+Let us compare this picture with the one obtained for MHG. As expected from the previous literature, the past subjunctive is found as a correlate of FiP in this period as well. A representative example is provided in (\ref{ex:petrova_chen:petrova_chen:15a}). But in MHG, the verbal mood of lexical verbs used in the past cannot be determined in each individual case, because the formal distinction between the indicative and the subjunctive is blurred, due to phonological reductions. The formal syncretism of the indicative and the subjunctive is particularly strong in the paradigm of the weak verbs, as in (\ref{ex:petrova_chen:petrova_chen:15b}), where the indicative and the subjunctive completely overlap in the past. But there are also syncretic forms in the past paradigm of some strong verbs, as in (\ref{ex:petrova_chen:petrova_chen:15c}).\footnote{In the domain of the strong verbs, distinctions between the indicative and the subjunctive are partially provided by the property of \textit{i}-mutation of stem velar vowels (/a/, /o/, /u/ and respective diphthongs), caused by the subjunctive suffix -\textit{i} present in OHG. But note that except for the case of short /a/ (\textit{Primärumlaut}, see \cite{Sonderegger1979}: 312), the effect of \textit{i}-mutation is not systematically marked in manuscripts of the OHG and MHG period. For example, the form \textit{wâren} in (i) can be both indicative and subjunctive, provided that the diacritics can signify both the length of the vowel, or \textit{i}-mutation:
+
+\begin{exe}
+    \exi{(i)} 
+    12\_2-bair-PV-G > M157-G1 (tok\_dipl 6456 - 6476) \\
+    \gll den gehiez er daz si gotes chint wâren\\
+    \textsc{dem.dat.pl} promised he that they God.\textsc{gen.sg} children were.\textsc{ind/sbjv.pst}\\
+    \glt ‘to them, he promised that they were God’s children’
+\end{exe}
+
+%(i) 
+%\gll den gehiez er daz si gotes chint wâren\\
+%\textsc{dem.dat.pl} promised he that they God.\textsc{gen.sg} children were.\textsc{ind/sbjv.pst}\\
+%\glt ‘to them, he promised that they were God’s children’ (M157: Wiener Physiologus:tok\_dipl 6456--6476)
+}
+
+At least in one case, given in (\ref{ex:petrova_chen:petrova_chen:15d}), the attested form is indisputably one of the indicative. Given this, it cannot be excluded that the indicative was already used in those cases in which FiP is expressed by way of a simple past form of the lexical verb in the MHG period. In some few cases, we also find forms of the present subjunctive in the database, as shown in (\ref{ex:petrova_chen:petrova_chen:15e}).
+
+
+\ea 
+\ea \label{ex:petrova_chen:petrova_chen:15a} 12\_2-bair-V\_1-X > M088-N1 (tok\_dipl 7609 – 7622)\\
+\gll \textit{er} \textit{ime} \textit{do} \textit{gehiez.} \textit{daz} \textit{er} \textit{niemmer} \textit{mêre} \textit{die} \textit{wærlt} \textit{flure} \textit{mit} \textit{wazzere}\\
+he him.\textsc{dat} then promise.\textsc{ind.pst} \textsc{comp} he never again the world flood.\textsc{sbjv.pst} with water\\
+\glt ‘he promised him that he never again would flood the world’
+
+\ex \label{ex:petrova_chen:petrova_chen:15b} 12\_2-obd-PV-X > M199B-N1 (tok\_dipl 3946 - 3956)\\
+\gll \textit{Vnder} \textit{in} \textit{sie} \textit{tho} \textit{gelobeten} \textit{thaz} \textit{sie} \textit{iz} \textit{ire} \textit{nieht} \textit{ne=sageten}\\
+among them.\textsc{dat} they then swear.\textsc{ind.pst} \textsc{comp} they it.\textsc{acc.sg} her.\textsc{dat} not NEG=say.\textsc{pst}\\
+\glt ‘Among themselves they swore that they would tell absolutely nothing of it to her’
+
+\ex \label{ex:petrova_chen:petrova_chen:15c} 12\_2-bair-V\_Kchr2-X > M121y2-N (tok\_dipl 44714 – 44724)\\
+\gll \textit{di=baier} \textit{im} \textit{alle} \textit{gehiezen.} \textit{daz} \textit{si} \textit{in} \textit{niemer} \textit{uerliezen}\\
+the=Bavarians him.\textsc{dat} all.\textsc{nom.pl} promise.\textsc{ind.pst} \textsc{comp} they him.\textsc{acc} never leave.\textsc{sbjv.pst}\\
+\glt ‘The Bavarians all promised him that they would never desert him’
+% \newpage
+\ex \label{ex:petrova_chen:petrova_chen:15d} 13\_1-obd-V-G > M312-G1 (tok\_dipl 9538 – 9549)\\
+\gll \textit{da} \textit{gelobte} \textit{si} \textit{wider} \textit{in.} \textit{daz} \textit{si} \textit{sit} \textit{allez} \textit{war} \textit{lîez}\\
+then promise.\textsc{ind.pst} she towards him.\textsc{acc} \textsc{comp} she thereafter everything real make.\textsc{pst}\\
+\glt ‘then she promised him that she would make thereafter everything true’
+
+\ex \label{ex:petrova_chen:petrova_chen:15e} 12\_2-bair-V\_1-X > M088-N1 (tok\_dipl 23212 - 23217)\\
+\gll \textit{er} \textit{vorhte,} \textit{daz} \textit{ez} \textit{ime} \textit{zerrinne}\\
+he fear.\textsc{ind.pst} \textsc{comp} it him.\textsc{dat} run\_out\_of.\textsc{sbjv.pst}\\
+\glt ‘he was afraid that he would run out of it’
+\z
+\z
+
+Modal verb constructions are found as correlates of FiP in MHG as well. Next to the etymological equivalents of the modal verbs found in OHG, namely MHG \textit{sol}(\textit{e})\textit{n} and MHG \textit{wellen} exemplified in (\ref{ex:petrova_chen:petrova_chen:16a}) and (\ref{ex:petrova_chen:petrova_chen:16b}), the modal verbs MHG \textit{mügen} ‘may’ and MHG \textit{müezen} ‘must’ also occur, see (\ref{ex:petrova_chen:petrova_chen:16c}) and (\ref{ex:petrova_chen:petrova_chen:16d}). Except for \textit{mügen}, all past forms of the modal verbs occurring in the database are syncretic between the indicative and the subjunctive:
+
+\ea 
+\ea \label{ex:petrova_chen:petrova_chen:16a} 13\_2-bair-V-X > M012-N0 (tok\_dipl 15882 - 15890)\\
+\gll \textit{Do} \textit{gehiez} \textit{er} \textit{in} \textit{baeiden} \textit{[…]} \textit{Als} \textit{si} \textit{des} \textit{obzes} \textit{enbizzen.} \textit{daz} \textit{si} \textit{fvr} \textit{war} \textit{solden} \textit{wizzen}\\
+then promise.\textsc{ind.pst} he them.\textsc{dat} both.\textsc{dat} […] as\_soon\_as they \textsc{def.gen.sg} fruit.\textsc{gen.sg} eat \textsc{comp} they for true shall.\textsc{pst} know.\textsc{inf}\\
+\glt ‘Then he promised both of them that they would truly become wise as soon as they eat the fruit’
+
+\ex \label{ex:petrova_chen:petrova_chen:16b} 13\_1-alem-PV-X > M113y-N1 (tok\_dipl 8308 – 8319)\\
+\gll \textit{er=giheiz} \textit{noe} \textit{er} \textit{ne=wolte} \textit{uns} \textit{nieht} \textit{mere} \textit{ertrenchen} \textit{inder} \textit{sintu-luote}\\
+he=promise.\textsc{ind.pst} Noah he \textsc{neg}=would us.\textsc{acc} no more drown.\textsc{inf} in\_the deluge\\
+\glt ‘he promised Noah that he would never again drown us in the flood’
+
+\ex \label{ex:petrova_chen:petrova_chen:16c} 14\_1-omd-V-G > M311-G1 (tok\_dipl 2752 - 2759)\\
+\gll \textit{vnd} \textit{waz} \textit{er} \textit{recht} \textit{erkande} \textit{daz} \textit{in} \textit{gewirden} \textit{mochte}\\
+and whatever he justly discern.\textsc{ind.pst} \textsc{comp.rel} him.\textsc{acc} honour.\textsc{inf} can.\textsc{pst}\\
+\glt ‘and whatever he justly discerned that would increase his dignity’
+
+\ex \label{ex:petrova_chen:petrova_chen:16d} 12\_2-wmd-PV-G > M199A-G1 (tok\_dipl 109 - 123)\\
+\gll \textit{se} \textit{gelouede} \textit{êr} \textit{that} \textit{se} \textit{mit} \textit{in} \textit{uore.} \textit{that} \textit{thes} \textit{genesen} \textit{moste} \textit{ere} \textit{herre.}\\
+she promise.\textsc{ind.pst} rather \textsc{comp} she with them.\textsc{dat} go.\textsc{sbjv.pst} \textsc{comp} \textsc{def.gen.sg} recover must.\textsc{pst} their lord\\
+\glt ‘she rather promised immediately that she would go with them, and that their lord would recover from it [i.e. the sickness]’
+\z
+\z
+
+\noindent Finally, we find the construction MHG \textit{künftic sîn/wesen} ‘be to come’, which corresponds to the lexical periphrasis OHG \textit{zuowart sîn/wesan}. There is a single example of this type in the database, provided in (\ref{ex:petrova_chen:petrova_chen:17}). As in OHG, the copula verb in this example is in the past indicative.
+
+\ea \label{ex:petrova_chen:petrova_chen:17} 12-2-bair-V\_Kchr1-X > M121y1-N (tok\_dipl 45193 - 45205)\\
+\gll \textit{aines} \textit{nahtes} \textit{er} \textit{an} \textit{dem} \textit{ſternernen} \textit{ſach.} \textit{waz} \textit{im} \textit{des} \textit{tages} \textit{kunftich} \textit{was}\\
+one.\textsc{gen.sg} night.\textsc{gen.sg} he at the.\textsc{dat.pl} stars see.\textsc{ind.pst} what.\textsc{comp} him.\textsc{dat} the.\textsc{gen.sg} day.\textsc{gen.sg} future be.\textsc{ind.pst}\\
+\glt ‘one night, he saw in the stars what would happen to him the next day’
+\z
+
+The construction involving the present participle of the lexical verb does not occur in the MHG part of the database.
+
+The quantitative distribution of the forms and constructions acting as correlates of FiP in MHG are provided in \tabref{tab:4}. The simple forms of the lexical verb, i.e. the past indicative and the subjunctive as well as the present subjunctive, are taken together. They provide the largest group, present in 65.4\% of all data. In this group, distinctive forms of the past subjunctive represent the most significant part, appearing in 44.2\% of all data. This shows that despite the process of loss of mood distinctions, the proportion of forms of the past subjunctive remains the same as in OHG, where it makes up 42.3\% (see \tabref{tab:3}). At the same time, the proportion of the modal verb construction increases from 23.1\% in OHG to 33.6\% in MHG. The frequency of the lexical periphrasis involving the adjective OHG \textit{zuowart}, namely MHG \textit{künftic}, declines from 11.5\% in OHG to 1.0\% in MHG.
+
+
+\begin{table}\small%[ht]
+    \begin{tabularx}{\textwidth}{Qlr}
+        \lsptoprule
+        {Formal Correlate of FiP in MHG} & & {n (\%)} \\
+        \midrule
+        % \multirow{4}{2.5cm}
+        {simple forms of the lexical} & past subjunctive & 46 (44.2\%) \\
+          % \tablevspace
+        \cmidrule{2-3}
+        verb 68 (65.4\%) & past indicative = past subjunctive & 15 (14.4\%) \\
+          % \tablevspace
+        \cmidrule{2-3}
+         & present subjunctive & 6 (5.8\%) \\
+          % \tablevspace
+        \cmidrule{2-3}
+         & past indicative & 1 (1.0\%) \\
+        % \cmidrule{2-3}
+          % \tablevspace
+        \midrule
+        modal verb constructions & & 35 (33.6\%) \\
+          % \tablevspace
+        \midrule
+        \textit{kümftig wësen} ‘be to come’ & & 1 (1.0\%) \\
+        \midrule
+        {Total} & & 104 (100\%) \\
+        \lspbottomrule
+    \end{tabularx}
+    \caption{Types, absolute numbers, and percentages of MHG formal correlates of FiP in the database}
+    \label{tab:4}
+\end{table}
+
+
+The proportions of the indicative and the subjunctive in the MHG part of the database are given in  \tabref{tab:5}. Simple forms of the lexical verb are taken together. Of those, 76.5\% are clearly in the subjunctive. Modal verb constructions are overwhelmingly syncretic regarding verbal mood, i.e., the formal overlapping of the indicative and the subjunctive holds for 94.3\% of the occurrences. As explained above, the lexical periphrasis \textit{kümftig} \textit{wesen} only attested in the indicative, but it occurs only once in the sample.
+
+\begin{table}\small
+    \begin{tabular}{lrrrr}
+        \lsptoprule
+        {Formal Correlate of FiP in MHG} & {\textsc{ind} n} & {\textsc{sbjv} n (\%)} & {\textsc{ind} = \textsc{sbjv}} & {Total}\\
+        \midrule
+        simple forms of the lexical verb & 1 & 52 (76.5\%) & 15 & 68 (100\%) \\
+        % \midrule
+        modal verb construction & 2 & 0 (0.0\%) & 23 (94.3\%) & 25 (100\%) \\
+        % \midrule
+        \textit{kümftig wësen} ‘be to come’ & 1 & 0 (0.0\%) & 0 & 1 (100\%) \\
+        \midrule
+        {Total} & 4 & 52 (50.0\%) & 48 & 104 (100\%) \\
+        \lspbottomrule
+    \end{tabular}
+    \caption{Formal correlates of FiP in the MHG part of the database}
+    \label{tab:5}
+\end{table}
+
+
+Let us summarize the observations regarding the inventory of forms and constructions expressing FiP in the OHG and MHG part of the database.
+
+Note that first, the corpus search reveals that the past subjunctive is the most significant correlate of FiP in OHG and MHG. But at the same time, there is variation between the indicative and the subjunctive in the domain of FiP. This is reminiscent of the situation observed for FiP in PDG, in which the morphologically subjunctive form \textit{würde}-\textsc{inf} co-varies with the forms of the past indicative (next to the past subjunctive, see \sectref{section 2.1} above).
+
+Second, the database confirms previous observations according to which there is parallelism in the expression of the future as a deictic category and FiP in OHG and MHG, in that modal verb constructions act as correlates of both, prior to the emergence of the \textit{werden}/\textit{würde}-\textsc{inf}. This parallelism is even expanded, as the results of our study suggest. As an example, the corpus search revealed that the construction \textit{be} + present participle acts as a correlate of FiP in OHG. This construction is documented in descriptions of historical German where it is generally related to the expression of duration (\cite{Wilmanns1906}: 171--172, \cite{Paul1968}: 72). But according to \citet[20]{rick1905}, \textit{be} + present participle in OHG is also used to express reference to the future, similarly to its more prominent counterpart involving the later future auxiliary \textit{werden}‘become’ and taken as the potential source construction of \textit{werden}-\textsc{inf} (\cite{Behaghel1924}: 262). Note that \textit{be} + present participle is documented as an equivalent of the Latin future in vernacular translations of the OHG period (\cite{Hinsdale1897}: 11–12). The same applies to the construction OHG \textit{zuowart wesan/werdan}, as \citet[11]{Hinsdale1897} demonstrates. In the database of the present study, both constructions are used to translate the periphrastic future of the type Lat. \textit{venturus esse}, see (\ref{ex:petrova_chen:petrova_chen:13a})–(\ref{ex:petrova_chen:petrova_chen:13b}) and (\ref{ex:petrova_chen:petrova_chen:14a}). At the same time, the putative source construction of \textit{werden}-\textsc{inf}, the construction \textit{werden} + present participle, is missing in our sample.
+
+In the following subsection, the distributional properties of the constructions acting as competitors of the single forms of the lexical verbs in the domain of FiP will be investigated. We will compare the distribution of correlates of FiP with that of forms expressing the canonical future in the earlier periods of German (\cite{Behaghel1924}, \cite{Luther2012} and \citeyear{Luther2013}, \cite{Hartmann2021}). The focus will be on the variation between the modal verb periphrases and the respective single verb forms of the lexical verb. The construction \textit{be} + present participle or \textit{be} + OHG \textit{zuowart} or MHG \textit{kümftig} will be excluded because they are not considered in the relevant work on the distribution of future constructions in the history of German.
+
+
+\subsection{Distributional properties of the correlates of FiP} \label{section 4.2}
+
+Three aspects regarding the distribution of the simple forms of the lexical verb versus modal verb constructions will be considered, namely i. the development in the proportion of these variants, ii. the choice of modal verbs, incl. the presence of restrictions related to special positions in the verbal paradigm, and iii. the semantic properties of the lexical verb in terms of \textit{aktionsart}.
+%Die drei römischen Zahlen oben eventuell noch anpassen?
+
+\subsubsection{General observations} \label{section 4.2.1}
+
+\citet[253–266]{Behaghel1924} provides an overview of forms and constructions used to express relations of the future in OHG and MHG, including their estimated frequencies. He observes that as a rule, the future is expressed by forms of the paradigm of the present indicative (\cite{Behaghel1924}: 253), and that gradually, different periphrastic expressions emerge, which compete with the futurate present. One of these is the combination of the OHG and MHG equivalents of the PDG modal verbs \textit{sollen}, \textit{wollen} and \textit{müssen}, which convey the meanings of necessity, volition, and ability in the historical periods (see also \cite{Lühr1997}). According to Behaghel, \textit{sollen} is the preferred modal verb until the end of the MHG period \citep[259]{Behaghel1924}, while the remaining two evolve later and display low frequencies \citep[259–260]{Behaghel1924}. As for the construction \textit{werden} + present participle, \citet[261]{Behaghel1924} mentions that it is still rare in OHG, having a strong inchoative meaning.
+
+Behaghel’s observations for OHG are consistent with the results of \citet{Hinsdale1897}, who examines the translations of the Latin future in vernacular texts of the OHG period. She also finds that in the predominant part of the data, the correlate of the Latin future in OHG is the present indicative \citep[37]{Hinsdale1897}. The modal verb periphrases are generally infrequent, and only \textit{sollen} can be found in a genuine future function in the earliest translations \citep[9]{Hinsdale1897}, while \textit{wollen} and \textit{müssen} start to appear in translations of the late-OHG period \citep[37]{Hinsdale1897}. In addition, the construction \textit{werden} + present participle is only marginally attested in translations of Latin futures and probably the result of a syntactic loan, because in the respective cases, the present participle is contained in the Latin original as well.\footnote{As in OHG \textit{nû uuirdist thû suîgenti} ‘and now, you will become silent’ in T 6, 9 for Lat. \textit{erit }[sic!]\textit{ tacens}, see \citet[10 and 38]{Hinsdale1897}.}
+
+This picture is still in place in MHG, as the corpus study by Luther (\citeyear{Luther2012} and \citeyear{Luther2013}) reveals. The present indicative is the main correlate of the future (\cite{Luther2012}: 4 and 6; \cite{Luther2013}: 90), co-varying with modal verb periphrases using \textit{sollen}, \textit{wollen} and \textit{müssen}. The construction \textit{werden} + present participle is still rare and strongly inchoative (see also \cite[173]{Wilmanns1906}  and \cite[72]{Paul1968}), and so is the later future construction \textit{werden}-\textsc{inf}. Both \textit{werden}-periphrases advance as forms conveying future meaning in late-MHG and ENHG (\cite[5]{Luther2012}, \cite{Hartmann2021}).
+
+
+
+
+\subsubsection{Development in the proportion of variants} \label{section 4.2.2}
+
+Luther investigates the development in the frequency of the futurate present and of modal verb periphrases during the MHG period, calculating the percentages of these forms in total, as well as in main and dependent clauses individually. To account for changes within the MHG period, she identifies 5 time spans, each covering 50 years of duration, with the exception of the first sub-period, which comprises the time span from the beginning of MHG in the second half of the 11\textsuperscript{th}century until the middle of the 12\textsuperscript{th} century. In brief, Luther (\citeyear{Luther2012} and \citeyear{Luther2013}) discovers that there is change in the overall distribution of the futurate present and of modal verb periphrases within the MHG period, in that the proportion of the former continuously declines, while the one of the latter gradually increases. She also discovers some differences in the change of these proportions in main versus subordinate clauses, namely that the decline of the futurate present is stronger in main clauses than in dependent ones, while the opposite holds for the modal verb constructions. In other words, over time, the modal verb constructions become more strongly associated with the expression of the future in main clauses, while the futurate present is more consistently maintained in dependent clauses. 
+
+Let us look if the same kind of development also applies to the proportions of simple forms of the lexical verb versus the modal verb constructions in the domain of FiP. Recall that only complement clauses are included in the database of the present analysis. Consequently, the comparison will only consider the figures applying for dependent clauses in Luther's study (\citeyear{Luther2013}). 
+
+\tabref{tab:6} provides the percentages of the futurate present (listed as ``\textsc{prs}\textsubscript{\textsc{fut}}") and of modal verb constructions (listed as ``\textsc{mv}") in dependent clauses in MHG, taken from \citet[92, Table 2 and 93, Table 3]{Luther2013}. The time spans distinguished by \citet{Luther2013} are provided in the titles of the respective columns, e.g. ``12\_2" stands for the second half of the 12\textsuperscript{th} century, etc. The first sub-period is represented as ``-12\_1". Table \ref{tab:7} provides the absolute numbers and the percentages of simple forms of the lexical verb (listed as ``\textsc{v}") and of modal verb constructions expressing FiP in the OHG and MHG sample. The figures for OHG are taken together; those for MHG are classified according to the time spans identified by \citet{Luther2013}. In addition, separate figures are provided for distinctive forms of the past subjunctive (listed as ``\textsc{sbjv}\textsubscript{\textsc{pst}}") and for the total of simple forms of the lexical verb found in the database. 
+
+\begin{table}
+    \begin{tabularx}{\textwidth}{QYYYYY}
+        \lsptoprule
+        & {-12\_1} & {12\_2} & {13\_1} & {13\_2} & {14\_1} \\
+        \midrule
+        {\textsc{prs}\textsubscript{\textsc{fut}}} & 64.6\% & 59.7\% & 59.2\% & 59.0\% & 55.9\% \\
+        % \midrule
+        {\textsc{mv}} & 14.4\% & 24.6\% & 24.6\% & 21.1\% & 22.2\% \\
+        \lspbottomrule
+    \end{tabularx}
+    \caption{Proportion of futurate presents and modal verb constructions in dependent clauses in MHG \citep[92, Table 2 and 93, Table~3]{Luther2013}}
+    \label{tab:6}
+\end{table}
+
+
+\begin{table}%[ht]
+    \centering
+    \begin{tabularx}{\textwidth}{QYYYYYY}
+        \lsptoprule
+        & {OHG} & {12\_1} & {12\_2} & {13\_1} & {13\_2} & {14\_1} \\
+        \midrule
+        {Total} & n=26 & n=1 & n=51 & n=24 & n=14 & n=14 \\
+        \midrule
+        {\textsc{sbjv}\textsubscript{\textsc{pst}}} & 11  & 0  & 25  & 11  & 5  & 5  \\
+         & (42.3\%) & (0.0\%) & (49.0\%) & (45.8\%) & (35.7\%) & (35.7\%) \\
+        \tablevspace
+        % \midrule
+        {\textsc{v}} & 11  & 1  & 42  & 15  & 5  & 5  \\
+         & (42.3\%) & (100\%) & (82.3\%) & (62.5\%) & (35.7\%) & (35.7\%) \\
+        \tablevspace
+        % \midrule
+        {\textsc{mv}} & 6  & - & 8  & 9  & 9  & 9  \\
+        & (23.1\%) & & (15.7\%) & (37.5\%) & (64.3\%) & (64.3\%) \\
+        \tablevspace
+        % \midrule
+        {Other} & 9 & - & 1  & - & - & - \\
+        \tablevspace
+        {Periphrases} & (34.6\%) & - & (2.0\%) & - & - & - \\
+        \lspbottomrule
+    \end{tabularx}
+    \caption{Proportions of simple forms of the lexical verbs and of modal verb constructions as expressions of FiP in the OHG and MHG part of the database}
+    \label{tab:7}
+\end{table}
+
+The proportions of the modal verb constructions as correlates for FiP in OHG and MHG must be treated with caution, because of the low number of occurrences obtained for the individual sub-periods. But let us nevertheless analyze the tendencies revealed by the figures in Table \ref{tab:7}, compared to those described by \citet{Luther2013} and revealed in Table \ref{tab:6}. The data for OHG as well as for the first period of MHG must be neglected, because of the low frequency of conclusive data. For the remaining sub-periods, we can be observe that there is a decline in the proportion of simple forms of the lexical verb and an increase in the proportion of modal verb periphrases over time. The modal verb constructions even reach higher percentages in the domain of FiP than in the domain of the canonical future. But this might be an effect of the database and must be corroborated on the basis of a bigger sample of data.
+
+
+\subsubsection{The choice of modal verbs} \label{section 4.2.3}
+
+Recall that according to \citet{Behaghel1924} and \citet{Hinsdale1897}, \textit{sollen} has a future function already in the earliest OHG texts, while \textit{wollen} and \textit{müssen} appear only later in future constructions. These observations are only partially confirmed by the data examined by \citet{Luther2013} for MHG. She observes that in total, \textit{wollen} is the more frequent modal in the beginning of the MHG period, appearing in 6.8\% of the cases referring to the future in the first period (-12\_1) (see \cite{Luther2013}: 95, Table \ref{tab:5}). At the same time, \textit{sollen} is present in 4.6\% of the data in the same period (see \cite{Luther2013}: 97, Table \ref{tab:7}). The modal verbs \textit{müssen} and \textit{ mögen} constantly display low percentages (see \cite{Luther2013}: 98, Table \ref{tab:9} and 100, Table \ref{tab:11}). 
+
+The proportion of the modal verbs \textit{sollen}, \textit{wollen}, \textit{müssen} and \textit{mögen} in future constructions in MHG dependent clauses are provided in Table \ref{tab:8}, following \citet{Luther2013}. The proportions of the same modal verbs found in constructions expressing FiP in OHG and MHG are given in Table \ref{tab:9}. No data is available for the first period of MHG (-12\_1).
+
+\begin{table}%[ht]
+    \centering
+    \begin{tabularx}{\textwidth}{Q YYYYY}
+        \lsptoprule
+        & {12\_1} & {12\_2} & {13\_1} & {13\_2} & {14\_1} \\
+        \midrule
+        {\textit{wellen}} & 6.0\% & 5.7\% & 10.4\% & 11.7\% & 8.0\% \\
+        % \midrule
+        {\textit{soln}} & 5.6\% & 4.8\% & 8.3\% & 7.0\% & 12.5\% \\
+        % \midrule
+        {\textit{müezen}} & 2.8\% & 10.9\% & 5.7\% & 2.5\% & 1.5\% \\
+        % \midrule
+        {\textit{mügen}} & 3.2\% & 3.2\% & 5.5\% & 6.0\% & 0.9\% \\
+        \lspbottomrule
+    \end{tabularx}
+    \caption{Proportions of modal verbs as expressions of the canonical future in dependent clauses in MHG (\cite{Luther2013}: 95, Table \ref{tab:5}, 97, Table \ref{tab:7}, 98, Table \ref{tab:9} and 100, Table \ref{tab:11})}
+    \label{tab:8}
+\end{table}
+
+\begin{table}%[ht]
+    \centering
+    \begin{tabularx}{\textwidth}{Q YYYYYY}
+        \lsptoprule
+        & {OHG} & {-12\_1} & {12\_2} & {13\_1} & {13\_2} & {14\_1} \\
+        \midrule
+        {Total} & n=26 & n=1 & n=50 & n=24 & n=14 & n=14\\
+        \midrule
+        {\textsc{mv}} & n=6 & n=0 & n=8 & n=9 & n=9 & n=9\\
+        \midrule
+        {\textit{wollen}} & 1 & - & 5 & 3 & 5 & 5 \\
+        % \midrule
+        {\textit{sollen}} & 5 & - & 2 & 6 & 3 & 3 \\
+        % \midrule
+        {\textit{müssen}} & - & - & 1 & - & - & - \\
+        % \midrule
+        {\textit{mögen}} & - & - & - & - & 1 & 1 \\
+        \lspbottomrule
+    \end{tabularx}
+    \caption{Distribution of modal verbs in constructions expressing FiP in OHG and MHG in the database}
+    \label{tab:9}
+\end{table}
+
+The numbers in Table \ref{tab:9} show that \textit{sollen} is more frequent than \textit{wollen} in OHG, as accounted for in the literature. In MHG, however, \textit{wellen} becomes the more frequent modal, as also observed by \citet{Luther2013}. Nonetheless, the relation of \textit{sollen} and \textit{wollen} is dynamic among the sub-periods of MHG and the individual records, as \citet[94–97]{Luther2013} explains. She refers to one phase in which \textit{sollen} is more frequent than \textit{wollen} in her database, namely the final one (14\_1), see Table \ref{tab:8}. This dynamic behavior in the ratio of \textit{sollen} and \textit{wollen} is reflected in the database on FiP, but here, the phase in which \textit{sollen} exceeds \textit{wollen}, is the first half of the 13\textsuperscript{th} century (13\_1). 
+
+Similar to the findings of the previous literature, the frequency of \textit{müssen} is lower than that of \textit{wollen} and \textit{sollen} in the database on FiP. Interestingly, the single example involving \textit{müssen} in FiP is found in the second half of the 12\textsuperscript{th} century, for which \citet[98]{Luther2013} documents an exceptional rise in the proportion of this modal verb in dependent clauses in her data as well. As for \textit{mögen}, which according to \citet[100, Table \ref{tab:11}]{Luther2013} reaches its highest frequency in the two phases of 13\textsuperscript{th} century, only a partial correspondence with the FiP can be observed, namely that this verb is attested in the second half of the 13\textsuperscript{th} and the first half of the 14\textsuperscript{th} century. But as a whole, the figures for \textit{müssen} and \textit{mögen} must be treated with caution, because the quantity of data found in the present database is extremely low.
+
+\largerpage[1]
+
+Let us turn to the validity of well-known paradigmatic restrictions governing the choice of modal verbs in future periphrases in OHG and MHG. \citet[37]{Hinsdale1897} observes that \textit{wollen} displays a preference for the 1\textsuperscript{st} person singular in OHG, which she explains along the lines of the genuine modal semantics of this verb, expressing intention and volition on the part of the speaker. In MHG, the preference of \textit{wollen} in the 1\textsuperscript{st} person singular is maintained. \citet[94–95]{Luther2013} observes that on average, half of the constructions involving \textit{wollen} are in the 1\textsuperscript{st} person singular in MHG.
+
+The present database does not display a preference for \textit{wollen} in the 1\textsuperscript{st} person singular. There are 3 examples in the 1\textsuperscript{st}person, two in the singular and one in the plural. All of them display the modal verb \textit{sollen}, as exemplified in (\ref{ex:petrova_chen:petrova_chen:18}):
+
+\ea \label{ex:petrova_chen:petrova_chen:18} DDD-AD-Notker-Psalmen\_1.2 > N\_Ps\_015, 23–24\\
+\gll Aber in carne uuésendo. fóre sah ih. daz ih ze góte fólletânero uérte iruuínden sólta\\
+but in flesh being fore- saw.\textsc{ind.pst} I \textsc{comp} I to God accomplished life return.\textsc{inf} should.\textsc{ind.pst}\\
+\glt ‘But as human I foresaw that I would return to God after [my] earthy existence is fulfilled’
+\z
+
+At the same time, \textit{wollen} is used in 19 of the examples contained in the database. None of these is used in the 1\textsuperscript{st}person singular. But in all of them, the original semantics of\textit{ wollen} is present, in that the event in the dependent clause is interpretable as expressing the intention or volition of the matrix subject, see (\ref{ex:petrova_chen:petrova_chen:19}). The same interpretation is sometimes available in clauses involving \textit{sollen}, see (\ref{ex:petrova_chen:petrova_chen:20}), which is obviously less limited to its original semantics of obligation or determination. In (\ref{ex:petrova_chen:petrova_chen:21}), for example, the construction involving \textit{sollen} is plainly prognostic rather than related to necessity or obligation:
+
+\ea \label{ex:petrova_chen:petrova_chen:19} 13\_1-bair-PV-G > M329-G1 (tok\_dipl 11261 - 11272)\\
+\gll vnd gehiez in daz er in ze=trôste wôlte sênten den heîligen geist\\
+and promised.\textsc{ind.pst} them.\textsc{dat} \textsc{comp} he them.\textsc{dat} for=consolation.\textsc{dat} would.\textsc{pst} send.\textsc{inf} the Holy Spirit\\
+\glt ‘and promised them that he would send them the Holy Spirit to console them’
+\z
+
+\largerpage[-1]
+
+\ea \label{ex:petrova_chen:petrova_chen:20} 13\_2-omd-PV-G > M408-G1 (tok\_dipl 8912 - 8926)\\
+\gll vnd ime gelobite he daz he in na drin tagin volgin scholde an der martire\\
+and him.\textsc{dat} swore.\textsc{ind.pst} he \textsc{comp} he them.\textsc{dat} around three days follow.\textsc{inf} should.\textsc{pst} in the martyrdom\\
+\glt ‘and he swore to him that he would follow them in around three days in the martyrdom’
+\z
+
+\ea \label{ex:petrova_chen:petrova_chen:21} 13\_1-wmd-PV-X > M505-N1 (tok\_dipl 510 - 518)\\
+\gll Alſos wisd=ons di iunfrouwe wa wir uh finden ſulden\\
+so indicated.\textsc{ind.pst}=us.\textsc{dat} the damsel where.\textsc{comp} we you.\textsc{acc.pl} find.\textsc{inf} should.\textsc{pst}\\
+\glt ‘So the damsel pointed us to where we would find you’
+\z
+
+In conclusion, it can be observed that there are parallels in the inventory and distribution of modal verbs in constructions expressing the canonical future and FiP in OHG and MHG. The same modal verbs are used, with roughly the same development of frequencies over time. A difference is present regarding the observed restriction of use of \textit{wollen} in the 1\textsuperscript{st}person singular in the expression of the canonical future in late-OHG and MHG. This preference was not confirmed for the use of \textit{wollen} in contexts pertaining to FiP. However, more data is needed to establish a reliable generalization regarding this issue. 
+
+
+
+\subsubsection{Semantic properties of the lexical verb} \label{section 4.2.4}
+
+In this sub-section, we will investigate if there is a preference for a particular type of expression of FiP, depending on the semantic properties of the lexical verb in terms of \textit{aktionsart}.
+
+It is well-known that verbs with different aspectual properties behave differently with respect to the way in which they express reference to future events. A prominent example is provided by Russian, in which the present tense of perfective verbs was reanalyzed as a future form, while imperfective verbs have retained their original present-tense reference and demand a special, periphrastic construction when referring to future events (see the discussion in \cite{Leiss1992}: 191–198). Similar effects have been discussed for German since the seminal work by Streitberg (\citeyear{Streitberg1891}, see \cite{Leiss1992}). Perfective verbs have been considered as inherently prospective in meaning, which makes them suitable to refer to the future even if they are used in the present, while imperfective verbs lack this property and require special markers of futurity (see the discussion and the references in \cite{Hartmann2021}: 373 and 375).
+
+\citet{Hartmann2021} investigates the actional properties of the embedded verbs in \textit{werden}-\textsc{inf} and its putative source construction \textit{werden} + present participle during the MHG and ENHG period, comparing them with modal verb constructions as already well-established means of referring to the future in the same periods. He seeks to identify effects related to context expansion as an indicator of the ongoing grammaticalization process of novel constructions and tries to determine if \textit{werden}-\textsc{inf} can be considered more restricted in terms of the actionality of the embedded verbs than its putative forerunner \textit{werden} + present participle. The result is negative. \citet{Hartmann2021} applies the seminal classification of verbs proposed by \citet{Vendler1957}, according to which predicates can be divided into telic and atelic, depending on whether verbal semantics involve an inherent terminal point (telic) or not (atelic). Telic verbs are further subdivided into so-called achievements and accomplishments, depending on whether the terminal point is reached within a single, definite moment (achievements), as in \textit{discover, reach a top} etc., or involves a continuous process (accomplishments), as in \textit{draw a circle} or \textit{run a mile}. Atelic verbs are also subdivided into two classes, namely activities and states, the former referring to processes which involve homogeneous sub-intervals, e.g. \textit{run, draw, }or\textit{work}, while the latter denote unitary non-dynamic situations, such as \textit{know, feel, see} or \textit{have}. The result is that in the beginning of the 12\textsuperscript{th} century, both constructions involving \textit{werden} are limited to verbs representing the class of atelic verbs (\cite{Hartmann2021}: 378), while representatives of the class of telic verbs start to appear only later in these constructions, namely during the 13\textsuperscript{th} century for \textit{werden} + present participle (ibid.) and even later for \textit{werden}-\textsc{inf}. By contrast, in the domain of the modal verb periphrases, telic and atelic verbs display an even distribution over the entire period of investigation (\cite{Hartmann2021}: 381).
+
+Let us look at the distribution of \textit{aktionsart} classes in the database obtained for FiP in OHG and MHG. Table \ref{tab:10} reveals the absolute number of verbs representing the various classes of \textit{aktionsart} distinguished by \citet{Vendler1957}. It shows that all classes of \textit{aktionsart} are attested in the database, although the class of telic verbs is predominant in both parts of the sample.
+
+\begin{table}%[ht]
+    \centering
+    \begin{tabularx}{\textwidth}{QYYYY}
+        \lsptoprule
+        & \multicolumn{2}{c}{{Telic}} & \multicolumn{2}{c}{{Atelic}} \\
+        \cmidrule(lr){2-3} \cmidrule(lr){4-5}
+        & {Achievement} & {Accomp-lishment} & {Activity} & {State} \\
+        \midrule
+        {OHG} & 18 & 4 & 2 & 2 \\
+        % \midrule
+        {MHG} & 62 & 17 & 8 & 17 \\
+        \midrule
+        {n=130} & & & & \\
+        \lspbottomrule
+    \end{tabularx}
+    \caption{Distribution of \textit{aktionsart} categories of the lexical verb in the database}
+    \label{tab:10}
+\end{table}
+
+Let us check if there is a correlation between the \textit{aktionsart} of the lexical verb and type of expression of FiP included in the database. \tabref{tab:11} shows the absolute numbers of telic and atelic verbs found in the database, classified according to the type of expression of FiP. Again, all simple forms of the lexical verbs are taken as a total and listed as ``\textsc{v}", while all kinds of periphrastic constructions are taken together and listed as ‘marked construction’. \tabref{tab:12}  provides the same numbers for telic and atelic verbs occurring in any simple form of the lexical verb (``\textsc{v}") and in modal verb periphrases (``\textsc{mv}") in the OHG and MHG part of the database.
+
+\begin{table}%[ht]
+    \centering
+    \begin{tabularx}{\textwidth}{QYYYY}
+        \lsptoprule
+        & \multicolumn{2}{c}{{Telic}} & \multicolumn{2}{c}{{Atelic}} \\
+        \cmidrule(lr){2-3} \cmidrule(lr){4-5}
+        & {\textsc{v}} & {Marked construction} & {\textsc{v}} & {Marked construction} \\
+        \midrule
+        {OHG} & 9 & 13 & 2 & 2 \\
+        % \midrule
+        {MHG} & 52 & 27 & 16 & 9 \\
+        \midrule
+        \multicolumn{5}{l}{{n=130}} \\
+        \multicolumn{5}{l}{{OHG:} Fisher’s exact value = 1, not significant} \\
+        \multicolumn{5}{l}{{MHG:} χ² = 0.03, p-value = .87, not significant} \\
+        \lspbottomrule
+    \end{tabularx}
+    \caption{Aspectual properties of verbs in FiP-constructions – single verb and verbs in all kinds of marked constructions}
+    \label{tab:11}
+\end{table}
+
+
+\begin{table}%[ht]
+    \centering
+    \begin{tabularx}{\textwidth}{Q YYYY}
+        \lsptoprule
+        & \multicolumn{2}{c}{{Telic}} & \multicolumn{2}{c}{{Atelic}} \\
+        \cmidrule(lr){2-3} \cmidrule(lr){4-5}
+        & {\textsc{v}} & {\textsc{mv}} & {\textsc{v}} & {\textsc{mv}} \\
+        \midrule
+        {OHG} & 9 & 5 & 2 & 1 \\
+        % \midrule
+        {MHG} & 52 & 26 & 16 & 9 \\
+        \midrule
+        \multicolumn{5}{l}{{MHG:} χ² = 0.06, p-value = 0.81, not significant at p < .01} \\
+        \lspbottomrule
+    \end{tabularx}
+    \caption{Aspectual properties of verbs in FiP-constructions – single verb and verbs in modal verb constructions}
+    \label{tab:12}
+\end{table}
+
+
+The figures in \tabref{tab:11} and \tabref{tab:12} reveal that there is no preference for any of the periphrastic constructions included in the database, depending on the \textit{aktionsart} of the lexical verb. We calculated the p-values for the individual periods using standard correlation tests. The results revealed that there is no statistically significant correlation between the \textit{aktionsart} of the verb and the type of expression of FiP found in the database. 
+
+\tabref{tab:13} provides the development in the distribution of telic and atelic verbs embedded in modal verbs in constructions expressing FiP in the database. We give global numbers for the whole OHG period; the MHG data is provided according to the individual sub-periods distinguished in the sections above.
+
+\begin{table}
+    \begin{tabularx}{\textwidth}{QYYYYYY}
+        \lsptoprule
+        & OHG & {-12\_1} & {12\_2} & {13\_1} & {13\_2} & {14\_1} \\
+        \midrule
+        {Telic} & 5 & - & 6 & 6 & 7 & 7\\
+        % \midrule
+        {Atelic} & 1 & - & 2 & 3 & 2 & 2 \\
+        \lspbottomrule
+    \end{tabularx}
+     \caption{Aspectual properties of verbs in FiP-constructions – single verb and verbs in modal verb constructions}
+    \label{tab:13}
+\end{table}
+
+The figures in \tabref{tab:13} show that in OHG and over the entire MHG period, both telic and atelic verbs fall within the scope of modal verbs in constructions expressing FiP. Throughout the entire database, telic verbs are continuously more frequent in each of the periods distinguished. 
+
+These results confirm the picture obtained by \citet{Hartmann2021} for MHG and ENHG, who shows that in modal verb periphrases used as future constructions, representatives of the various \textit{aktionsart} classes are evenly distributed over the entire investigation period.
+
+
+\section{Summary and conclusion} \label{section 5}
+
+In this paper, we discussed the results of a corpus study which was designed to determine the inventory of forms and constructions expressing FiP in OHG and MHG. We found that the past subjunctive is the most relevant correlate of FiP in these periods, and that it alternates with various types of periphrastic constructions, which are known to express futurity in the history of German. These are modal verb constructions, but also two additional types of periphrases, namely \textit{be} + present participle and the lexical periphrases \textit{be/become} in combination with an adjective meaning ‘future, to come’. We also found that the verbal mood in these constructions is not consistently the subjunctive but rather, variation between the indicative and the subjunctive is present in the domain of FiP from the beginning of its attestation. 
+
+We observed that, while \textit{be} + present participle and \textit{be/become} + adjective decline over time, modal verb periphrases advance as the major competitors of the past subjunctive (or any simple form of the lexical verb) during the MHG period. Considering the observation that that modal verb constructions represent a kind of a periphrastic future expression and a forerunner of the later construction \textit{werden/würde}-\textsc{inf}, we investigated whether the distribution of these constructions is parallel in contexts of the canonical future, and in FiP. 
+
+Three factors were tested, namely the development in the percentages of variants over time, the choice of modal verbs, including the observed preference for \textit{wollen} in the 1\textsuperscript{st} person singular, and the presence of a correlation between the aspectual properties of the lexical verb and any type of expression of FiP. 
+
+The results revealed that the development of the proportions of modal verb constructions as competitors of simple forms of the lexical verb follows the same tendencies in both domains, in that the relative frequency of the former gradually increases, while the relative frequency of the latter declines over the investigation period. There is a difference, however, in that modal verb constructions yield higher proportions in the domain of FiP than in the domain of the canonical future. This, however, needs to be corroborated on the basis of a bigger sample of data from the respective periods. 
+
+With respect to the choice of modal verbs, the situation is similar, in that the inventory and relative frequency of modal verbs in FiP is comparable to the one in the domain of the canonical future. However, the preference for \textit{wollen} in the 1\textsuperscript{st} person singular observed for the canonical future cannot be confirmed by the data expressing FiP.
+
+Finally, the choice of the type of expression and the semantic properties of the lexical verb in terms of \textit{aktionsart} were examined. We found that verbs displaying all types of \textit{aktionsart} may occur both as futurate simple forms of lexical verbs as well as in a modal verb construction expressing FiP. It was shown that the lack of restrictions regarding the \textit{aktionsart} of verbs embedded in modal periphrases in the domain of FiP is a common property shared with modal periphrases as markers of the canonical future in MHG and ENHG.
+
+The results of the present investigation add diachronic evidence to some controversial issues regarding the nature of FiP as a temporal category, supporting the formal compositionality and functional ambiguity of the correlates of FiP observed in modern languages, including PDG, and highlighting the parallels between FiP and the future as a deictic category. However, future research investigating a larger sample of data is needed to obtain a more reliable picture of the parallels and differences regarding the formal and distributional properties of forms and constructions expressing the two types of the future in the history of German, including the later period in which \textit{werden/würde}-\textsc{inf} raises and consolidates as a special future construction.
+
+
+
+\begin{comment}
+\section*{Abbreviations}
+\begin{tabularx}{.5\textwidth}{@{}lQ@{}}
+... & \\
+... & \\
+\end{tabularx}%
+\begin{tabularx}{.5\textwidth}{@{}lQ@{}}
+... & \\
+... & \\
+\end{tabularx}
+\end{comment}
+\section*{Acknowledgements}
+We are indebted to the participants of the Conference ``Futures of the Past", March 6--7, 2023 in Düsseldorf, for questions and discussions. We also thank the editors of the volume and an anonymous reviewer for valuable comments and suggestions on an earlier version of the manuscript. All remaining errors are ours. 
+
+\sloppy
+\printbibliography[heading=subbibliography,notkeyword=this]
+\end{document}

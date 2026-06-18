@@ -1,0 +1,65 @@
+% \newcommand*{\orcid}{}
+%
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\makeatother
+
+\newcommand{\togglepaper}[1][0]{
+   \bibliography{../localbibliography}
+   \papernote{\scriptsize\normalfont
+     \theauthor.
+     \titleTemp.
+     To appear in:
+     E. Di Tor \& Herr Rausgeberin (ed.).
+     Booktitle in localcommands.tex.
+     Berlin: Language Science Press. [preliminary page numbering]
+   }
+   \pagenumbering{roman}
+   \setcounter{chapter}{#1}
+   \addtocounter{chapter}{-1}
+}
+%
+\newbool{bookcompile}
+\booltrue{bookcompile}
+\newcommand{\bookorchapter}[2]{\ifbool{bookcompile}{#1}{#2}}
+%
+% %\newcommand{\orcid}[1]{}
+\graphicspath{ {./figures/} }
+%
+\let\eachwordone=\itshape
+
+
+% Seongha
+% \newcommand{\koreex}[1]{{\fontspec{Baekmuk Batang}{#1}}}
+
+% Kutida
+\newfontfamily\thaifont{Noto Sans Thai} 
+\newcommand{\textthai}[1]{{\thaifont #1}} % für Thai
+
+
+\newfontfamily\chinesefont{Noto Sans CJK SC}
+\newcommand{\textchinese}[1]{{\chinesefont #1}} % Für Chinesisch
+
+% wiemer
+\def\hyph{-\penalty0\hskip0pt\relax}
+% \definechangesauthor[color=NavyBlue]{SH}
+
+
+
+\newcolumntype{K}{>{\raggedright\arraybackslash}p{0.6\textwidth}}  % Right column with 0.7 width
+
+
+% \newfontfamily\krn[Scale=MatchLowercase,BoldFont=SourceHanSerif-Bold.otf]{SourceHanSerif-Regular.otf}
+% \AdditionalFontImprint{Source Han Serif KO}
+% \XeTeXlinebreaklocale 'ko'
+% \renewcommand{\krn}{}
+
+
+
+% Rhee
+\newfontfamily\koreanfont{Noto Sans CJK KR} 
+\newcommand{\textkorean}[1]{{\koreanfont #1}} % für Koreanisch
+
+\renewcommand{\REF}[2][]{(\ref{#2}#1)}

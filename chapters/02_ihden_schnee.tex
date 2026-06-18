@@ -1,0 +1,606 @@
+\documentclass[output=paper,colorlinks,citecolor=brown]{langscibook}
+\ChapterDOI{10.5281/zenodo.20541846}
+\author{Sarah Ihden\orcid{}\affiliation{Universität Rostock} and Lena Schnee\orcid{}\affiliation{Universität Hamburg}}
+\title{Expressing future reference in Middle Low German}
+\abstract{The article deals with future constructions in Middle Low German and with the question of which external and internal linguistic factors have an influence on the choice of the formally different variants referring to future events in Middle Low German. The study is based on transcriptions and annotations of the \mbox{Reference} \mbox{Corpus} Middle Low German / Low Rhenish (1200–1650). In addition to a purely quantitative part, the article presents a deep quantitative-qualitative investigation of future constructions in Middle Low German Bible texts and reveals various factors that have an impact on the choice of a variant – above all there is an influence of the translator, as well as an influence of the semantic context.}
+
+%move the following commands to the "local..." files of the master project when integrating this chapter
+%\usepackage{tabularx}
+%\usepackage[english]{babel}
+%\usepackage{langsci-optional}
+%\usepackage{langsci-gb4e}
+%\usepackage{fontspec}
+%\bibliography{localbibliography}
+%\newcommand{\orcid}[1]{}
+
+\IfFileExists{../localcommands.tex}{
+   \addbibresource{../localbibliography.bib}
+   \input{../localpackages}
+   \input{../localcommands}
+   \input{../localhyphenation}
+   \boolfalse{bookcompile}
+   \togglepaper[2]%%chapternumber
+}{}
+
+%\usepackage{graphicx}
+%\graphicspath{ {./images/} }
+%\usepackage{rotating}
+
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+Future constructions are intensively researched in Germanic languages both in their recent and in their historical varieties. However, with regard to historical varieties of the German language, there are still some research gaps, concerning for example the diachronic development of competing constructions expressing future and the role of internal and external factors influencing the use of a variant. This is especially true for Middle Low German,\footnote{Middle Low German is a group of historical varieties of Low German. It was used from 1200 until about 1650 not only in the northern German-speaking areas but also in the Baltic area and elsewhere in centres of the Hanseatic League such as London or Nowgorod, since it was the lingua franca of this confederation.} the development of which is less researched compared to the High German varieties.\footnote{The development of future constructions in High German is intensively researched with differing focus regarding content and methodological focus. A complete overview of research cannot be given here, so reference is made only to selected works. See for example \citet{Saltveit1962} analysing sentences with both \textit{werden} ('become') with the present participle and with the infinitive from Old High German until the 16\textsuperscript{th} century and \citet{Oubouzar1974} providing a quantitative and qualitative study of \textit{werden} + present participle and infinitive in a set of seven texts from the 11\textsuperscript{th} until the 17\textsuperscript{th} century.} In the old Middle Low German grammars by \citet{Lübben1882}, \citet{Lasch1914}, and \citet{Sarauw1924} (see Section \ref{chap:lit}), future constructions are only briefly referred to. While the interest in Middle Low German grammar has increased in the last few years and a wide range of grammatical issues including complex verbal constructions have been investigated, future constructions have not been in the centre of interest yet. A recent corpus-based study by \citet{Ihden2023} on \textit{wērden}/\textit{wēsen} + present participle contains some useful observations concerning the futurate use of \textit{wērden} + present participle. However, this study did not provide a comprehensive description of the variation between \textit{wērden} + present participle and \textit{wērden} + infinitive as well as the other competing future constructions as the focus of the analysis was not on future expressions.
+Hence, findings on the development of future expressions in Middle Low German and on influencing factors remain to be obtained.
+
+This key research desideratum is addressed in our paper focusing on the diachronic development of the formally different variants expressing future in Middle Low German and on interactions between them, especially on the reasons for the use of a specific variant. In order to do so, we use transcriptions and annotations from the Reference Corpus Middle Low German / Low Rhenish (1200–1650) (short: ReN) (\cite{ReNTeam2021}). The ReN is currently the largest corpus of Middle Low German texts. It is enriched with various linguistic annotations and the text selection is structured by time, language area, and genre, which allows us to analyse phenomena that vary along each parameter.
+
+We will conduct a two-step analysis on the variation of future expressions in Middle Low German, starting with a purely quantitative approach to provide a bigger picture of frequency (Section \ref{chap:freq}) which we will complement with a quantitative-qualitative approach on variation of future constructions in Bible texts and on factors influencing the use of a variant (Section \ref{chap:bibles}).
+
+Our paper is structured as follows: In Section \ref{chap:lit} we give a brief overview of the different future constructions in Middle Low German and on the previous research in this area. Section \ref{chap:method} contains our research questions, explains our method and presents the corpus we used. The results of our analyses are given in Section \ref{chap:results}, starting with an overview on the distribution of two formally similar variants, namely \textit{wērden} + present participle and \textit{wērden} + infinitive (Section \ref{chap:freq}), followed by a quantitative-qualitative analysis of variation in future references in Middle Low German Bible texts (Section \ref{chap:bibles}). In Section \ref{chap:summary}, we summarise the main results and give an outlook on potential following studies based on our work.
+
+\is{} % add x to subject index for this page
+
+\section{Middle Low German future constructions in the research literature}\label{chap:lit}
+
+The Middle Low German reference grammars by \citet{Lübben1882}, \citet{Lasch1914}, and \citet{Sarauw1924} describe four different grammatical structures for referring to future events. 
+\begin{itemize}
+    \item Modal verb constructions:
+    \subitem a) \textit{schȫlen} (‘shall’) + infinitive: \textit{hê schal kōmen}
+    \subitem b) \textit{willen}  (‘will’) + infinitive: \textit{hê wil kōmen}
+    \subitem c) \textit{mö̂ten}  (‘must’) + infinitive:  \textit{mö̂t kōmen} %\textit{ö{\fontspec{Symbola}\symbol{"02C6}}} %@Lena: Graphem!
+    \item Present tense:
+    \subitem d) Main verb in simple present: \textit{hê kōmet}
+    \item Complex verbal construction with \textit{wērden} (‘become’) in present indicative and a present participle:
+    \subitem e) \textit{wērden} + present participle: \textit{hê wērt kōmende}
+     \item Complex verbal construction with \textit{wērden} (‘become’) in present indicative and an infinitive:
+    \subitem f) \textit{wērden} + infinitive: \textit{hê wērt kōmen} 
+\end{itemize}
+
+According to \citet[222--223, § 412, note 6]{Lasch1914}, the most common choices, especially in earlier texts and in texts from the western areas, are modal constructions with the verbs \textit{schȫlen} (‘shall’) and \textit{willen}  (‘will’) as in \textit{hê schal kōmen} in a) or \textit{hê wil kōmen} in b) meaning `he will come'. Sometimes the modal verb \textit{mö̂ten} %@Lena: Graphem!
+(‘must’) is used in that sense as well, as in \textit{hê mö̂t kōmen} in c).\footnote{The forms of the lexemes given here are based on the Middle Low German dictionary \citep{MNWB} which differentiates between old length (e.g. \textit{ê}) and new length (e.g. \textit{ē}).} \citet[91, § 65]{Lübben1882} states that no differences in the use of these three variants could be detected~-- as an illustration, he cites a Bible translation by a chronicler from Bremen containing both \textit{mö̂ten} %  %@Lena: Graphem!
++ infinitive and \textit{willen}  + infinitive within the same sentence (\textit{ik mot voruolgen myne vyende vnde ik wil nicht vmmekeren} `I will follow my enemies and I will not turn back'). \citet[225]{Sarauw1924} considers the present as in \textit{hê kōmet} in d) the primary and mainly used option for expressing future. Aside from the present tense and modal verbs + infinitive, there are also two complex verbal constructions with \textit{wērden} (‘become’) in present indicative conveying a future meaning in Middle Low German, namely \textit{wērden} + present participle as in \textit{hê wērt kōmende} in e) and \textit{wērden} + infinitive as in \textit{hê wērt kōmen} in f). 
+According to \citet[91, § 65]{Lübben1882}, a form such as \textit{kōmen} in f) must not be interpreted as an infinitive but as a present participle which has lost its ending -\textit{de}. Through time, this new form without the -\textit{de} becomes common for expressing a future event. 
+It is described by \citet[92, § 65]{Lübben1882} as typical for High German varieties where it already spread from the 14\textsuperscript{th} century on.
+The formal ambiguity between the present participle and the infinitive is also mentioned by \citet[222--223, § 412, note 6]{Lasch1914}. She states that the infinitive becomes the dominant variant within the complex verbal constructions with \textit{wērden} expressing future events.
+
+Information on the different variants expressing future in Middle Low German can also be found in a grammar book from the Middle Low German time itself, the so-called \textit{Münster Grammatik} (1451). According to the text, which explains tense and mood of the verb using the example of the Latin verb \textit{legēre}, the Latin form \textit{legam} (`I will read') is future indicative and corresponds to Middle Low German ``ick wil edder ick schal lesen, edder alse de averlender seggen: ik werde lesen" (`I will or I shall read, or as the foreigners (from the upper German regions, as opposed to the low lands) say: I become read' \citep[44]{Wilken1877}.\footnote{See also the new edition of the \textit{Münster Grammatik} by \citet[61--63]{Caparrini2018}.} The text thus contrasts the variants \textit{willen} + infinitive and \textit{schȫlen} + infinitive used in Middle Low German with the variant \textit{wērden} + infinitive used in High German areas. In addition, the author explains the subtle differences in the use of \textit{willen} + infinitive and \textit{schȫlen} + infinitive as future expressions. While \textit{willen} + infinitive is used when someone has the will to carry out the mentioned action, \textit{schȫlen} + infinitive is preferred when one is obliged to carry out this action \citep[44]{Wilken1877}. Thus, a semantic difference between the two constructions is established here. Furthermore, the \textit{Münster Grammatik} deals with Latin verb forms in the future imperative as in \textit{legitō} (`read!') which means that someone is obliged to read in the future: ``dat he in einer tokamender tyd lesen schal" `that he shall read in a future time' \citep[45]{Wilken1877}. Since such an obligation is connected with the variant \textit{schȫlen} + infinitive as described above, it is most likely to serve as an equivalent for the Latin future tense in the imperative.
+Besides diachronic, diatopic and semantic differences between the variants, there are even more factors with an impact on the use of a variant for expressing future. An influence of the author, the scribe or the printer of a text is shown by \citet[440]{Ihden2023}, who provides a corpus-based analysis of \textit{wērden} and \textit{wēsen} + present participle with data from the ReN (see above). As \citet[440]{Ihden2023} shows, \textit{wērden} + present participle is rather frequent in Middle Low German Bible translations, where future expressions in the Latin Vulgate are translated very closely. Moreover, a cursory look at sentences with future expressions in the Bible texts from the ReN revealed that the same sentence from the Bible can be translated using formally different constructions for referring to future events (\cite[436]{Ihden2023}). Hence, the use of a variant seems to depend strongly on the person producing the text. In the case of the Middle Low German Bible texts, this is the translator.
+
+As we have outlined, there are no comprehensive studies on the development of the different constructions expressing future in Middle Low German. Much research on future constructions has been done focusing on the older High German varieties, however. Regarding the future construction \textit{werden} + infinitive in the German language, there has been a controversial discourse on where the construction comes from for decades, and several scenarios on the origin and the development of \textit{werden} + infinitive have been worked out (also see Schnee and Hartmann, this Volume). One theory states that \textit{werden} + infinitive derived from \textit{werden} + present participle by a phonological reduction of the participle, namely the loss of the final -\textit{e} and the assimilation of the consonant cluster -\textit{nd} (Middle High German -\textit{ende} > -\textit{en)} \citep[397--398, § 373]{weinhold1967}.\footnote{\citet[397, § 373]{weinhold1967} notes with reference to \citet{bech1901} that this loss of the -\textit{e} was mainly spread in the Middle German varieties but not in Southern German varieties. In line with this, \citet[91]{Kleiner1925} shows that in Alemannic texts from the 13\textsuperscript{th} century there is no loss of the ending -\textit{de} in present participle forms. Hence, the attestations of the reduced and assimilated forms are not in line with the areal development of the \textit{werden} future. Because it extends from the Southern German speaking areas, one would have expected attestations for the loss of the participle ending if the theory was correct (\cite[3]{Jäger2024}).} A second theory, the so-called analogy theory, explains the development of \textit{werden} + infinitive by an analogy to Middle High German \textit{beginnen} or modal verbs + infinitive (e.g. \cite[177]{Wilmanns1899}).\footnote{In contrast to these mono-factorial explanations, \citet{DiewaldHabermann2005} propose a multi-factorial approach and explain the development of the \textit{werden} future as an interaction between grammaticalisation, language contact and socio-cultural factors.} See \citet{Westvik2000} for an overview of the different theories.
+\largerpage[2]
+
+Two studies, however, must be mentioned here that do include Middle Low German data. That is, for once, \citegen{kurrelmeyer1904} extensive study, which \citet{Westvik2000} counts as a contribution to the analogy theory, and \citet{Schmid2000}, which according to Westvik proposes what he calls a theory of contamination, as he suggests that the contamination of formally different constructions with a similar meaning leads to the emergence of \textit{werden} + infinitive.
+
+\citet{kurrelmeyer1904} looks at a broad range of constructions potentially used for future reference (\textit{wollen}+ infinitive, \textit{sollen}+ infinitive, present, \textit{werden}~+ infinitive, \textit{werden} + present participle as well as \textit{werden} + past participle, \textit{werden}~+ adjective and \textit{werden} + noun) and lists the proportions each of these have in the total number of future references for a total of 209 texts, 16 of which are Middle Low German. In the latter he identifies 497 future references. Nearly 50\% of these are expressed with \textit{wollen}\footnote{\citet{kurrelmeyer1904} subsumes the Low German verbs under their High German counterparts. We adopt the author's wording in this paragraph.} + infinitive, followed by  \textit{sollen} + infinitive with about 20\%. 13\% of the future references use the present tense. \textit{werden} + infinitive makes up 11\%, however, this construction is only found in three of the texts. It has a substantial part only in one text, namely \textit{Reynke de vos} (Lübeck 1498). Less than 3\% of the instances have \textit{werden} + present participle. The rest of the future references are expressed with constructions not typically counted as future markers but do have futurate semantics to them, namely \textit{werden} with a past participle, an adjective or a noun. Overall, \citet[89]{kurrelmeyer1904} concludes for the Low German texts that ``the first person is represented chiefly by \textit{wollen} + \textit{infinitive}, the second is not sharply defined, now using one, now the other form, the third uses all three constructions, that is, \textit{present tense}, \textit{sollen} or \textit{wollen} + \textit{infinitive}" (emphasis in original). He sees a tendency of the formerly prevailing form \textit{sollen}~+ infinitive (p. 32) to be replaced by \textit{wollen} + infinitive. 
+
+\citet{Schmid2000} looks at 100 different versions of the \textit{Fifteen Signs Before Doomsday} from the 12\textsuperscript{th} to the 17\textsuperscript{th} century. Due to the nature of its content (prophecies) and its consistency, this corpus allows for an onomasiological study, looking at formal variation. As the different versions come from different areas and centuries, it can be used for diachronic and diatopic studies.\footnote{The corpus is not balanced within area and time, however. It shows a preponderance of Upper German texts and other dialects areas are not represented either in the earlier or the later periods, compare \citet[242]{Westvik2000}.} He reports about the five Middle Low German texts that in two of these, which date from the 15\textsuperscript{th} century, the present construction is the more frequent variant, while in two texts from the 16\textsuperscript{th} century, \textit{sollen} + infinitive dominates.\footnote{The numbers presented here are unfortunately somewhat elusive: In the overview of the texts in his corpus, \citeauthor{Schmid2000} reports four Middle Low German texts from the 15\textsuperscript{th}, and only one from the 16\textsuperscript{th} Century. While the overall difference could be explained by texts that have no clear leading variant, the discrepancy in the number of texts from the 16\textsuperscript{th} century is not accounted for.}
+
+Overall, he notes that the \textit{sollen} construction is particularly well established in Middle German, Middle Low German and Middle Dutch, while the Upper German area is characterised by the spread of the \textit{werden} construction.\footnote{\citet{Westvik2000} questions the validity of this assessment regarding the origin of the \textit{werden}-construction, based on the already mentioned imbalance of the data set. This critique does not apply to the statements about Low German, for which, however, very little data was collected.}
+
+As large corpora for historical German varieties have been published in recent decades, the development of future constructions is increasingly researched using corpus-linguistic methods. Regarding older varieties of German, the largest amount of data comes from the Reference Corpora on German language history (\cite{Ihdenetal2023}), namely the Reference Corpora of Old German (short ReA), Middle High German (short ReM), Early New High German (short ReF) and Middle Low German / Low Rhenish (short ReN) as well as German Inscriptions (short ReDI).
+
+\largerpage[-1]
+
+In a recent study based on Old High German and Old Saxon data from the ReA, \citet{Jäger2024} provides an alternative scenario concerning the development of \textit{werden} + infinitive in German. According to her, the origin of the construction lies in copula constructions with \textit{werden} and a predicative past participle. \citet[189]{Jäger2024} lists a number of conditions which have to be fulfilled in order to have a bridging context where there is an ambiguity between the past participle and the infinitive. In the data from the ReA she finds nine clear occurrences of such bridging contexts; one for Old High German and eight for Old Saxon. \citet[183]{Jäger2024} points out that her scenario accounts for both the diachronic and the diatopic extension of \textit{werden} + infinitive in High German. As the prefix \textit{ge}- becomes an obligatory marker of the past participle in the 15\textsuperscript{th} and 16\textsuperscript{th} century, there is a higher chance that a speaker considers an ambiguous form without the prefix to be an infinitive (\cite[229]{Jäger2024}). This supports the reanalysis of \textit{werden}~+ past participle as \textit{werden} + infinitive. With regard to the areal distribution, \citet[230]{Jäger2024} notes that the development differs between High German and Low German. In High German, the past participle is usually formed with the prefix \textit{ge}- and the infinitive without it, while no such formal difference exists in Low German, as the past participle can still be formed without this prefix. Therefore, High German speakers tended to reanalyse a past participle without the \textit{ge}- as an infinitive, unlike speakers of Low German, who were accustomed to the formal similarity of the past participle and the infinitive.
+
+\citet{Hartmann2021} provides an analysis of competing constructions expressing future in Middle High German and Early New High German using data from the ReM and the Bonn Early New High German Corpus (short FnhdC).\footnote{See also \citet{Luther2013} who uses a sample of texts from the ReM in order to investigate which different formal expressions are used for referring to future events in Middle High German. Unfortunately, her procedure for identifying the attestations for future reference is not completely transparent, which is reflected in the fact that she presents attestations that are not unambiguous future references.} With regard to the frequency of the different constructions, \citet[376--378]{Hartmann2021} shows that both the use of \textit{werden} + present participle and of \textit{werden} + infinitive increases during the 12\textsuperscript{th} century. But, from the 13\textsuperscript{th} century on the frequency of \textit{werden} + present participle declines while the frequency of \textit{werden} + infinitive increases even more. In contrast to the constructions with \textit{werden}, the use of the modal verbs + infinitive remains at a relatively stable level through the Middle High German and the Early New High German period.
+
+Besides frequency, \citet{Hartmann2021} also analyses which semantic verb types (according to the aktionsart categorization of \cite{Vendler1957}) are used in the main verb slot of the different constructions. He finds a parallel development of both \textit{werden} + present participle and \textit{werden} + infinitive. First, in the 12\textsuperscript{th} century, almost only activities are used as main verbs within the two constructions. From the 13\textsuperscript{th} century on, \citet[378--379]{Hartmann2021} observes a context expansion since not only activities but also achievements and accomplishments occur in the main verb slot. \citet[379]{Hartmann2021} shows that in both constructions the frequency of telic verbs increases. In the modal verb constructions, which are used as a contrast here, the frequency of the different semantic verb types stays nearly the same through time (\cite[380--381]{Hartmann2021}). From these results \citet[382--383]{Hartmann2021} draws the conclusion that both \textit{werden} + present participle and \textit{werden} + infinitive have gone through a similar development of grammaticalisation, since they could be used in the same contexts and therefore both were competing constructions for a specific period of time. This phase of \textit{attraction} is followed by a phase of \textit{differentiation}\footnote{\citet[389--390]{Hartmann2021} uses the terms \textit{attraction} and \textit{differentiation} according to \citet{DeSmet2018}, who explain that competing forms can change their functions by undergoing two phases: In the first phase, the attraction, two constructions with specific functional similarities become even more similar (\cite[203--204]{DeSmet2018}). In the second phase, the differentiation, ``the functional domain competed over ends up being divided, with each expression filling a unique functional niche" (\cite[198]{DeSmet2018}).} concerning the semantics of the constructions. While nearly all of the few occurrences for \textit{werden} + present participle in the FnhdC carry an inchoative semantic (\cite[390]{Hartmann2021}), with \textit{werden} + infinitive, the future reading becomes stronger.
+
+So far, no corpus-based studies have been conducted to assess the domain of future constructions in Middle Low German. With this paper we address this deficit and contribute to a more complete picture of the development of future constructions in historical varieties of German. 
+
+\section{Research questions, methods and corpus used}\label{chap:method}
+We work with a broad definition of (future) tense: Formally, this means that we include any grammatical form (i.e. morphological markers or periphrastic auxiliary constructions) that is used to express future (i.e. situate an event\footnote{We use the term \textit{event} in the broad sense to describe any type of activity, process or state \citep[85]{Ultan1978}.} posterior to a reference point, i.e. the utterance time, compare \cite[287--288]{Reichenbach1947}.) We further acknowledge that referencing to the future is rarely the sole function of a construction \citep[52]{comrie_identifying_1989}.
+The  most commonly found atemporal functions of future markers are modal categories (such as imperative, obligation, necessity or polite request). Besides these, future markers can express e.g. aspectual categories (such as gnomic/general truth and habitual event), as well as some (non spatial) goal-oriented categories \citep[102--106]{Ultan1978}. Markers of modality, particularly those that express obligation, volition, uncertainty or irreality, are also the most common source from which future markers develop, followed by aspectual markers or (spatial) goal-oriented categories \citep[118]{Ultan1978}. 
+The fact that modality and future tense are so closely connected is often attributed to ``the relative uncertainty inherent in both future event and most of the categories subsumed under the general heading of modals"  \citep[118]{Ultan1978}. 
+
+It is noteworthy that this is but one of the many similarities and semantic overlaps between these categories that are `atemporal' in a stricter sense but strongly connected to the category of future tense. \citet[73, 82]{morris1990} considers them subcategories of \textit{future} (\textit{future of intent}, \textit{future of obligation} and \textit{future of ingression}), which he suggests is to be seen as a broader, complex cognitive category. We do not (yet) make any claims about whether or not expressing future tense can be said to be the primary function of any of the forms looked at. The centre of interest of this paper is to identify the factors that influence the use of the different variants used in Middle Low German in order to refer to a future event (Section \ref{chap:bibles}). 
+
+First, Section \ref{chap:freq} gives an overview over the diachronic distribution of two different competing future expressions in Middle Low German. We will take a look at the frequencies of \textit{wērden} in the present indicative with a present participle and with an infinitive in the ReN (\cite{ReNTeam2021})  and compare them with those found by \citet{Hartmann2021} in the High German corpora. The ReN contains 235 texts from 1200 until about 1650 with a total amount of 2.3 million tokens, of which 1.5 million tokens are grammatically annotated with respect to part of speech (pos), inflectional morphology, and lemma. The remaining 800,000 tokens are transcribed without annotations.
+The ReN is structured by the parameters of language area, time, and genre, which allows an examination of the potential influence of these factors on grammatical variation.
+
+Due to their multi-functionality, the present forms as well as the modal constructions\footnote{\citet{Hartmann2021} uses sets of modal constructions as a background to compare the semantic features analysed against, in order to control that the development he observes in the \textit{werden} constructions can be considered distinctive for the latter and not merely a general development shared by all verbal phrases.} are not included in this first analysis. In order to collect all occurrences of \textit{wērden} with either an infinitive or a present participle, we searched the corpus for sentences containing the lexeme \textit{wērden} (annotated with the lemma \textit{wērden$^1$} in the ReN) as well as an infinitive or a present participle and then manually sorted out the cases where the latter is not a complement to the instance of \textit{wērden}. We verified that each instance also carries future semantics. Instances of preterital \textit{wērden} were excluded for this study, as future meaning is only expressed when the auxiliary verb is in the present tense. We also excluded instances of \textit{wērden} that are unambiguous subjunctive forms\footnote{The paradigm regularly shows syncretism of the indicative and the subjunctive in the first and second person singular as well as in the plural. Due to graphematic variation, further syncretism can arise. As the proportion of instances tagged as ambiguous is rather high, we decided to include both distinctly indicative forms and those that are not explicitly subjunctive (i.e. those tagged as ambiguous for mode).}, leaving us with a data set of 614 instances in sum (326 instances of \textit{wērden} + present participle and 288 of \textit{wērden} + infinitive).\footnote{The relevant data and scripts for both sub-studies are available in an OSF repository, which can be accessed via \href{https://osf.io/4c6yv }{https://osf.io/4c6yv}.}
+
+The second part of our study (Section \ref{chap:bibles}) aims to cover all the formally different constructions used for future reference (including the present tense and the modal constructions not considered in the purely quantitative approach). This onomasiological perspective entails the difficulty of obtaining an adequate data set, as the entirety of instances is not formally identifyable (due to the multiple functions most of the variants can have). 
+For the present study, we draw on the fact that future tense is morphologically represented in Latin. We look at three Middle Low German Bible prints that are translations of the Latin Vulgate. More specifically, we examine the way each of the texts realises those sentences that have a future form in the Latin text.
+Notably, the formal identification of Latin future instances will not only yield such attestations with true futurate meaning, but also such instances where the Latin future marker serves an `atemporal' function (see above). In addition to the true future meanings future and future progressive \citep[243]{hale_latin_1966}, the Latin future indicative can also have the following meanings: habitual action \citep[252]{hale_latin_1966}, the modal notion of command or prohibition \citep[304]{hale_latin_1966}, or the ``discovery of a state of affairs now existing" \citep[253]{hale_latin_1966}. 
+We include all instances of morphologically marked future indicative, regardless of their more specific function. We look at the different functions separately in Section \ref{chap:context}.
+
+\begin{figure} %[h!]
+    \includegraphics[scale=0.6]{ihden_schnee/map_mlg.png}
+    \caption{The language areas of Middle Low German}
+    \label{fig:ihden_schnee:map}
+\end{figure}
+
+\figref{fig:ihden_schnee:map}\footnote{This map was created by Sarah Ihden using \href{regionalsprache.de}{https://regionalsprache.de}. It is based on the map ``Schreibsprachenlandschaften im Spätmittelalter" by Konrad Kunze and Robert Peters with additions by Libuse Spáčilová, drawn by Brigitte Pfeil.} shows the language areas of Middle Low German and the cities where the three Bible texts listed below come from.
+\begin{enumerate}
+    \item The Bible of Köln (Westphalian) from 1478--1479;
+    \item the Bible of Lübeck (East Elbian) from 1494;
+    \item the Bible of Halberstadt (Eastphalian) from 1522.
+\end{enumerate}
+
+When comparing the content and the language of these Bibles, one has to be aware of their complex text tradition. The Bible of Köln is directly translated from the Vulgate, and is itself the main source of the Bible of Lübeck. The Bible of Halberstadt is based on the Latin Vulgate and on both the other Middle Low German Bibles of Köln and Lübeck (\cite[66, 120, 144]{EichenbergerWendland1977}). For this study we used the transcriptions of the Bible texts provided by the ReN. Since only extracts of the Bibles are contained in the corpus, this means that we only look at a subset of Bible passages, namely those that we have from all three of the Bibles. Table \ref{tab:ihden_schnee:extracts} shows the number of sentences with a future verb in Latin for each of the Bible chapters covered by our data set.
+
+\begin{table}
+\caption{Number of Latin future forms in the Bible extracts included in our data set}
+\label{tab:ihden_schnee:extracts}
+ \begin{tabularx}{\textwidth}{llr}
+  \lsptoprule
+  ID &extract & n Latin futures \\
+  \midrule
+   01--02 & Gen. 2: The Creation of Man and Woman & 2 \\
+   03--10 & Gen. 3: The Fall & 8 \\
+   11--18 & Gen. 4: Cain and Abel & 8 \\
+   19& Gen. 11: The Tower of Babel & 1 \\
+   20--23& Gen. 22: The Sacrifice of Isaac & 4 \\
+   24--44& Exod. 20: The Ten Commandments & 21 \\
+   45--46& Luke 2: The Birth of Jesus Christ & 2 \\
+   47--63& Mt. 5: The Sermon on the Mount & 17\\
+   64--83& Mt. 6: The Sermon on the Mount & 20 \\
+   84--95& Mt. 7: The Sermon on the Mount & 12\\
+    
+  \lspbottomrule
+ \end{tabularx}
+\end{table}
+
+\begin{minipage}{\textwidth} % add minipage so nothing is inserted in between this itemize block
+Each sentence has been annotated for the following:
+\begin{itemize}
+    \item construction used to translate the Latin futurate verb;
+    \item lemma of the main verb;
+    \item tense, mode, voice, person and number of the finite verb.
+\end{itemize}
+All annotations have been checked by both authors. The data set contains 35 future passive forms, which we look at separately in Section \ref{chap:bibles}. They will be excluded for all remaining analyses, where we focus on the 95 future active instances. 
+The latter have been further annotated for the overall semantics of the surrounding sentence. The categories that have been distinguished partially reflect the `atemporal' meanings the Latin future indicative can express:
+\end{minipage}
+
+\largerpage[-1.5]
+
+\begin{itemize}
+    \item \textbf{prognosis}: 
+    \begin{itemize}
+        \item a (\textbf{singular}) event is predicted to happen in the future: \\
+        $[\ldots]$ \textit{you \textbf{will find} a baby wrapped in swaddling cloths and lying in a manger.} (Luk. 2:12)\footnote{The annotations were made on the basis of the Latin references. For ease of comprehension, the examples given here for the individual categories are English translations based on the English Standard Version of the Bible provided by the \textit{Deutsche Bibelgesellschaft} at \href{https://www.bibelwissenschaft.de/online-bibeln/english-standard-version/bibeltext/}{https://www.bibelwissenschaft.de/online-bibeln/english-standard-version/bibeltext/} (last accessed on October 1 2023). The English translations of Bible verses given in the remainder of this paper are taken from the same source.}
+        \item an event is predicted to \textbf{habitually} occur (in the future):\\
+        \textit{Because you have done this, cursed are you above all livestock and above all beasts of the field; on your belly you shall go, and dust you \textbf{shall eat} all the days of your life.} (Gen. 3:14)
+    \end{itemize}
+    \item \textbf{commandment}: an obligation or prohibition is expressed; it is valid from the moment of expression on and reaches into the future:\\
+    \textit{You \textbf{shall} not steal.} (Ex. 20:15)
+    \item \textbf{condition}: protasis of a conditional:\\
+    \textit{Or if he \textbf{asks} for a fish} $[\ldots]$
+    \item \textbf{consequence}: the apodosis of a conditional:\\
+     $[\ldots]$ \textit{\textbf{will give} him a serpent} (Mt. 7:10)
+    \item \textbf{generic statement}: a statement not about a specific moment in the future but of general validity: \\
+    \textit{whoever murders \textbf{will be liable} to judgment} (Mt. 5:21)
+\end{itemize}
+
+Besides the `future' meaning in the narrower sense, which we label \textit{prognosis} and which we subdivided into prognoses about singularly occurring events and such about habitually occurring events, we find the modal meaning of obligation or prohibition, which we labelled \textit{commandment} here. Much less frequent are sentences that are part of a condition-consequence structure, especially the conditions are rare. As these are naturally non-assertive, they are considered unspecific regarding temporal reference \citep[314]{Dahl2000}. Typologically only fully grammaticalised future markers (i.e. those that are obligatory) occur in these contexts \citep[314]{Dahl2000}.\footnote{In modern German the usage of \textit{werden} + infinitive is highly restricted in either part of conditional clauses \citep[]{vater1975}.}
+Expressions of gnomic, general truth are (semantically) considered tenseless \citep[87]{Ultan1978}. They tend to also formally be unmarked for tense (i.e. languages often use the present tense for these) \citep[87]{Ultan1978}. However, some languages (e.g. Greek and English) also express it with future markers \citep[87]{Ultan1978}. In the Latin Vulgate, we do find sentences with future markers that express a gnomic truth, which could hint at this being possible in Latin, too. However, it could also be due to our operationalisation of ascribing gnomic truth. 
+
+\section{Analyses}\label{chap:results}
+
+\subsection{Distribution of \textit{wērden} + present participle and \textit{wērden} + infinitive}\label{chap:freq}
+Before providing a deeper analysis on factors influencing the use of the different future constructions in Middle Low German, this section gives a first, rather rough glimpse of the frequencies of two of the constructions. The research literature suggests a connection between the development of \textit{wērden} + infinitive and \textit{wērden} + present participle. As our quantitative analysis in this section treats these constructions only, we can only draw conclusions about these patterns and not about future marking in general. The entire range of Middle Low German future constructions will be investigated in the next sections.
+
+\begin{figure} %[h!]
+   \includegraphics[scale=0.8]{ihden_schnee/freqren_halfcents.png}
+  \caption{Diachronic distribution of \textit{wērden} + infinitive and \textit{wērden} + present participle in the ReN (normalised to corpus size, total counts given in labels)}
+   \label{fig:ihden_schnee:freqren}
+\end{figure}
+
+Figure \ref{fig:ihden_schnee:freqren} shows the frequencies of \textit{wērden}~+ present participle (red) and \textit{wērden}~+ infinitive (blue) in the ReN.\footnote{All figures are created with ggplot \citep{wickham2016} in RStudio \citep{RCoreTeam2021}.}
+The figure is based on the frequencies normalised to corpus size (n of finite verbs) with the raw frequencies given on top of each column. 
+Before the 15\textsuperscript{th} century, attestations for both constructions are marginal, ranging from 0 to 4 and remaining far below one token per 1000 finite verbs in the corpus. Starting in the second half of the 15\textsuperscript{th} century, we find a sudden increase in attestations of both constructions, with \textit{wērden} + present participle being more frequent at first. In the following half century, where most of the attestations are found, the two constructions' frequencies are roughly the same, with \textit{wērden} + infinitive prevailing slightly. After that, we find, again, far fewer instances. For \textit{wērden} + present participle we find only one attestation in the last 150 years covered by the corpus. \textit{Wērden} + infinitive is also much less attested in the later period compared to the preceding one. However, as the corpus contains only a very small number of tokens from only three texts from this period, the relative frequency is still high. 
+
+While the frequency development is consistent with the observations in the traditional Middle Low German grammars,\footnote{For example, \citet[222--223, § 412, note 6]{Lasch1914} states that the construction with the infinitive predominates over the one with present participle over time.} these results must be treated with caution. One caveat concerns the sparse data for the later periods of the corpus (the cessation of \textit{wērden} + present participle could be due to the small range of texts covered). Another one concerns the uneven distribution of future references in texts, as future references are rather rare and the occurrence of future markers of course depends on whether future events play a role in each specific text. 
+
+The frequency peaks in Figure \ref{fig:ihden_schnee:freqren} can be attributed to some texts containing a large amount of future-related propositions: In the first half of the 16\textsuperscript{th} century, many of the instances (for both constructions) come from \textit{Der schapherders Kalender} (1523), a text containing a collection of prophecies for the different zodiac signs, which by nature of their content contain an exceptionally high number of future references. The second half of the 15\textsuperscript{th} and the whole 16\textsuperscript{th} century prominently feature Middle Low German Bible versions as well as other religious texts, which generally contain more references to the future than literary texts, for example. The majority of instances of \textit{wērden} + infinitive in the second half of the 17\textsuperscript{th} century can be attributed to the \textit{Veer Schertz=Gedichte}, a compilation of humorous poems by Lauremberg (1652). Since in the later times of Middle Low German the influence of High German increases, the high frequency of \textit{wērden}~+ infinitive in this text might be due to contact with High German where \textit{wērden}~+ infinitive is already the established construction at that time.
+
+The varying likelihood of future references between individual texts but also between genres/text types limits the reliability of the frequencies found, given that the corpus is not balanced overall regarding the distribution of genre over time. For the 13\textsuperscript{th} and 14\textsuperscript{th} century, the corpus predominantly contains legal texts and deeds, as well as some texts of knowledge transfer. For the 15\textsuperscript{th} and 16\textsuperscript{th} century, however, religious texts and literature predominate and the 17\textsuperscript{th} century only features literary texts.\footnote{The distribution of tokens along the parameters of time, language area, and genre is visualised on the corpus website \href{https://www.slm.uni-hamburg.de/ren/korpus/korpusdesign.html}{https://www.slm.uni-hamburg.de/ren/korpus/korpusdesign.html} (last accessed on October 1 2023).} 
+As mentioned above, the texts in which we find most instances of the \textit{wērden} constructions mainly belong to the fields of religious texts, literature and knowledge transfer (in the rather special case of the horoscopical \textit{Der schapherders Kalender}). Since these genres prevail in the later periods of the corpus, the results could possibly reflect this structure rather than a diachronic development in the usage of the constructions.  
+We focus on one of the highly futurate text types found in the corpus, namely Bible translations, in the next section, while expanding the scope of our analysis with respect to the variants. 
+
+\subsection{Variation in future references in Bible Texts}\label{chap:bibles}
+\subsubsection{Frequency of future constructions in different texts}\label{chap:bibles_freq}
+Before analysing the constructions used for translating future in the Latin Vulgate into Middle Low German in more detail, we will first look broadly at their frequencies in our three Middle Low German texts. As Figure \ref{fig:ihden_schnee:bible_ov} shows, the most frequent constructions are the ones described in the research literature, namely the present tense (purple) as in (\ref{ex:ihden_schnee:1a}), \textit{wērden} + infinitive (blue) as in (\ref{ex:ihden_schnee:2a}), \textit{wērden} + present participle (green) as in (\ref{ex:ihden_schnee:1b}), and modal verb constructions (orange). With regard to these modal verb constructions in our data, only \textit{schȫlen} + infinitive as in (\ref{ex:ihden_schnee:1c}) is used more frequently, while constructions with \textit{willen} as in (\ref{ex:ihden_schnee:2b}) appear marginally and \textit{mö̂ten}% @Lena: Graphem!
+~+ infinitive is not used for future translations in the three Bible texts from the ReN. The frequencies in these texts do not reflect the trend observed by \citet{kurrelmeyer1904}, since \textit{willen} + infinitive is not among the predominant constructions at all.
+
+\begin{figure} [H]
+    \includegraphics[scale=0.8]{ihden_schnee/Abb4.png}
+    \caption{Verbal constructions used for translation of Latin future (active) in the three Middle Low German Bibles.}
+    \label{fig:ihden_schnee:bible_ov}
+\end{figure}
+
+
+\ea $[\ldots]$ nec enim \textit{habebit}\footnote{The Latin futurate verbs as well as the verbs used for their translation in the Middle Low German Bibles are italicised in all the examples.}  insontem Dominus eum qui adsumpserit nomen Domini Dei sui frustra (Exodus 20:7) \label{ex:ihden_schnee:1}
+\exi{} $[\ldots]$ for the Lord will not hold him guiltless who takes his name in vain
+\ea $[\ldots]$ Wente de here \textit{heft} on nicht entschuldich de synes godes namen ydelyken tho sik nympt . (Halberstadt, 39va, 19--22)\footnote{The Middle Low German examples are given in the modernised transcription of the ReN; for better reading, hyphens and the alinea symbol are deleted. The different transcription views of the ReN texts in ANNIS (\cite{KrauseZeldes2016}) are explained by \citet{Barteldetal2017} and \citet[Section 6.3]{Barteldetal2021}.}\label{ex:ihden_schnee:1a}
+\ex $[\ldots]$ wente de here \textit{werd} ene nicht vnschuldich \textit{hebbende} de to sik nemende werd den namen sines heren sines gades vorgheues . (Lübeck, 40va, 29--31)\label{ex:ihden_schnee:1b}
+\ex $[\ldots]$ Vnde de here en \textit{schal} en nicht \textit{entschuldighen} . de sinen namen ydelik nomet . (Köln, 40ra, 22)\label{ex:ihden_schnee:1c}
+\z
+\z
+\il{Middle Low German} %add "Middle Low German" to language index for this page
+\il{Latin} %add "Latin" to language index for this page
+\ea \textit{benedicam} tibi et multiplicabo semen tuum sicut stellas caeli et velut harenam quae est in litore maris $[\ldots]$ (Genesis 22:17) \label{ex:ihden_schnee:2}
+\exi{} I will surely bless you, and I will surely multiply your offspring as the stars of heaven and as the sand that is on the seashore $[\ldots]$
+\ea Jck \textit{werde} dy \textit{benedigen} vnde werde meren dyn saet alse de sternen des hymmels / vnd alse dat sant dat dar ys in dem ouer des meres $[\ldots]$ (Halberstadt, 13ra, 24--28)\label{ex:ihden_schnee:2a}
+\ex so \textit{wyl} ik dy \textit{gebenedien} vnde wil din geslechte mannichuoldighen . also de sternen des hemmels vnde also dat sand dat daer licht in deme ouersten des meres $[\ldots]$ (Köln, 13ra, 19--24)\label{ex:ihden_schnee:2b}
+\z
+\z
+\il{Middle Low German} %add "Middle Low German" to language index for this page
+\il{Latin} %add "Latin" to language index for this page
+
+%% @Lena: Die beiden Beispiele oben nicht durch die Abbildung trennen!
+Besides these constructions, the data also contain a few imperatives. Their use is evidence of the complex interplay between future and modal semantics. In Section \ref{chap:context}, we show in detail the strong connection between commandments expressed in a sentence and the modal verb construction with \textit{schȫlen} + infinitive as in (\ref{ex:ihden_schnee:3b}). A semantic equivalent that also expresses obligation is the imperative, hence an imperative form combined with one or more negation elements can also be used in order to prohibit an action as in (\ref{ex:ihden_schnee:3a}).
+
+\ea audistis quia dictum est antiquis non \textit{moechaberis} (Mt. 5:27) \label{ex:ihden_schnee:3}
+\exi{} You have heard that it was said, You shall not commit adultery.
+\ea Gij hebbet ghehort dat ghesecht is den olden nicht \textit{breke} de ee . (Köln, 167rb, 26--27)\label{ex:ihden_schnee:3a}
+\ex Gy hebbet gehort dat gesecht ys den olden / du \textit{scalt} neyne vnkuͤscheyt \textit{don} . (Halberstadt, 168vb, 02--04)\label{ex:ihden_schnee:3b}
+\ex Gi hebbet gehort dat ghesecht is den olden . du \textit{scalt} nene vnkuscheit \textit{don} . (Lübeck, 402va, 51--53)\label{ex:ihden_schnee:3c}
+\z
+\z
+\il{Middle Low German} %add "Middle Low German" to language index for this page
+\il{Latin} %add "Latin" to language index for this page
+
+\begin{figure} %[h!]
+    \includegraphics[scale=0.8]{ihden_schnee/Abb4_passiv.png}
+    \caption{Verbal constructions used for translation of Latin future (passive) in the three Middle Low German Bibles.}
+    \label{fig:ihden_schnee:bible_ov_pass}
+\end{figure}
+
+In order to gain a more comprehensive picture of the future translations in Middle Low German, we not only look at the Latin active forms, but also at the passive forms shown in Figure \ref{fig:ihden_schnee:bible_ov_pass}. When analysing Latin passive forms one has to be aware that in Latin there are so called deponentia (i.e. verbs with passive forms in their paradigms carrying an active semantics, see \cite{kühner1912}; \cite[74]{hale_latin_1966}). Hence, the passive forms of these verbs are to be translated with an active form. For example the verb \textit{moechāberis} in (\ref{ex:ihden_schnee:4}) is a future passive form of `commit adultery' and in the sentence \textit{non moechaberis} (Exodus 20:14) it is translated as `You shall not commit adultery' in the English Standard Version of the Bible.
+
+Our data set contains 35 Latin future passive forms, 13 of which are deponentia. In the three Middle Low German Bibles, these deponentia are translated using different constructions, namely: the present tense (purple), \textit{schȫlen} + infinitive (orange), \textit{wērden} + infinitive (blue), \textit{wērden} + present participle (green) and the imperative (yellow) (in Figure \ref{fig:ihden_schnee:bible_ov_pass}), see for example the translation of the above-mentioned sentence \textit{non moechaberis} as \textit{Du schalt nene vnkuscheit doͤn} in the Bible of Lübeck in (\ref{ex:ihden_schnee:4}). For the translation of the vast majority of the 22 verbs that are no deponentia, the construction \textit{wērden} + past participle (grey) as in (\ref{ex:ihden_schnee:5a}) respectively \textit{schȫlen} + \textit{wērden} + past participle as in (\ref{ex:ihden_schnee:5b}) is used -- the formal equivalents of the Latin passive. %@Sarah: erwähnen, dass MND kein futur passiv hat und daher present passiv verwendet wird?
+Besides these, there are only a few occurrences of the present tense. In (\ref{ex:ihden_schnee:6}), the Latin passive form \textit{adsimilābitur} `will be like' is translated as \textit{wert lik} in Middle Low German (i.e. the combination of the finite verb \textit{wērden} and a predicative adjective). This is possible because of the strong syntactic and semantic relationship between the past participle form of a verb and a predicative adjective. Hence, in New High German, constructions like \textit{die Fenster sind gewaschen} `the windows are cleaned' are ambiguous and it is discussed in the research literature whether we have a passive construction here, the so called \textit{Zustandspassiv} `state passive', or a copula verb with a predicative adjective (see, for example, \cite{Maienborn2007}). The translation in (\ref{ex:ihden_schnee:6}) is evidence for this aforementioned relationship between the past participle form of a verb and a predicative adjective.
+
+\ea non \textit{moechaberis} (Exodus 20:14) \label{ex:ihden_schnee:4}
+ 
+\exi{} You shall not commit adultery.
+\ea Du \textit{schalt} nene vnkuscheit \textit{do\char"0364n} (Lübeck, 40va, 49)\label{ex:ihden_schnee:4a}
+\z
+\z 
+\ea et \textit{benedicentur} in semine tuo omnes gentes terrae (Genesis 22:18) \label{ex:ihden_schnee:5}
+ 
+\exi{} and in your offspring shall all the nations of the earth be blessed 
+\ea Vnd yn dynem sade \textit{werden gebenediget} alle volk der erden (Halberstadt, 13ra, 28--30)\label{ex:ihden_schnee:5a}
+
+\ex vnde alle lude der erden \textit{scholen ghebenediet werden} in dime gheslechte (Köln, 13ra, 24--27)\label{ex:ihden_schnee:5b}
+\z
+\z
+\il{Middle Low German} %add "Middle Low German" to language index for this page
+\il{Latin} %add "Latin" to language index for this page
+\ea omnis ergo qui audit verba mea haec et facit ea \textit{adsimilabitur} viro sapienti qui aedificavit domum suam supra petram (Mt. 7:24) \label{ex:ihden_schnee:6}
+\exi{} Everyone then who hears these words of mine and does them will be like a wise man who built his house on the rock.
+\ea  Darumme een iewelik de dar hort desse mine word vnde dar na deit . de \textit{wert lik} dem wisen manne de syn hus buwet vp den steen . (Lübeck, 403rb, 60--62)\label{ex:ihden_schnee:6a}
+\z
+\z
+
+\subsubsection{The influence of the text and the translator}\label{chap:translator}
+
+\largerpage[-0.5]
+
+Having gained an overview of the various options for translating Latin future expressions into Middle Low German, we will now take a closer look at the choice of the various constructions in the three biblical texts. Examples (\ref{ex:ihden_schnee:1}) and (\ref{ex:ihden_schnee:2}) in the preceding section already indicate that the three Middle Low German translations can use different constructions for the same Latin future expression. The Latin \textit{habebit} `I will have' in Exodus 20:7 is translated by a) a present tense form (\textit{heft}) in the Bible of Halberstadt, b) \textit{wērden} + present participle (\textit{werd hebbende}) in the Bible of Lübeck, and c) \textit{schȫlen} + infinitive (\textit{schal entschuldighen}) in the Bible of Köln (see \ref{ex:ihden_schnee:1a}--\ref{ex:ihden_schnee:1c}). In Genesis 22:17, the Latin future \textit{benedicam} `I will bless' is translated by a) \textit{wērden} + infinitive (\textit{werde benedigen}) in the Bible of Halberstadt, whereas the Bible of Köln uses b) \textit{willen} + infinitive (\textit{wyl gebenedien}) (see \ref{ex:ihden_schnee:2a}--\ref{ex:ihden_schnee:2b}).
+
+The observation that the choice of a future construction strongly depends on the text also shows in the frequencies presented in Figure \ref{fig:ihden_schnee:bible_ov} in the preceding section.  
+The most crucial difference concerns the two constructions \textit{wērden} + infinitive and \textit{wērden} + present participle. While with 12\% in the Bible of Köln and 14\% in the Bible of Halberstadt \textit{wērden} + infinitive is an important option for translating Latin future, with 2\% in the Bible of Lübeck it is only marginally used. Instead, the Bible of Lübeck contains a relatively high amount of \textit{wērden} + present participle (22\%), which is used infrequently in the other two texts. As mentioned in Section \ref{chap:method}, the Bible of Lübeck is based on the Bible of Köln, and the Bible of Halberstadt is based on both of the others. Interestingly, the translators of the Bible of Lübeck and the Bible of Halberstadt make significant changes concerning the future expressions. They do not simply adapt the form from the base text – otherwise we would have similar frequencies for the different constructions in all three texts. In fact, the frequency of \textit{wērden} + infinitive and \textit{wērden} + present participle strikingly differs between the two Bibles from Köln and Halberstadt on the one hand and the Bible of Lübeck on the other hand.
+
+\largerpage[-0.5]
+
+As explained for the older varieties of High German in Section \ref{chap:lit} and as is suggested for Middle Low German in Section \ref{chap:freq}, \textit{wērden} + infinitive prevails over \textit{wērden} + present participle  diachronically. However, such a development is not reflected in the frequencies of these two constructions in the three Bibles -- there is no rise in the use of \textit{wērden} + infinitive from Köln via Lübeck to Halberstadt. Instead, the Bible of Köln and the Bible of Halberstadt show similar frequencies of the two constructions and the Bible of Lübeck stands out from the other two with a much higher proportion of \textit{wērden} + present participle and a much lower frequency of \textit{wērden} + infinitive. The frequent use of \textit{wērden} + present participle in the Bible of Lübeck is a choice of its translator and therefore a characteristic feature of this text. Whether the differences are solely due to the translator or whether an influence of the language area manifests itself in the translator's language cannot be clearly answered on the basis of the texts we have examined. The observation that Lübeck distinguishes itself from Köln and Halberstadt suggests a possible influence of the language area. From around 1370 to 1530, the language of Lübeck functioned as a supra-regional lingua franca \citep[1483]{Peters2000a}; it was regarded as the de facto Middle Low German standard. A higher proportion of \textit{wērden} + infinitive in Köln and Halberstadt could be explained by a stronger influence of High German, because Köln has a special status due to its location in the High German language area and Halberstadt is on the south-eastern edge of the Eastphalian area on the border to the Elbe Eastphalian area (see Figure \ref{fig:ihden_schnee:map} in Section \ref{chap:method}). The south of the Elbe Eastphalian area  already switched to Early New High German between 1350 and 1450 \citep[1417]{Peters2000b}; a certain influence of High German can also be assumed in the neighbouring areas.\footnote{Such an influence is confirmed by \citet{Czajkowski2021}, who examines Low German and High German forms on the phonological and graphematic level in the transitional area between Low German and East Central German. The locations of her corpus range from Sittichenbach in the south to Halberstadt and Aken in the north. The period examined extends from 1265 to 1490 \citep[31--36]{Czajkowski2021}. \citet[293--294]{Czajkowski2021} shows that the proportion of High German forms already increases from the second half of the 14\textsuperscript{th} century until the end of the 15\textsuperscript{th} century. It can be assumed that this language change manifested itself not only on the phonological and graphematic level but also in the syntax.}
+
+Besides these differences concerning \textit{wērden} + present participle and \textit{wērden}~+ infinitive, the three texts share many similarities. In all three texts the present tense is the dominating structure for the translation of a Latin future expression, the frequencies between the Bibles only differ minimally. Moreover, all three texts make use of the modal verb construction with \textit{schȫlen} rather frequently.
+
+In order to gain deeper insights into the different choices of translating a Latin future form into Middle Low German, in the following we take a closer look at corresponding sentences with different future constructions in the three texts. Our focus lies on the sentences with \textit{wērden} + present participle in the Bible of Lübeck, which are much more frequent in this text than in the other two. Tables \ref{tab:ihden_schnee:correspKLN} and \ref{tab:ihden_schnee:correspHBS} show which constructions are used for translating a Latin future form in the Bible of Köln and in the Bible of Halberstadt where the Bible of Lübeck has \textit{wērden} + present participle.
+
+\begin{table}
+\caption{\textit{Wērden} + present participle in Lübeck: Correspondences in Köln}
+\label{tab:ihden_schnee:correspKLN}
+ \begin{tabularx}{.5\textwidth}{X r}
+  \lsptoprule
+  KLN 1478/79 & n \\
+  \midrule
+  \textit{schȫlen} + infinitive &   12  \\
+  \textit{wērden} + infinitive  &   7 \\
+  present & 5 \\
+  \textit{willen} + infinitive & 3\\
+  \textit{wērden} + present participle & 1\\
+  \lspbottomrule
+ \end{tabularx}
+\end{table}
+\begin{table}
+\caption{\textit{Wērden} + present participle in Lübeck: Correspondences in Halberstadt}
+\label{tab:ihden_schnee:correspHBS}
+ \begin{tabularx}{.5\textwidth}{X r}
+  \lsptoprule
+  HBS 1522 & n \\
+  \midrule
+  \textit{wērden} + infinitive &   12  \\
+  present  &   6 \\
+  \textit{wērden} + present participle & 3 \\
+  \textit{schȫlen} + infinitive & 3 \\
+  \textit{willen} + infinitive & 3\\
+  \textit{wērden} + past participle & 1\\
+  \lspbottomrule
+ \end{tabularx}
+\end{table}
+
+In the Bible of Köln, the majority (12/28) of the corresponding constructions for \textit{wērden} + present participle in the Bible of Lübeck have \textit{schȫlen} + infinitive, whereas in the Bible of Halberstadt we find \textit{wērden} + infinitive in most of the corresponding sentences (12/28). One example illustrating this use of different constructions for the translation of the same Latin sentence is given in (\ref{ex:ihden_schnee:7}). The Latin future \textit{comedes} `you will eat' is translated as \textit{scholt eten} in the Bible of Köln (\ref{ex:ihden_schnee:7a}), as \textit{werst etende} in the Bible of Lübeck (\ref{ex:ihden_schnee:7b}) and as \textit{werst eten} in the Bible of Halberstadt (\ref{ex:ihden_schnee:7c}).
+
+\ea ad $[\ldots]$ maledicta terra in opere tuo in laboribus \textit{comedes} eam cunctis diebus vitae tuae (Genesis 3:17) \label{ex:ihden_schnee:7}
+\exi{} $[\ldots]$ cursed is the ground because of you; in pain you shall eat of it all the days of your life.
+\ea $[\ldots]$ de erde sij voruloket vnde dine wercke . du \textit{scholt eten} vth er . in arbeit alle de dage dines leuendes . (Köln, 5va, 11--16) \label{ex:ihden_schnee:7a}
+\ex $[\ldots]$ Vormalediet sy de erde . vmme di vnde diner sunde willen vnvruchtbar to wesende in dyneme werke // Jn deme arbeyde so \mbox{\textit{werst} u} van er \textit{etende} alle de dage dines leuendes . (Lübeck, 8va, 64--8vb,04)\label{ex:ihden_schnee:7b}
+\ex $[\ldots]$ vnde vormaledyget sy de erde Jn dynem arbeide \textit{werst} u \textit{eten} van oͤr / alle dyne daghe dynes leuendes . (Halberstadt, 4va, 04--10)\label{ex:ihden_schnee:7c}
+\z
+\z
+\il{Middle Low German} %add "Middle Low German" to language index for this page
+\il{Latin} %add "Latin" to language index for this page
+
+Besides the frequently used constructions \textit{schȫlen} + infinitive in the Bible of Köln and \textit{wērden} + infinitive in the Bible of Halberstadt, both texts also contain sentences that use the present tense where the Bible of Lübeck has \textit{wērden} + present participle. As shown in Figure \ref{fig:ihden_schnee:bible_ov}, in the Bible of Halberstadt the present tense occurs more frequently than in the other two texts for translating future expressions from the Vulgate. An example of the use of the present tense in the Bibles of Köln and Halberstadt instead of \textit{wērden} + present participle in the Bible of Lübeck is presented in (\ref{ex:ihden_schnee:8}). While the Bible of Lübeck translates the Latin \textit{occidet} `he will kill' as \textit{werd dodende} (\ref{ex:ihden_schnee:8b}), the other two texts use a present tense verb: the Bible of Köln has \textit{sleyt dot} (\ref{ex:ihden_schnee:8a}) and the Bible of Halberstadt \textit{do\char"0364det} (\ref{ex:ihden_schnee:8c}).
+\ea $[\ldots]$ et ero vagus et profugus in terra omnis igitur qui invenerit me \textit{occidet} me (Genesis 4:14) \label{ex:ihden_schnee:8}
+\exi{} $[\ldots]$ I shall be a fugitive and a wanderer on the earth, and whoever finds me will kill me. 
+\ea $[\ldots]$ vnde ich werde vluchtich vnde ellendich vppe der erden . daer vmme een iewelick de my werd vinden de \textit{sleyt} my \textit{dot} . (Köln, 6ra, 14--16)\label{ex:ihden_schnee:8a}
+\ex $[\ldots]$ vnde werde vnstedich vnde vorvluchtich vp der erden . Alle de my vindende werd . de \textit{werd} my \textit{dodende} . (Lübeck, 9ra, 23--27)\label{ex:ihden_schnee:8b}
+\ex $[\ldots]$ vnd werde eyn loder vnd eyn vorvlokeder in der erden / hijr vmme we my vindet de \textit{do\char"0364det} my / (Halberstadt, 5ra, 06--10)\label{ex:ihden_schnee:8c}
+\z
+\z
+\il{Middle Low German} %add "Middle Low German" to language index for this page
+\il{Latin} %add "Latin" to language index for this page
+
+Since the formally different options for expressing future in Middle Low German share the same basic semantics or the same grammatical function, they can easily be exchanged for each other within the same context as is illustrated by Tables \ref{tab:ihden_schnee:correspKLN} and \ref{tab:ihden_schnee:correspHBS} and by the examples analysed above. Hence, the use of one variant is clearly a choice of the translator. However, the reason why one translator prefers a variant against another one can hardly be discerned. One hypothesis might be that the translator uses one variant consciously in order to express a different semantic nuance of the sentence. Modal verb constructions could, for example, be preferred in order to convey the additional semantic nuance of modality. In order to verify our hypothesis, the following two sections take a closer look at the filling of the main verb slot of the future construction as well as at the semantic and syntactic context.
+
+\subsubsection{Filling of the main verb slot: the case of \textit{wērden}}\label{chap:verbslot} 
+There is only one main verb occuring in the constructions analysed that shows a clear pattern regarding its effect on the choice of construction and that is \textit{wērden}. In our data set, it is the most frequent verb in the main verb slot of the future constructions (n=45). Strikingly, it is nearly exclusively used in the present tense variant in all three texts (41/45, see Table \ref{tab:ihden_schnee:mainverbs_cxs}) as in (\ref{ex:ihden_schnee:9a}--\ref{ex:ihden_schnee:9b}). 
+
+\begin{table}
+\caption{The most frequent verbs occurring with the different constructions}
+\label{tab:ihden_schnee:mainverbs_cxs}
+ \begin{tabularx}{0.9\textwidth}{lrlll}
+  \lsptoprule
+  Construction & nTypes & verb1 & verb2 & verb3 \\
+  \midrule
+  present &28 &  \textit{wērden} (41)& \textit{gēven} (9) & \textit{lônen} (9) \\
+  \textit{schȫlen} + inf. &27 & \textit{māken}  (8)& \textit{begēren} (5)& \textit{dôn} (5) \\
+  \textit{wērden} + pres. part. &19 & \textit{sên} (4) & \textit{ēten}  (3)&  \textit{ingân} (2) \\
+  \textit{wērden} + inf. &14 & \textit{besitten} (3) & \textit{ēten}  (3) & \textit{gēven} (3)\\
+  \lspbottomrule
+ \end{tabularx}
+\end{table}
+
+\begin{table}
+\caption{Constructions occurring with the main verb \textit{wērden}}
+\label{tab:ihden_schnee:mainverbwerden}
+ \begin{tabularx}{.6\textwidth}{X lr}
+  \lsptoprule
+  Construction & Bible & n \\
+  \midrule
+ present & Köln & 14 \\
+ present & Lübeck & 15 \\
+ present & Halberstadt & 15 \\
+ \textit{schȫlen} + infinitive & Lübeck & 1\\
+ imperative & Köln &1\\
+ imperative & Halberstadt & 1\\
+ imperative & Lübeck & 1 \\
+ \lspbottomrule
+ \end{tabularx}
+\end{table}
+
+\largerpage[-1]
+
+There are only two exceptions (see Table \ref{tab:ihden_schnee:mainverbwerden}), one where the Bible of Köln and the Bible of Halberstadt use the main verb \textit{wērden} in present tense where the Bible of Lübeck contains \textit{schȫlen} + \textit{wērden} (see \ref{ex:ihden_schnee:10a}--\ref{ex:ihden_schnee:10c}) and one where all three Bibles use \textit{wērden} in the imperative. Consequently, there is a very close connection between the main verb \textit{wērden} and the present tense variant.
+
+\ea $[\ldots]$ sin autem male statim in foribus peccatum \textit{aderit} $[\ldots]$ (Genesis 4:7) \label{ex:ihden_schnee:9}
+\exi{} $[\ldots]$ And if you do not do well, sin is crouching at the door $[\ldots]$
+\ea $[\ldots]$ Efft u euer ouel deist tohantes \textit{werd} dyn sunde \textit{entegenwerdich} in den doeren $[\ldots]$ (Köln, 5vb, 03--11)\label{ex:ihden_schnee:9a}
+\ex $[\ldots]$ yodoch werst u quad donde. dinen broder to hatende // dine sunde \textit{werd} drade \textit{ieghenwardich} in dem doren $[\ldots]$ (Lübeck, 8vb, 59 -- 9ra, 04)\label{ex:ihden_schnee:9b}
+\ex $[\ldots]$ Jss et auer dat du oͤuel werkest altohant \textit{ys} dijn suͤnde in den doͤren $[\ldots]$ (Halberstadt, 4va, 49--53)\label{ex:ihden_schnee:9c}
+\z
+\z
+\il{Middle Low German} %add "Middle Low German" to language index for this page
+\il{Latin} %add "Latin" to language index for this page
+
+\largerpage[2]
+
+\ea $[\ldots]$ vagus et profugus \textit{eris} super terram (Genesis 4:12) \label{ex:ihden_schnee:10}
+\exi{} $[\ldots]$ You shall be a fugitive and a wanderer on the earth.
+\ea $[\ldots]$ du \textit{werst} vluchtich vnde ellendich vp der erden . (Köln, 6ra, 07--09)\label{ex:ihden_schnee:10a}
+\ex $[\ldots]$ Vnstedich vnde vorvluchtich \textit{schalt} u \textit{werden} vp der erden alle de daghe dines leuendes $[\ldots]$ (Lübeck, 9ra, 18--22)\label{ex:ihden_schnee:10b}
+\ex $[\ldots]$ Eyn loder vnd eyn vorvlokeder \textit{werdest} du vp der erden . (Halberstadt, 5ra, 01--04)\label{ex:ihden_schnee:10c}
+\z
+\z
+\il{Middle Low German} %add "Middle Low German" to language index for this page
+\il{Latin} %add "Latin" to language index for this page
+
+Most of the instances of \textit{wērden} in present tense translate a Latin future form of the verb \textit{esse} `be'. Instead of translating this future form into Middle Low German with the help of complex verbal constructions with the main verb \textit{wēsen} or \textit{sîn}\footnote{Middle Low German has two different verbs meaning ‘to be’, namely, \textit{wēsen} and \textit{sîn}.}~-- the equivalent of Latin \textit{esse} --, for example \textit{schal sîn} or \textit{wērt sîn}, the three texts prefer the present tense of \textit{wērden}. This choice of construction is only possible because of the semantic connection between \textit{wērden} in present tense and \textit{wēsen} in future tense, as in \textit{De sunde wert iegenwardich} 'Sin becomes present' and \textit{De sunde wert sin iegenwardich} 'Sin will be present'. If \textit{X} (here: the sin) becomes \textit{Y} (here: present) today it means that \textit{X} will be \textit{Y} tomorrow.
+
+This analysis showed a clear impact of verb semantics on the choice of future construction in the case of \textit{wērden}. This effect can be accounted for by the verb's semantics, as it denotes a change of state and thus already brings about a future reading when used in the present. An additional marking of futurity is unnecessary in such cases. The occurrence of the \textit{wērden} + infinitive construction with \textit{wērden} is considered to indicate an advanced level of grammaticalisation of the construction and is found from the 16\textsuperscript{th} century on in High German (\cite[17]{Schmid2000}; \cite[28]{concu_werden_2022}). It indicates an expansion of the contexts of occurrence and it shows the gradual bleaching of meaning in the auxiliary, which leads to a differentiation from its main verb usage and thus an ease of potential blocking effects to use both words in the same predicate. It is in line with previous research as well as our findings from Section \ref{chap:freq} that we do not find such signs of grammaticalisation in the Middle Low German Bibles.\footnote{We find but 12 instances of \textit{wērden} + \textit{wērden} in the ReN. Most of them are instantiations of an embedded  passive construction (\textit{wērden} + \textit{wērden} + past participle). Nine of them are from the first half of the 16\textsuperscript{th} century, the rest from later periods.}
+
+The role of sentence semantics, which has already been indicated in the preceding analysis, is examined more closely in the following section in order to identify potential correlations.
+
+\subsubsection{Syntactic and semantic context}\label{chap:context}
+The influence of syntactic context and sentence meaning is analysed with the help of a comparative view of the constructions used in the three texts. 
+Figure \ref{fig:ihden_schnee:korp_comp} shows the corresponding Middle Low German passages in chronological order of appearance in the Bible. The first two lower bars represent the passages from \textit{The creation of men and women} (2 instances), followed by  \textit{The expulsion from paradise} (8 instances) etc. (see also Table \ref{tab:ihden_schnee:extracts}). At the sides, the abbreviated names of the Bible chapters are given. This type of figure illustrates the importance of the semantic context for the choice of future construction. From the parallel layout of the three texts with the construction used encoded by different colours, we can easily assess where the texts agree and where they disagree in the future construction used. Concurrently we see clustering of certain constructions in certain passages of the Bible texts. 
+
+\begin{figure} %[h!]
+    \includegraphics[scale=0.55]{ihden_schnee/Abb6_labels_new.png}
+    \caption{Comparative view of constructions used in the three texts}
+    \label{fig:ihden_schnee:korp_comp}
+\end{figure}
+
+The lion's share of \textit{schȫlen} + infinitive appears in the Ten Commandments (Exod. 20). Our data set contains 21 sentences from this chapter (see also Table \ref{tab:ihden_schnee:extracts}). The Bible of Köln nearly exclusively uses \textit{schȫlen} + infinitive here, with only one exception where it has \textit{willen} + infinitive. In the Bible of Lübeck we find variation between \textit{schȫlen} + infinitive (n=8), \textit{schȫlen} + \textit{wērden} + present participle (n=7), \textit{wērden} + present participle (n=5), and \textit{schȫlen} + present participle (n=1). Halberstadt is similar to Köln in that it predominantly uses \textit{schȫlen} + infinitive (n=16). Apart from that, it uses the present, \textit{wērden} + infinitive, \textit{willen} + infinitive and the imperative in one sentence each. Outside of the Ten Commandments, Figure \ref{fig:ihden_schnee:korp_comp} illustrates the corresponding use of \textit{schȫlen} + infinitive (4) as well as the imperative (7) in the three chapters of the Sermon on the Mount (Mt. 5--7).
+
+What further stands out from Figure \ref{fig:ihden_schnee:korp_comp} is the accumulations of corresponding use of the present tense variant (30) in  the three chapters of the Sermon on the Mount (Mt.~5--7). More corresponding instances with the present (n=3) can be found in the chapters from Genesis. Overall, we observe more variation between the Bibles in the passages from Genesis and in the earlier passages of the Sermon on the Mount.
+
+% converging imperative
+Before looking directly at the annotations of sentence semantics, let us examine the sentences that are consistently translated with one specific construction in all three Bibles, starting with the imperative which in Figure \ref{fig:ihden_schnee:korp_comp} forms three neat yellow stripes in the area of the three chapters of the Sermon on the Mount. In our data, there are for example two sentences from the chapter ``Sermon on the Mount", where the Latin future forms \textit{peierabis} `you will lie', \textit{reddes} `you will give back', \textit{diliges} `you will love' and \textit{habebis} `you will have' are in all of the three texts translated by the imperative forms \textit{swere}, \textit{gyff}/\textit{ghif}/\textit{gyf}, \textit{hebbe} and \textit{hate} (see \ref{ex:ihden_schnee:11a}--\ref{ex:ihden_schnee:11c1}). 
+The content of the sentences indicates that not only an action taking place in the future is referred to but the sentences contain a demand note. This is supported by person and number of the verb, namely the 2nd person singular (in accordance with this, the other three occurrences with corresponding imperatives have verbs in the 2nd person plural). The translators of the Middle Low German Bibles transfer this semantic note of a request to do or to neglect an action by using the imperative which inherently expresses a demand. 
+
+\largerpage[-1]
+
+\ea iterum audistis quia dictum est antiquis non \textit{peierabis} \textit{reddes} autem Domino iuramenta tua (Mt. 5:33) \label{ex:ihden_schnee:11} 
+\exi{} audistis quia dictum est \textit{diliges} proximum tuum et odio \textit{habebis} inimicum tuum (Mt. 5:43)
+\exi{} Again you have heard that it was said to those of old, You shall not swear falsely, but shall perform to the Lord what you have sworn.
+\exi{} You have heard that it was said, You shall love your neighbor and hate your enemy.
+\ea Euer hebbe gij ghehort dat ghesecht is den olden nicht en \textit{swere} meynede . sunder \textit{gyff} de ede deme heren (Köln, 167rb, 43--46)\label{ex:ihden_schnee:11a} 
+\ex Gij hebben ghehort dat gesecht is \textit{hebbe leff} dynen naber vnde \textit{hate} dynen viant . (Köln, 167va, 08--09)\label{ex:ihden_schnee:11a1} 
+\ex Ouer hebbe gi hort dat ghesecht is den olden . nicht en \textit{swere} meenede . sunder \textit{ghif} de ede dem heren . (Lübeck, 402vb, 03--04)\label{ex:ihden_schnee:11b} 
+\ex Gy hebben ghehort dat ghesecht is . \textit{hebbe leff} dynen neghesten vnde \textit{hate} dynen vient : (Lübeck, 402vb, 22--23)\label{ex:ihden_schnee:11b1}
+\ex Auer hebbe gy gehort dat gesecht ys den olden nicht \textit{swere} meynede / sunder \textit{gyf} de ede dem heren . (Halberstadt, 168vb, 19--21)\label{ex:ihden_schnee:11c}
+\ex Gy hebben gehort dat gesecht ys / \textit{hebbe leiff} dynen negesten vnd \textit{hate} dynen vyent / (Halberstadt, 168vb, 37--39)\label{ex:ihden_schnee:11c1}
+\z
+\z
+\il{Middle Low German} %add "Middle Low German" to language index for this page
+\il{Latin} %add "Latin" to language index for this page
+
+% converging schȫlen + inf
+A similar observation can be made for the corresponding use of \textit{schȫlen} + infinitive in the three texts. Seven out of the eleven occurrences for such correspondences concentrate in the chapter the Ten Commandments. As examples (\ref{ex:ihden_schnee:12a}--\ref{ex:ihden_schnee:12c}) show, the Latin Vulgate uses a verb in the 2nd person singular, namely \textit{adsumes} `you will take' and, similar to the example in (\ref{ex:ihden_schnee:11}), the sentence contains a command or a prohibition. In the Middle Low German Bibles, this prohibition is expressed by the construction \textit{schȫlen} + infinitive, namely by \textit{schalt} (\textit{to})\textit{nemen}. Due to the special feature of the modal verb construction with \textit{schȫlen} expressing not only future reference but also modality, it is perfectly suitable for transferring the additional semantic nuance of demand.
+
+These investigations of corresponding translations with the imperative and with \textit{schȫlen} + infinitive in the three Bible texts demonstrate that the meaning of the whole sentence and its context have a strong influence on the use of a future construction. That is, the imperative and modal constructions with \textit{schȫlen} are clearly and unsurprisingly connected to the domain of obligation. This connection is also reflected in the constructions' usage with grammatical person and number (see Figure \ref{fig:ihden_schnee:person_cx}). In all three texts, \textit{schȫlen} + infinitive predominantly occurs in the second person singular, as this is used in the directive contexts. The present tense is often used with the third person singular, but, since it occurs in all persons and numbers, no such clear preference as with \textit{schȫlen} + infinitive is observed here.
+
+\ea non \textit{adsumes} nomen Domini Dei tui in vanum $[\ldots]$ (Exodus 20:7)\label{ex:ihden_schnee:12}
+\exi{} You shall not take the name of the Lord your God in vain
+\ea Du en \textit{schalt} den namen dynes ghades nicht ydelick in dynen mont \textit{nemen} $[\ldots]$ (Köln, 40ra, 20--24)\label{ex:ihden_schnee:12a}
+\ex Du \textit{schalt} nicht \textit{tonemen}. to sprekende // den namen dynes heren dines gades vorgheues $[\ldots]$ (Lübeck, 40va, 27--31)\label{ex:ihden_schnee:12b}
+\ex Du en \textit{schalt} dynes heren godes name nicht vergheues yn dynen munt \textit{nemen} $[\ldots]$ (Halberstadt, 39va, 19--22)\label{ex:ihden_schnee:12c}
+\z
+\z
+\il{Middle Low German} %add "Middle Low German" to language index for this page
+\il{Latin} %add "Latin" to language index for this page
+
+\begin{figure} %[h!]
+   \includegraphics[scale=0.6]{ihden_schnee/person_construction_biblewrap.png}
+    \caption{Constructions used by person and number in the three Bibles}
+    \label{fig:ihden_schnee:person_cx}
+\end{figure}    
+
+% Semantic of the Sentence
+\begin{figure} %[h!]
+    \includegraphics[scale=0.6]{ihden_schnee/satztyp_cx_new_abs.png}
+    \caption{Correlation between sentence semantics and construction in the three Bibles (n=93).}
+    \label{fig:ihden_schnee:satztyp_cx}
+\end{figure}
+
+The distribution of the future constructions between the chapters of the Bible indicated in Figure \ref{fig:ihden_schnee:korp_comp} is clearly influenced by different types of sentence semantics that predominate in the individual chapters. This connection between the sentence semantics and the choice of construction is illustrated in Figure \ref{fig:ihden_schnee:satztyp_cx},\footnote{Figure \ref{fig:ihden_schnee:satztyp_cx} is based on the 93 of the 95 sentences in our data set. Two were excluded because of ambiguous annotations for sentence semantics.} which shows the distribution of the constructions for the different types of sentence semantics that we annotated for. While the most frequent correlation (that is, between commandments and the variant \textit{schȫlen} + infinitive and the imperative) has already been discussed, this perspective offers new insights especially for the usage of the present: It is the only variant used (with only a marginal deviation in the Bible of Lübeck) in those sentences, that contain a) the consequence to a condition and b) a condition. Example (\ref{ex:ihden_schnee:condition_consequence}) shows a case where both parts of the conditional clause have a future form in the Vulgate. Future encoding appears frequently with the consequent part of the conditional clause (n=18). The conditions themselves are rarely expressed in the future (we only find this three times in our data), which is to be expected given the typological evidence referred to in Section \ref{chap:method}.
+
+\ea aut si piscem \textit{petet} numquid serpentem \textit{porriget} ei (Mt. 7:10)\label{ex:ihden_schnee:condition_consequence}
+\exi{} Or if he asks for a fish, will give him a serpent?
+\ea Edder effte he on \textit{byddet} vmme eynen vysch \textit{reket} he ohm nicht dan eine slangen (Halberstadt 169va, 21--22)
+\z
+\z
+
+%  present&consequence
+The apodosis examples all come from the second chapter of the Sermon on the Mount (Mt. 6) and each sentence is predicting that, if the preceeding condition is met, God will reward the addressee, as in (\ref{ex:ihden_schnee:lonen}). The use of present tense (or also: the absence of overt future marking) in such (temporally unspecified) contexts is typologically seen fairly common and not surprising for Middle Low German either, as it does not have one fully obligatory future marker (see Section \ref{chap:method}).
+
+\ea $[\ldots]$ et Pater tuus qui videt in abscondito \textit{reddet} tibi (Mt. 6:4)\label{ex:ihden_schnee:lonen}
+\exi{} $[\ldots]$ And your Father who sees in secret will reward you.
+\ea $[\ldots]$ vnde dyn vader de dar suet in vorborghenheit de \textit{lonet} dij . (Köln 167va, 35--37)\label{ex:ihden_schnee:lonenKLN}
+\ex $[\ldots]$ vnde din vader de dar suet in vorborghenheit de \textit{lonet} di . (Lübeck 402vb, 47--49)\label{ex:ihden_schnee:lonenLBK}
+\ex $[\ldots]$ vnd dyn vader de dat suet yn vorborgenheyt de \textit{lonet} dy . (Halberstadt 169ra, 16--18)\label{ex:ihden_schnee:lonenHBS}
+\z
+\z
+
+% generic statements
+The next category of sentence semantics that we differentiated in our data is \textit{generic statements}, that is assertions that can be considered to be true generally, not merely in the future. This type of sentence shows a clear preference for the present, as illustrated in Figure \ref{fig:ihden_schnee:satztyp_cx}. Our data contain a total of 15 verbal constructions in such general contexts that come from nine different Bible passages. More than half of these instances are convergently translated with the present constructions by all three Bibles, as for example in the passage in (\ref{ex:ihden_schnee:Mt6:24}), which contains four constructions in such context.
+
+\ea nemo potest duobus dominis servire aut enim unum odio \textit{habebit} et alterum \textit{diliget} aut unum \textit{sustinebit} et alterum \textit{contemnet} $[\ldots]$ (Mt. 6:24)\label{ex:ihden_schnee:Mt6:24}
+\exi{} No one can serve two masters, for either he will hate the one and love the other, or he will be devoted to the one and despise the other $[\ldots]$
+\ea Nemant mach denen twen heren edder den enen \textit{hatet} he . den anderen \textit{hefft} he leff . edder he \textit{beholt} den enen vnde \textit{vorsmat} den anderen $[\ldots]$ (Köln 167vb, 29--33)
+\ex Numment mach denen twen heren. dar de ene deme anderen enteghen is // edder den enen \textit{hatet} he . vnde den anderen \textit{heft} he lef . edder he \textit{behold} den enen . vnde \textit{vorsmad} den anderen $[\ldots]$ (Lübeck 403ra, 28--32)
+\ex Nemant mach deynen twen heren edder den einen \textit{hatet} he / vnd den anderen \textit{hefft} he leyff edder he \textit{beholt} den eynen vnd \textit{vorsmadet} den anderen $[\ldots]$ (Halberstadt 169rb, 10--13)
+\z
+\z
+
+% variation with prognosis
+The other types of sentence semantics we distinguished in our data show more variation.  
+22 sentences in our data set are classified as prognoses, making a statement over a singular event to take place in the future (for example \ref{ex:ihden_schnee:Gen22:8}). With this type of sentence semantic, we find eight sentences that converge in the three Bibles using the present (n=5), \textit{wērden} + infinitive (n=2) and  \textit{schȫlen} + infinitive (n=1). In 14 sentences there is variation. While there are different combinations, there is a pattern within these sentences, namely the preference of the different texts for certain constructions, as was discussed in Section \ref{chap:bibles_freq}: We see a prevalence of the \textit{schȫlen} construction in Köln, \textit{wērden} + present participle in Lübeck and \textit{wērden} + infinitive in Halberstadt, which is illustrated in (\ref{ex:ihden_schnee:Gen22:8KLN}--\ref{ex:ihden_schnee:Gen22:8HBS}).
+
+\ea dixit Abraham Deus \textit{providebit} sibi victimam holocausti fili mi pergebant ergo pariter (Gen. 22:8)\label{ex:ihden_schnee:Gen22:8}
+\exi{} Abraham said, God will provide for himself the lamb for a burnt offering, my son. 
+\ea do sprak abraham myn sone god de \textit{schal vorseen} vmme sinen offer vnde offerhande . (Köln 12vb, 28--29)\label{ex:ihden_schnee:Gen22:8KLN}
+\ex doch sede abraam Sone myn . god \textit{werd} sik \textit{voresynde} dat dar schal werden ghedodet in een bernende offer (Lübeck 16va, 10--12)\label{ex:ihden_schnee:Gen22:8LBK}
+\ex God de \textit{wert} sick \textit{voerseen} vmme dat gebrande opper . (Halberstadt 12vb, 14--15)\label{ex:ihden_schnee:Gen22:8HBS}
+\z
+\z
+
+% habitual statements
+We differentiated the rather singular semantics of our category \textit{prognosis} from clearly \textit{habitual} statements that predict an event to occur habitually in the future. We have assigned this label to seven sentences in our data set (one including multiple future constructions, see (\ref{ex:ihden_schnee:Mt6:31})\footnote{The equivalent of `What shall we drink?' is omitted in the Bible of Lübeck.}). This group does not differ strikingly from the sentences with the singular prognosis meaning. Only one of the sentences has the same construction (present) in all texts. For the other sentences, there is variation that is in accord with the observation made with the prognoses, complementing the pattern with an apparent preference for \textit{schȫlen} + infinitive in Köln and a preference for constructions with the present participle in Lübeck.
+
+% \ea spinas et tribulos \textit{germinabit} tibi et \textit{comedes} herbas terrae (Gen. 3:18)\label{ex:ihden_schnee:gen3:18}
+% \exi{} thorns and thistles it shall bring forth for you; and you shall eat the plants of the field.
+% \ea se \textit{wert} dy \textit{bringhen} dorne vnde distel. vnde du \textit{scholt eten} de kruder der erden. (Köln 5va, 16--17)\label{ex:ihden_schnee:gen3:18KLN}
+% \ex distel vnde dorne \textit{wert} see dy \textit{bloyende}. vnde de krude der erden \textit{werst} u \textit{etende}. (Lübeck 8vb, 04--05)\label{ex:ihden_schnee:gen3:18LBK}
+% \ex Dorne vnde distele \textit{wert} se dy \textit{vthspretende} / vnd du \textit{werst eten} krut der erden (Halberstadt 04va, 11)\label{ex:ihden_schnee:gen3:18HBS}
+% \z
+% \z
+\ea nolite ergo solliciti esse dicentes quid \textit{manducabimus} aut quid \textit{bibemus} aut quo operiemur (Mt. 6:31)\label{ex:ihden_schnee:Mt6:31}
+\exi{} Therefore do not be anxious, saying, What shall we eat? or What shall we drink? or What shall we wear?
+\ea Dar vmme nicht en wilt sin sorchuoldich sprekende . wat \textit{ete} wy effte wat \textit{drincken} wy edder war mede werde wy ghecledet . (Köln 167vb, 52--55)
+\ex dar umme segghe ik iuw . nicht en syt sorchuoldich iuwer sele . iuwem leuende // wat gi \textit{schoelen eten} . noch iuwen liue . wor mede gi dat kleden (Lübeck 403ra, 33--34)
+\ex Dar vmme nicht wyllet syn sorchuoldich sprekende / wat \textit{ete} gy efte wat \textit{drinke} wy edder wor mede werde wy gekledet (Halberstadt 169rb, 30--33)
+\z
+\z
+
+
+%schȫlen+inf in none directive contexts
+Let us return briefly to the construction \textit{schȫlen} + infinitive. In example (\ref{ex:ihden_schnee:Gen22:8}) we saw it used in a prognostic (i.e. `real future') utterance in the Bible of Köln, which we have found to show a preference of this construction. In (\ref{ex:ihden_schnee:Mt6:31}) it is the Bible of Lübeck that uses \textit{schȫlen} while the other two Bibles have present forms. (\ref{ex:ihden_schnee:Mt7:21}) shows the only non-directive sentence where Halberstadt uses the construction (alongside both other texts) and it might be up to debate in this case whether the sentence does or does not bear a modal meaning. Overall, regarding the different usages of  \textit{schȫlen} + infinitive, the situation is as follows: As was shown in Section \ref{chap:bibles_freq}, the construction appears most frequent in Köln and less frequent in Lübeck and Halberstadt (see Figure \ref{fig:ihden_schnee:bible_ov}). The proportion of non-directive (prognosis, habitual and generic) usage, however, is comparable in Lübeck and Köln, with about a third of the instances in Lübeck and more than a fourth in Köln. In Halberstadt, however, there are no non-directive instances of \textit{schȫlen}~+ infinitive except the one shown in (\ref{ex:ihden_schnee:Mt7:21a}). Looking back at the frequency distribution found for the constructions with \textit{wērden}, we could tentatively suggest a decline of \textit{schȫlen} + infinitive as a future construction, given that, in the period where we see an increase in the \textit{wērden} constructions, we find no more usage of \textit{schȫlen}~+ infinitive in sentences that are futurate in the narrow sense (i.e. excluding directiva) in the Bible translation. This conclusion is of course tentative and is in urgent need of verification on the basis of larger amounts of data.   
+
+\ea non omnis qui dicit mihi Domine Domine \textit{intrabit} in regnum caelorum $[\ldots]$ (Mt. 7:21) \label{ex:ihden_schnee:Mt7:21}
+\exi{} Not everyone who says to me, ‘Lord, Lord,’ will enter the kingdom of heaven $[\ldots]$ 
+\ea nicht alle de dar spreket tho my here here \textit{schal gan }in dat rike der hemmele $[\ldots]$ (Köln 168ra,56--168rb,02) \label{ex:ihden_schnee:Mt7:21b}
+\ex Nicht alle de dar spreket to my . here here \textit{scal gan} in dat rike der hemmele $[\ldots]$ (Lübeck 403rb,50--403rb,54) \label{ex:ihden_schnee:Mt7:21c}
+\ex Nicht alle de dar spricket tho my / here here \textit{schal gaen} yn dat ryke der hymmele $[\ldots]$ (Halberstadt 169va,46--169va,50) \label{ex:ihden_schnee:Mt7:21a}
+\z
+\z
+
+This analysis showed that different types of sentence semantics clearly have an effect on the choice of the construction for translating the Latin future. We find a strong preference for the modal construction with \textit{schȫlen} and the imperative for directive statements like commandments and interdictions. Both parts of conditional clauses clearly prefer the present construction, as do generic statements, albeit with a little more variation. The sentence types that seem to be the least determined with regard to the construction are prognoses, both about singular and habitual events. The latter are the sentences where most of the \textit{wērden}~+ infinitive are found. Overall, the results regarding the `extra' categories considered here, on top of the `real future' categories, are inline with what would be expected based on the literature. We want to underline, however, that these results do contribute to an understanding of future reference in Middle Low German and that using a broader definition of future, encompassing constructions that overlap semantically, showed to be fruitful for an initial and exploratory study like the present one. 
+
+\section{Summary and Outlook}\label{chap:summary}
+Our empirical investigation of future constructions and the translation of Latin
+future forms in Middle Low German has brought the following results to light:
+In the first part of the study, we conducted a purely quantitative examination of
+the occurrence of the two competing constructions \textit{wērden} + present participle
+and \textit{wērden} + infinitive. Our data, taken from the ReN, show an increase in the occurrence of both variants in the second half of the 15\textsuperscript{th} century and the first half of the 16\textsuperscript{th} century. It is not possible to draw conclusions about the development of the constructions prior to the 15\textsuperscript{th} century on the basis of the structure of the corpus, as texts that contain more references to the future are only represented from the 15\textsuperscript{th} century on. A number of differences can still be noted in relation to their development in High German. Firstly, the development differs strikingly from that observed in High German in that \textit{wērden} + infinitive does not seem to replace \textit{wērden} + present participle over time. Instead, we see a rather sudden increase in both constructions. Furthermore, the frequency growth of \textit{wērden} + present participle in Middle Low German takes place at a time when it no longer plays a central role in High German. In our data, we cannot trace its demise. Its absence in the 17\textsuperscript{th} century should not be overestimated because of the few texts contained in that time span of the corpus. Overall, it must be noted that the suitability of reference corpora for the investigation of phenomena that are dependent on the content of the texts, such as future reference, is not necessarily given and must be checked and evaluated. 
+
+In the second part of our study, we undertook a quantitative-qualitative investigation of the translation of Latin future forms in three Middle Low German Bibles. The benefit of this analysis is its onomasiological approach: Starting from the function, namely expressing the future of an event, which in Latin is morphologically marked on the verb, we examined all the formally different constructions sharing this function (i.e. also the present tense and the modal constructions). Due to their multi-functionality, in a corpus linguistic approach, for example, finding attestations for these is rather difficult or requires a great deal of effort. In our analysis, we identified a set of intertwined factors influencing  the choice of variant. One of them could be the translator, more precisely their preference for specific structures or their individual reading of the Latin original. However, the language area could also be a decisive factor, since Köln and Halberstadt are more susceptible to the influence of High German than Lübeck. With regard to constructions expressing future, the three texts differ above all in that the proportion of \textit{wērden} + present participle is considerably higher in the Bible of Lübeck than in the Bible of Köln and the Bible of Halberstadt.
+
+Regarding the main verbs in the Middle Low German future construction our examination revealed a connection with the type of construction for the verb \textit{wērden}, that is, it occurs predominantly in present tense. As the change of state semantics of the verb itself can already bring about a future reading, an additional marking of futurity is not necessary. The fact that \textit{wērden} does not occur in the verb slot of \textit{wērden} + infinitive shows that the construction has not reached the same level of grammaticalisation in Middle Low German that it has in Early New High German, where \textit{werden} + \textit{werden} occurs from the 16\textsuperscript{th} century on.
+
+The semantic context also has an influence on the choice of variant. Here, a strong connection between commandments and the use of \textit{schȫlen} + infinitive was found. This in turn is also reflected in the fact that \textit{schȫlen} + infinitive is predominantly used in the second person singular. For this reason, the Ten Commandments of the Bible contain a particularly large number of verbal complexes with \textit{schȫlen}. We were also able to show that the present tense variant occurs mainly in conditions and consequences.
+
+% Our study has shown that only the combination of quantitative and qualitative analysis of corpus data can yield reliable results on the occurrence of formally different constructions used for referring to future events in Middle Low German as well as on the influence of intra- and extra-linguistic factors on the choice of variant.
+In order to gain an even more comprehensive insight into the use of future expressions in Middle Low German, it would be helpful to look at other text types besides the Bible texts studied here, such as the calendar mentioned above. However, it should be borne in mind that manual annotation of all future tense expressions in such a text is very time-consuming and unambiguous annotation is not always possible, especially in the case of modal verb constructions. Despite extensive corpora, the study of the future in German remains a complex and challenging task.
+
+
+
+% \section*{Abbreviations}
+% \begin{tabularx}{.5\textwidth}{@{}lQ@{}}
+% ... & \\
+% ... & \\
+% \end{tabularx}%
+% \begin{tabularx}{.5\textwidth}{@{}lQ@{}}
+% ... & \\
+% ... & \\
+% \end{tabularx}
+
+
+
+\section*{Acknowledgements}
+We want to thank the other participants of the workshop for their helpful comments and inspiring discussions, Ingrid Schröder for valuable feedback on an earlier version of this article, the anonymous reviewer, thanks to whose constructive remarks we were able to considerably improve the article and Lourens Visser for his thorough proofreading of the final version. Any remaining errors are our own.
+
+
+\section*{Sources}
+
+The bibliographical information on the texts is taken from the metadata of the ReN 1.1 (see below).
+\begin{itemize}
+    \item Kölner Bibel. Köln 1478–1479, Heinrich Quentell. Detmold, Lippische Landesbibliothek: Exp. Th. 75.20. 
+    \item Lübecker Bibel. Lübeck 1494, Steffen Arndes. München, Bayerische Staatsbibliothek: Ink B-495.
+    \item Halberstädter Bibel. Halberstadt 1522: Lorenz Stuchs. München, Bayerische Staatsbibliothek: B3Kat-ID: BV035304241.
+\end{itemize}
+
+\sloppy
+\printbibliography[heading=subbibliography,notkeyword=this]
+
+\end{document}
